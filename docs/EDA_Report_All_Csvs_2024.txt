@@ -1,0 +1,2412 @@
+Exploratory Data Analysis (EDA) Report for Archive.zip (18 sheets)
+================================================================================
+
+File: base_query.csv
+--------------------------------------------------------------------------------
+Number of rows: 24426
+Number of columns: 6
+
+Column Names and Data Types:
+SKU                object
+Item per Bundle     int64
+CR_BrandId          int64
+DF_Market          object
+Location           object
+TMO                object
+dtype: object
+
+Missing Values per Column:
+SKU                0
+Item per Bundle    0
+CR_BrandId         0
+DF_Market          0
+Location           0
+TMO                0
+dtype: int64
+
+Basic Statistics:
+              SKU  Item per Bundle     CR_BrandId DF_Market       Location  \
+count       24426     24426.000000   24426.000000     24426          24426   
+unique       2007              NaN            NaN       135            511   
+top     UNDEFINED              NaN            NaN     China  Izmir Airport   
+freq          570              NaN            NaN      3162            262   
+mean          NaN       280.281094   77535.790305       NaN            NaN   
+std           NaN       394.869603   35992.800701       NaN            NaN   
+min           NaN         0.000000       0.000000       NaN            NaN   
+25%           NaN       200.000000   46755.000000       NaN            NaN   
+50%           NaN       200.000000   57751.500000       NaN            NaN   
+75%           NaN       400.000000  116065.000000       NaN            NaN   
+max           NaN     10000.000000  158374.000000       NaN            NaN   
+
+          TMO  
+count   24426  
+unique     34  
+top       PMI  
+freq     7463  
+mean      NaN  
+std       NaN  
+min       NaN  
+25%       NaN  
+50%       NaN  
+75%       NaN  
+max       NaN  
+
+Sample Data (first 20 rows):
+                                                  SKU  Item per Bundle  \
+0                             THE KING - (RED) KS BOX              200   
+1   MARLBORO - (RED FWD) KS BOX 600 SPECIAL OUTER ...              600   
+2   MARLBORO - GOLD (3.5) KS RCB - SPAIN DF - IDM ...              200   
+3   MARLBORO - DOUBLE FUSION PURPLE KS RCB 600 C S...              600   
+4   MARLBORO - DOUBLE FUSION SUMMER MENTHOL KS  60...              600   
+5                             DUNHILL - (BLUE) KS BOX              200   
+6                   MILD SEVEN - INTERNATIONAL KS BOX              200   
+7                                       MINE - KS BOX              200   
+8                       LUCKY STRIKE - AMBER KS BOX C              200   
+9                       LUCKY STRIKE - AMBER KS BOX C              200   
+10                         DOUBLE HAPPINESS - KS SOFT              200   
+11                         DOUBLE HAPPINESS - KS SOFT              200   
+12           MARLBORO - GOLD (3.5) KS RCB - TURKEY DF              200   
+13  MARLBORO - GOLD (3.5) KS RCB - SPAIN DF - IDM ...              200   
+14                                CAMEL - BLUE KS BOX              200   
+15                           NEWPORT - MENTHOL KS BOX              600   
+16                         THE KING - (RED) 100's RCB              200   
+17                             SILK CUT - BLUE KS BOX              400   
+18  MARLBORO - DOUBLE ICE KS RCS C JUMBO WHITE - G...              200   
+19    STERLING - SUPERKINGS MENTHOL MENTHOL 100's BOX              400   
+
+    CR_BrandId      DF_Market                 Location               TMO  
+0       106308       Spain DP           Madrid Barajas    KING'S TOBACCO  
+1       122774         France  Paris Charles De Gaulle               PMI  
+2       122496       Spain DP                   Gerona               PMI  
+3       118939         Turkey    Istanbul Asia Airport               PMI  
+4       125175         Turkey    Istanbul Asia Airport               PMI  
+5        49364          China           Chengdu Tianfu               BAT  
+6        45709          China           Chengdu Tianfu               JTI  
+7        46257         Taiwan         Taipei - Taoyuan               JTI  
+8       127567         Mexico              Guadalajara               BAT  
+9       127567         Brazil                Viracopos               BAT  
+10       47113      Hong Kong                Hong Kong  NANYANG BROTHERS  
+11       47113          China        Dalian Zhoushuizi  NANYANG BROTHERS  
+12      123070         Turkey         Istanbul Airport               PMI  
+13      122496          Spain                   Malaga               PMI  
+14       52735         Sweden        Stockholm Arlanda               JTI  
+15       44309          Aruba               Oranjestad               BAT  
+16      100981       Bulgaria                    Sofia    KING'S TOBACCO  
+17       46015        Ireland                   Dublin               JTI  
+18      103132           Oman                  Salalah               PMI  
+19       91239  Great Britain           London Gatwick               JTI  
+
+Insights and Observations:
+ - No missing values detected.
+ - Data appears to be structured and analyzable.
+
+================================================================================
+
+File: clusters.csv
+--------------------------------------------------------------------------------
+Number of rows: 82885
+Number of columns: 6
+
+Column Names and Data Types:
+Year              int64
+IATA             object
+Market           object
+AIRPORT_NAME     object
+Nationality      object
+Pax             float64
+dtype: object
+
+Missing Values per Column:
+Year                0
+IATA                0
+Market          10967
+AIRPORT_NAME        0
+Nationality         0
+Pax                 0
+dtype: int64
+
+Basic Statistics:
+           Year   IATA Market                         AIRPORT_NAME  \
+count   82885.0  82885  71918                                82885   
+unique      NaN   1087    181                                 1085   
+top         NaN    JFK  Italy  EuroAirport Basel-Mulhouse-Freiburg   
+freq        NaN    195   3947                                  229   
+mean     2024.0    NaN    NaN                                  NaN   
+std         0.0    NaN    NaN                                  NaN   
+min      2024.0    NaN    NaN                                  NaN   
+25%      2024.0    NaN    NaN                                  NaN   
+50%      2024.0    NaN    NaN                                  NaN   
+75%      2024.0    NaN    NaN                                  NaN   
+max      2024.0    NaN    NaN                                  NaN   
+
+       Nationality           Pax  
+count        82885  8.288500e+04  
+unique         231           NaN  
+top          China           NaN  
+freq           879           NaN  
+mean           NaN  2.361033e+04  
+std            NaN  2.864880e+05  
+min            NaN  1.000000e+00  
+25%            NaN  1.700000e+01  
+50%            NaN  8.900000e+01  
+75%            NaN  9.060000e+02  
+max            NaN  2.221635e+07  
+
+Sample Data (first 20 rows):
+    Year IATA         Market  \
+0   2024  CMB      Sri Lanka   
+1   2024  ZTH         Greece   
+2   2024  MAD          Spain   
+3   2024  KSC       Slovakia   
+4   2024  OLB          Italy   
+5   2024  ABJ    Ivory Coast   
+6   2024  MHD           Iran   
+7   2024  STN  Great Britain   
+8   2024  DJE        Tunisia   
+9   2024  OTP        Romania   
+10  2024  LCY  Great Britain   
+11  2024  VVI        Bolivia   
+12  2024  HAK          China   
+13  2024  YUL         Canada   
+14  2024  CAY  French Guyana   
+15  2024  POA         Brazil   
+16  2024  FDH        Germany   
+17  2024  MGQ        Somalia   
+18  2024  LGW  Great Britain   
+19  2024  MZT         Mexico   
+
+                                         AIRPORT_NAME      Nationality  \
+0                           Bandaranaike Intl Airport        Sri Lanka   
+1         Zakynthos Intl Airport, "Dionysios Solomos"           Angola   
+2                              Madrid-Barajas Airport         Slovakia   
+3                                 KoSice Intl Airport        Argentina   
+4                      Olbia - Costa Smeralda Airport          Uruguay   
+5                                  Port Bouet Airport           Guinea   
+6   Mashhad Intl Airport (Shahid Hashemi Nejad Air...   United Kingdom   
+7                             London Stansted Airport          Ukraine   
+8                          Djerba-Zarzis Intl Airport  Dem. Rep. Congo   
+9                           Henri Coanda Intl Airport          Moldova   
+10                                London City Airport   Czech Republic   
+11                             Viru Viru Intl Airport            Spain   
+12                         Haikou Meilan Intl Airport           Mexico   
+13       Montreal-Pierre Elliott Trudeau Intl Airport         Pakistan   
+14                      Cayenne - Felix Eboue Airport         Portugal   
+15                         Salgado Filho Intl Airport           France   
+16         Friedrichshafen Airport (Bodensee Airport)          Albania   
+17                             Aden Adde Intl Airport          Eritrea   
+18                                    Gatwick Airport          Vietnam   
+19                 General Rafael Buelna Intl Airport           Jordan   
+
+          Pax  
+0   1643957.0  
+1        22.0  
+2      3354.0  
+3         1.0  
+4         6.0  
+5     14224.0  
+6      1040.0  
+7      4589.0  
+8        98.0  
+9     40763.0  
+10     1901.0  
+11    59629.0  
+12       56.0  
+13    10614.0  
+14      724.0  
+15        4.0  
+16        9.0  
+17       44.0  
+18     4155.0  
+19       16.0  
+
+Insights and Observations:
+ - Missing values are present in the dataset.
+ - Data appears to be structured and analyzable.
+
+================================================================================
+
+File: country_figures.csv
+--------------------------------------------------------------------------------
+Number of rows: 1332
+Number of columns: 6
+
+Column Names and Data Types:
+KFYear                 int64
+Country               object
+ADCStick             float64
+SmokingPrevelance    float64
+InboundAllowance     float64
+PurchaserRate        float64
+dtype: object
+
+Missing Values per Column:
+KFYear                  0
+Country                 0
+ADCStick             1332
+SmokingPrevelance     903
+InboundAllowance     1330
+PurchaserRate        1330
+dtype: int64
+
+Basic Statistics:
+             KFYear Country  ADCStick  SmokingPrevelance  InboundAllowance  \
+count   1332.000000    1332       0.0         429.000000               2.0   
+unique          NaN     222       NaN                NaN               NaN   
+top             NaN  Panama       NaN                NaN               NaN   
+freq            NaN       6       NaN                NaN               NaN   
+mean    2021.500000     NaN       NaN           0.251177             200.0   
+std        1.708467     NaN       NaN           0.127940               0.0   
+min     2019.000000     NaN       NaN           0.036000             200.0   
+25%     2020.000000     NaN       NaN           0.158000             200.0   
+50%     2021.500000     NaN       NaN           0.231000             200.0   
+75%     2023.000000     NaN       NaN           0.336000             200.0   
+max     2024.000000     NaN       NaN           0.718000             200.0   
+
+        PurchaserRate  
+count        2.000000  
+unique            NaN  
+top               NaN  
+freq              NaN  
+mean         0.238500  
+std          0.002121  
+min          0.237000  
+25%          0.237750  
+50%          0.238500  
+75%          0.239250  
+max          0.240000  
+
+Sample Data (first 20 rows):
+    KFYear       Country  ADCStick  SmokingPrevelance  InboundAllowance  \
+0     2023        Panama       NaN                NaN               NaN   
+1     2021    St. Helena       NaN                NaN               NaN   
+2     2024       Tunisia       NaN              0.293               NaN   
+3     2022      Anguilla       NaN                NaN               NaN   
+4     2023         Palau       NaN                NaN               NaN   
+5     2021      Dominica       NaN                NaN               NaN   
+6     2019        Brazil       NaN              0.168               NaN   
+7     2024        Brazil       NaN              0.170               NaN   
+8     2021     Swaziland       NaN                NaN               NaN   
+9     2023  Bosnia-Herz.       NaN              0.412               NaN   
+10    2021         Kenya       NaN                NaN               NaN   
+11    2022     Lithuania       NaN              0.239               NaN   
+12    2024  Falkland Is.       NaN                NaN               NaN   
+13    2022      Tanzania       NaN                NaN               NaN   
+14    2021        Bhutan       NaN                NaN               NaN   
+15    2024        Panama       NaN                NaN               NaN   
+16    2022         Syria       NaN                NaN               NaN   
+17    2024          Niue       NaN                NaN               NaN   
+18    2021      Djibouti       NaN                NaN               NaN   
+19    2023       Reunion       NaN              0.263               NaN   
+
+    PurchaserRate  
+0             NaN  
+1             NaN  
+2             NaN  
+3             NaN  
+4             NaN  
+5             NaN  
+6             NaN  
+7             NaN  
+8             NaN  
+9             NaN  
+10            NaN  
+11            NaN  
+12            NaN  
+13            NaN  
+14            NaN  
+15            NaN  
+16            NaN  
+17            NaN  
+18            NaN  
+19            NaN  
+
+Insights and Observations:
+ - Missing values are present in the dataset.
+ - Data appears to be structured and analyzable.
+
+================================================================================
+
+File: DF_Vol_data_cleared.csv
+--------------------------------------------------------------------------------
+Number of rows: 8084
+Number of columns: 8
+
+Column Names and Data Types:
+Year                int64
+DF_Market          object
+Location           object
+TMO                object
+CR_BrandId          int64
+SKU                object
+Item per Bundle     int64
+Volume              int64
+dtype: object
+
+Missing Values per Column:
+Year               0
+DF_Market          0
+Location           0
+TMO                0
+CR_BrandId         0
+SKU                0
+Item per Bundle    0
+Volume             0
+dtype: int64
+
+Basic Statistics:
+          Year DF_Market               Location   TMO     CR_BrandId  \
+count   8084.0      8084                   8084  8084    8084.000000   
+unique     NaN       134                    520     1            NaN   
+top        NaN    Turkey  Istanbul Asia Airport   PMI            NaN   
+freq       NaN      1316                     90  8084            NaN   
+mean    2024.0       NaN                    NaN   NaN  120306.042058   
+std        0.0       NaN                    NaN   NaN   17169.640923   
+min     2024.0       NaN                    NaN   NaN   40680.000000   
+25%     2024.0       NaN                    NaN   NaN  118850.250000   
+50%     2024.0       NaN                    NaN   NaN  123091.000000   
+75%     2024.0       NaN                    NaN   NaN  125450.000000   
+max     2024.0       NaN                    NaN   NaN  157067.000000   
+
+                                                      SKU  Item per Bundle  \
+count                                                8084      8084.000000   
+unique                                               1054              NaN   
+top     L&M - BLUE LABEL (5.0 CWB) KS RCB - GENERIC DF...              NaN   
+freq                                                   96              NaN   
+mean                                                  NaN       282.449283   
+std                                                   NaN       142.976396   
+min                                                   NaN       100.000000   
+25%                                                   NaN       200.000000   
+50%                                                   NaN       200.000000   
+75%                                                   NaN       400.000000   
+max                                                   NaN       600.000000   
+
+              Volume  
+count   8.084000e+03  
+unique           NaN  
+top              NaN  
+freq             NaN  
+mean    8.629856e+05  
+std     2.714812e+06  
+min     9.400000e+01  
+25%     2.399275e+04  
+50%     1.176425e+05  
+75%     5.406000e+05  
+max     6.086040e+07  
+
+Sample Data (first 20 rows):
+    Year             DF_Market                      Location  TMO  CR_BrandId  \
+0   2024               Germany                       Hamburg  PMI      125532   
+1   2024                Turkey                Samsun Airport  PMI       94143   
+2   2024    Saint Marteen (NL)  St. Maarten Princess Juliana  PMI      125840   
+3   2024                Turkey             Gaziantep Airport  PMI       70907   
+4   2024       Caribbean Other      Basseterre (Saint Kitts)  PMI      125837   
+5   2024                 Japan                       Chitose  PMI      114605   
+6   2024  United Arab Emirates                       Sharjah  PMI      120075   
+7   2024                Turkey                Ankara Airport  PMI       70907   
+8   2024                Turkey                Samsun Airport  PMI       42446   
+9   2024                 Japan                Tokyo - Haneda  PMI      119099   
+10  2024                Turkey                 Konya Airport  PMI       94143   
+11  2024              Colombia                        Bogota  PMI      124032   
+12  2024           South Korea     Busan - Kimhae (downtown)  PMI      122718   
+13  2024                 Japan                       Chitose  PMI      119099   
+14  2024               Tunisia                      Monastir  PMI      157067   
+15  2024                France       Paris Charles De Gaulle  PMI      121200   
+16  2024                Brazil                Belo Horizonte  PMI      125841   
+17  2024                Poland                      Szczecin  PMI      144363   
+18  2024                  Peru                          Lima  PMI      139312   
+19  2024         Great Britain                Leeds Bradford  PMI      122747   
+
+                                                  SKU  Item per Bundle  \
+0   MARLBORO - RED 3.5 KS BOX - ENGLISH GHW TPD2 D...              200   
+1         MARLBORO - (RED FWD) KS BOX 400 - TURKEY DF              400   
+2   MARLBORO - RED 3.5 KS BOX 600 SPECIAL OUTER - ...              600   
+3   PARLIAMENT - AQUA BLUE KS RCB 600 WHITE - TURK...              600   
+4      MARLBORO - RED 3.5 KS BOX - GENERIC DF-ENG TXT              200   
+5   MARLBORO - MENTHOL 8 MENTHOL KS BOX WHITE - JA...              200   
+6   MARLBORO - DOUBLE MIX MIX KS RCS C JUMBO RC WH...              200   
+7   PARLIAMENT - AQUA BLUE KS RCB 600 WHITE - TURK...              600   
+8                 L&M - BLUE LABEL KS RCB - TURKEY DF              200   
+9   MARLBORO - ICE BLAST MEGA 5 MENTHOL KS BOX C W...              200   
+10        MARLBORO - (RED FWD) KS BOX 400 - TURKEY DF              400   
+11  CHESTERFIELD - ORIGINAL (4.0) KS BOX - GENERIC...              200   
+12      MARLBORO - GOLD (3.5) KS RCB WHITE - KOREA DF              200   
+13  MARLBORO - ICE BLAST MEGA 5 MENTHOL KS BOX C W...              200   
+14  L&M - DOUBLE FORWARD MENTHOL KS RCB C WHITE - ...              200   
+15  PHILIP MORRIS - BLEUE KS BOX - FRANCE DF GHW-F...              200   
+16  MARLBORO - RED 3.5 KS BOX 400 - GENERIC DF-ENG...              400   
+17  CHESTERFIELD - ORIGINAL (4.0) KS BOX - ENGLISH...              200   
+18  MARLBORO - SILVER BLUE (3.5) KS RCB WHITE - GE...              200   
+19  MARLBORO - (RED FWD) KS RCB 400 TRANSPARENT BU...              400   
+
+     Volume  
+0    242800  
+1    410800  
+2    949175  
+3    261000  
+4      5200  
+5     78000  
+6    967400  
+7   1670400  
+8     56600  
+9   1190600  
+10   123200  
+11    94400  
+12  1712000  
+13    78600  
+14    25200  
+15   663200  
+16    54000  
+17    13940  
+18   200600  
+19    52000  
+
+Insights and Observations:
+ - No missing values detected.
+ - Data appears to be structured and analyzable.
+
+================================================================================
+
+File: DF_Vol_data.csv
+--------------------------------------------------------------------------------
+Number of rows: 23505
+Number of columns: 8
+
+Column Names and Data Types:
+Year                int64
+DF_Market          object
+Location           object
+TMO                object
+CR_BrandId          int64
+SKU                object
+Item per Bundle     int64
+Volume              int64
+dtype: object
+
+Missing Values per Column:
+Year               0
+DF_Market          0
+Location           0
+TMO                0
+CR_BrandId         0
+SKU                0
+Item per Bundle    0
+Volume             0
+dtype: int64
+
+Basic Statistics:
+           Year DF_Market       Location    TMO     CR_BrandId        SKU  \
+count   23505.0     23505          23505  23505   23505.000000      23505   
+unique      NaN       133            512     34            NaN       2015   
+top         NaN     China  Izmir Airport    PMI            NaN  UNDEFINED   
+freq        NaN      3175            262   7370            NaN        586   
+mean     2024.0       NaN            NaN    NaN   78199.645182        NaN   
+std         0.0       NaN            NaN    NaN   36347.294720        NaN   
+min      2024.0       NaN            NaN    NaN       0.000000        NaN   
+25%      2024.0       NaN            NaN    NaN   46853.000000        NaN   
+50%      2024.0       NaN            NaN    NaN   58605.000000        NaN   
+75%      2024.0       NaN            NaN    NaN  119100.000000        NaN   
+max      2024.0       NaN            NaN    NaN  158374.000000        NaN   
+
+        Item per Bundle        Volume  
+count      23505.000000  2.350500e+04  
+unique              NaN           NaN  
+top                 NaN           NaN  
+freq                NaN           NaN  
+mean         268.170389  6.395111e+05  
+std          140.247662  3.450957e+06  
+min            0.000000  1.000000e+00  
+25%          200.000000  1.200000e+04  
+50%          200.000000  6.670400e+04  
+75%          400.000000  3.120000e+05  
+max         1000.000000  2.478810e+08  
+
+Sample Data (first 20 rows):
+    Year             DF_Market               Location               TMO  \
+0   2024               Bahrain                 Manama               PMI   
+1   2024                  Peru                   Lima               PMI   
+2   2024                 Japan                  Chubu               JTI   
+3   2024           Switzerland                 Zurich               JTI   
+4   2024            Uzbekistan               Tashkent               PMI   
+5   2024                 Spain                 Gerona               BAT   
+6   2024               Morocco             Ouarzazate               JTI   
+7   2024                Turkey          Konya Airport               BAT   
+8   2024  United Arab Emirates                Sharjah               JTI   
+9   2024                 China        Wenzhou Longwan  NANYANG BROTHERS   
+10  2024                 China                Beijing               JTI   
+11  2024               Morocco                    Fes               PMI   
+12  2024                Brazil  Sao Paulo - Guarulhos               PMI   
+13  2024                 Italy                 Venice               JTI   
+14  2024        Canary Islands              Lanzarote               PMI   
+15  2024         Great Britain               Aberdeen   IMPERIAL BRANDS   
+16  2024                Brazil  Sao Paulo - Guarulhos               BAT   
+17  2024               Jamaica            Montego Bay               PMI   
+18  2024    Dominican Republic        Samana El Catey               PMI   
+19  2024                Poland                 Warsaw               JTI   
+
+    CR_BrandId                                                SKU  \
+0       114978  MARLBORO - DOUBLE ICE KS RCS 600 C SPECIAL OUT...   
+1       139312  MARLBORO - SILVER BLUE (3.5) KS RCB WHITE - GE...   
+2        46303                              SEVEN STARS - KS SOFT   
+3        49844                            CAMEL - (YELLOW) KS BOX   
+4       114553  MARLBORO - (GOLD 3.0) KS RCB - CES-EE-CA DF-EN...   
+5        57357                         LUCKY STRIKE - BLUE KS BOX   
+6        88440                              CAMEL - FILTER KS BOX   
+7       106878                      KENT - SPARK NAVY BLUE KS RCB   
+8        54088                              WINSTON - BLUE KS BOX   
+9       103412             DOUBLE HAPPINESS - DELUXE (RED) KS BOX   
+10       49692                                    SALEM - KS SOFT   
+11      123639  L&M - BLUE LABEL (5.0 CWB) KS RCB - GENERIC DF...   
+12      139305  MARLBORO - GOLD (3.5) KS RCB - GENERIC DF-ENG ...   
+13       54087                           WINSTON - CLASSIC KS BOX   
+14      125678  MARLBORO - RED 3.5 KS BOX - CANARY ISLANDS DF ...   
+15       96896                     LAMBERT & BUTLER - BLUE KS BOX   
+16      106878                      KENT - SPARK NAVY BLUE KS RCB   
+17      139305  MARLBORO - GOLD (3.5) KS RCB - GENERIC DF-ENG ...   
+18      139307  MARLBORO - GOLD (3.5) KS RCB 600 SPECIAL OUTER...   
+19       49844                            CAMEL - (YELLOW) KS BOX   
+
+    Item per Bundle   Volume  
+0               600  1350000  
+1               200   133800  
+2               200  4795200  
+3               600   113400  
+4               200   517540  
+5               200     6200  
+6               600    61776  
+7               200     1200  
+8               200   202200  
+9               200    93170  
+10              200  1759034  
+11              200   202000  
+12              200  1159000  
+13              200    50600  
+14              200  4346800  
+15              600    79800  
+16              200    84400  
+17              200   478470  
+18              600    35400  
+19              200   166000  
+
+Insights and Observations:
+ - No missing values detected.
+ - Data appears to be structured and analyzable.
+
+================================================================================
+
+File: df_vols_query.csv
+--------------------------------------------------------------------------------
+Number of rows: 32937
+Number of columns: 16
+
+Column Names and Data Types:
+DF_Market           object
+Location            object
+TMO                 object
+Brand Family        object
+CR_BrandId           int64
+SKU                 object
+Item per Bundle      int64
+2022 Volume          int64
+2023 Volume          int64
+2024 Volume          int64
+2022Month            int64
+2023Month            int64
+2024Month            int64
+2022 Revenue       float64
+2023 Revenue       float64
+2024 Revenue       float64
+dtype: object
+
+Missing Values per Column:
+DF_Market            0
+Location             0
+TMO                  0
+Brand Family         0
+CR_BrandId           0
+SKU                  0
+Item per Bundle      0
+2022 Volume          0
+2023 Volume          0
+2024 Volume          0
+2022Month            0
+2023Month            0
+2024Month            0
+2022 Revenue       210
+2023 Revenue        22
+2024 Revenue       118
+dtype: int64
+
+Basic Statistics:
+       DF_Market               Location    TMO Brand Family     CR_BrandId  \
+count      32937                  32937  32937        32937   32937.000000   
+unique       144                    566     39          205            NaN   
+top       Turkey  Istanbul Asia Airport    PMI     MARLBORO            NaN   
+freq        4038                    370  10684         7285            NaN   
+mean         NaN                    NaN    NaN          NaN   77793.902723   
+std          NaN                    NaN    NaN          NaN   35161.913790   
+min          NaN                    NaN    NaN          NaN       0.000000   
+25%          NaN                    NaN    NaN          NaN   47113.000000   
+50%          NaN                    NaN    NaN          NaN   59257.000000   
+75%          NaN                    NaN    NaN          NaN  114357.000000   
+max          NaN                    NaN    NaN          NaN  158374.000000   
+
+              SKU  Item per Bundle   2022 Volume   2023 Volume   2024 Volume  \
+count       32937     32937.000000  3.293700e+04  3.293700e+04  3.293700e+04   
+unique       2561              NaN           NaN           NaN           NaN   
+top     UNDEFINED              NaN           NaN           NaN           NaN   
+freq          773              NaN           NaN           NaN           NaN   
+mean          NaN       275.730728  2.711731e+05  3.991543e+05  4.296896e+05   
+std           NaN       347.502894  1.404753e+06  2.318666e+06  2.853078e+06   
+min           NaN         0.000000  0.000000e+00  0.000000e+00  0.000000e+00   
+25%           NaN       200.000000  0.000000e+00  0.000000e+00  0.000000e+00   
+50%           NaN       200.000000  7.600000e+03  1.540000e+04  1.620000e+04   
+75%           NaN       400.000000  9.780000e+04  1.432000e+05  1.532000e+05   
+max           NaN     10000.000000  7.061480e+07  1.537783e+08  2.467516e+08   
+
+           2022Month     2023Month     2024Month  2022 Revenue  2023 Revenue  \
+count   32937.000000  32937.000000  32937.000000  3.272700e+04  3.291500e+04   
+unique           NaN           NaN           NaN           NaN           NaN   
+top              NaN           NaN           NaN           NaN           NaN   
+freq             NaN           NaN           NaN           NaN           NaN   
+mean        4.087257      5.018885      4.960561  1.627401e+05  2.737325e+06   
+std         4.600124      4.998719      4.803390  1.618594e+06  8.953029e+07   
+min         0.000000      0.000000      0.000000  0.000000e+00  0.000000e+00   
+25%         0.000000      0.000000      0.000000  0.000000e+00  0.000000e+00   
+50%         2.000000      3.000000      4.000000  8.618438e+02  3.040000e+03   
+75%         8.000000     11.000000     11.000000  1.789244e+04  3.626399e+04   
+max        12.000000     12.000000     12.000000  9.106650e+07  9.342806e+09   
+
+        2024 Revenue  
+count   3.281900e+04  
+unique           NaN  
+top              NaN  
+freq             NaN  
+mean    3.495758e+06  
+std     1.052786e+08  
+min     0.000000e+00  
+25%     0.000000e+00  
+50%     3.196800e+03  
+75%     4.036348e+04  
+max     9.179545e+09  
+
+Sample Data (first 20 rows):
+               DF_Market                 Location              TMO  \
+0                 Turkey            Konya Airport              BAT   
+1                 France  Paris Charles De Gaulle              PMI   
+2                  China             Hohhot Baita              BAT   
+3              Indonesia               Ngurah Rai              JTI   
+4          Great Britain               Manchester              JTI   
+5                 Poland                   Warsaw              PMI   
+6            South Korea                  Incheon           KT & G   
+7   United Arab Emirates                    Dubai              JTI   
+8                Morocco                Marrakech              BAT   
+9                Morocco                  Tangier  IMPERIAL BRANDS   
+10          Saudi Arabia                   DAMMAM              PMI   
+11                Turkey            Izmir Airport              JTI   
+12                 Japan                  Chitose              PMI   
+13                 Japan                  Komatsu              BAT   
+14         Great Britain               Manchester              JTI   
+15                 Japan           Osaka - Kansai              PMI   
+16          Saudi Arabia                   Jeddah              JTI   
+17               Germany                 Hannover              PMI   
+18           South Korea                  Incheon           KT & G   
+19             Indonesia               Ngurah Rai   CHINA NATIONAL   
+
+    Brand Family  CR_BrandId  \
+0           KENT       62490   
+1       MARLBORO      122774   
+2   LUCKY STRIKE       51260   
+3    SEVEN STARS       37891   
+4       SILK CUT       45375   
+5       MARLBORO      120910   
+6           ESSE      107108   
+7        WINSTON      118895   
+8   LUCKY STRIKE       51260   
+9       DAVIDOFF       70865   
+10    PARLIAMENT      125064   
+11       WINSTON       54448   
+12    PARLIAMENT       97144   
+13     UNDEFINED           0   
+14      STERLING       91239   
+15      MARLBORO      122726   
+16       WINSTON       54087   
+17           L&M      125729   
+18          ESSE      125779   
+19       YUN YAN      103389   
+
+                                                  SKU  Item per Bundle  \
+0                              KENT - SWITCH KS RCB C              200   
+1   MARLBORO - (RED FWD) KS BOX 600 SPECIAL OUTER ...              600   
+2                  LUCKY STRIKE - ORIGINAL RED KS BOX              200   
+3                                         SEVEN STARS              200   
+4                            SILK CUT - PURPLE KS BOX              200   
+5   MARLBORO - (RED FWD) KS BOX - ENGLISH GHW TPD2...              200   
+6            ESSE - ROYAL PALACE 100's RCB SUPERSLIMS              200   
+7                            WINSTON - BLUE LE KS BOX              200   
+8                  LUCKY STRIKE - ORIGINAL RED KS BOX              400   
+9                           DAVIDOFF - (WHITE) KS BOX              200   
+10  PARLIAMENT - AQUA BLUE KS RCS WHITE - GENERIC ...              200   
+11                           WINSTON - CLASSIC KS RCB              200   
+12  PARLIAMENT - PLATINUM BLUE 100's RCB WHITE - J...              200   
+13                                          UNDEFINED                0   
+14    STERLING - SUPERKINGS MENTHOL MENTHOL 100's BOX              400   
+15  MARLBORO - DOUBLE FUSION SUMMER MENTHOL KS BOX...              200   
+16                           WINSTON - CLASSIC KS BOX              600   
+17  L&M - BLUE LABEL (5.0 CWB) KS BOX TRANSPARENT ...              200   
+18  ESSE - CHANGE GRAM 100's D-HEXAGONAL (FRONT/BA...              200   
+19                          YUN YAN - CLASSIC KS SOFT              200   
+
+    2022 Volume  2023 Volume  2024 Volume  2022Month  2023Month  2024Month  \
+0          3200        24600        10200          1          9          4   
+1       5239800      4690200      4585200         12         12         11   
+2             0          240         2755          0          0          0   
+3         22400       279000       339400          6         12         11   
+4        915400       954000       824200         12         12         11   
+5       1284600            0            0         12          0          0   
+6       1159800      3319000      5453600         12         12         11   
+7        326200       902400       995600          6         11         11   
+8        544780      1526932      1833529          9         12         11   
+9         67549        69455        50522          9         12         11   
+10            0       120800       497000          0          6         11   
+11       312600       237800            0         12         12          0   
+12         3400        65600        46200          1         12         10   
+13            0            0        67657          0          0         10   
+14      1110800       992000      1012800         12         12         11   
+15        74000      1089600      2744000         11         12         12   
+16       157200       981600       813600          3         12          7   
+17        12200            0            0          3          0          0   
+18      1837800      5090800      5404000         10         12         11   
+19         8800        37800        11800          2          6          2   
+
+    2022 Revenue  2023 Revenue  2024 Revenue  
+0         488.35  4.253120e+03  1.791950e+03  
+1     1374896.50  1.399234e+06  1.382564e+06  
+2           0.00  1.440000e+02  1.653000e+03  
+3           0.00  7.216716e+08  9.111904e+08  
+4      292928.00  3.269154e+05  3.192190e+05  
+5     1051976.00  0.000000e+00  0.000000e+00  
+6      342141.00  9.797950e+05  1.669249e+06  
+7       31021.83  9.749926e+04  1.132137e+05  
+8       73545.30  2.068993e+05  2.475264e+05  
+9       10807.84  1.128080e+04  8.237520e+03  
+10          0.00  8.395600e+04  3.554767e+05  
+11      44710.68  3.957400e+04  0.000000e+00  
+12      73780.00  1.423520e+06  1.002540e+06  
+13          0.00  0.000000e+00  0.000000e+00  
+14     227714.00  2.217207e+05  2.474710e+05  
+15    1614700.00  2.379849e+07  5.992537e+07  
+16          0.00  3.057202e+05  2.668080e+05  
+17       3287.90  0.000000e+00  0.000000e+00  
+18     273940.00  7.636200e+05  8.106000e+05  
+19          0.00  7.237919e+07  2.240700e+07  
+
+Insights and Observations:
+ - Missing values are present in the dataset.
+ - Data appears to be structured and analyzable.
+
+================================================================================
+
+File: DomesticVolumes.csv
+--------------------------------------------------------------------------------
+Number of rows: 16841
+Number of columns: 5
+
+Column Names and Data Types:
+Year        int64
+EBROMId     int64
+Market     object
+EBROM      object
+Volume      int64
+dtype: object
+
+Missing Values per Column:
+Year       0
+EBROMId    0
+Market     0
+EBROM      0
+Volume     0
+dtype: int64
+
+Basic Statistics:
+           Year       EBROMId  Market                           EBROM  \
+count   16841.0  1.684100e+04   16841                           16841   
+unique      NaN           NaN     175                           12200   
+top         NaN           NaN  Russia  MARLBORO RED 3.5 KS BOX 20 (-)   
+freq        NaN           NaN    1273                              61   
+mean     2024.0  5.815087e+07     NaN                             NaN   
+std         0.0  4.050856e+06     NaN                             NaN   
+min      2024.0  5.000004e+07     NaN                             NaN   
+25%      2024.0  6.005716e+07     NaN                             NaN   
+50%      2024.0  6.016534e+07     NaN                             NaN   
+75%      2024.0  6.021267e+07     NaN                             NaN   
+max      2024.0  6.028070e+07     NaN                             NaN   
+
+              Volume  
+count   1.684100e+04  
+unique           NaN  
+top              NaN  
+freq             NaN  
+mean    2.239697e+05  
+std     3.370669e+06  
+min     1.000000e+00  
+25%     1.517000e+03  
+50%     1.172300e+04  
+75%     5.675100e+04  
+max     1.921738e+08  
+
+Sample Data (first 20 rows):
+    Year   EBROMId               Market  \
+0   2024  50031761       Czech Republic   
+1   2024  50066321              Germany   
+2   2024  60192417      Slovak Republic   
+3   2024  60129773               Russia   
+4   2024  50049618       Turkish Cyprus   
+5   2024  60038682              Bahrain   
+6   2024  60078747              Romania   
+7   2024  60235315      Slovak Republic   
+8   2024  60130298  Other South Pacific   
+9   2024  60118459                  UAE   
+10  2024  60207691             Portugal   
+11  2024  50039681               Serbia   
+12  2024  50069084      North Macedonia   
+13  2024  60235956               Serbia   
+14  2024  60233690               Poland   
+15  2024  60199466              Finland   
+16  2024  60213056              Albania   
+17  2024  60214403       Bosnia & Herz.   
+18  2024  60212650               Canada   
+19  2024  60272076               Russia   
+
+                                           EBROM  Volume  
+0         GAULOISES BLONDES (BLUE) KS BOX 20 (-)   12079  
+1          JOHN PLAYER SPECIAL RED KS BOX 20 (-)  322016  
+2        L&M BLUE LABEL (5.0 CWB) 100 RCB 20 (-)  116583  
+3                      P&S (WHITE) KS RCB 20 (-)    3460  
+4            JOHN PLAYER GOLD LEAF KS BOX 20 (-)   14517  
+5                      WINSTON ONE KS RCB 20 (-)    9344  
+6           BENSON & HEDGES BLACK 100 BOX 20 (-)     927  
+7                MARLBORO RED 3.5 100 BOX 20 (-)   17932  
+8       PETER JACKSON HYBRIDSI MNT KS BOX 20 (-)     760  
+9                  BON MENTHOL MNT KS BOX 20 (-)     318  
+10            CAMEL ACTIVATE WHITE KS CUR 20 (-)   85027  
+11         SOBRANIE BLACK RUSSIAN 100 SHO 20 (-)   23704  
+12                    WINSTON BLUE KS RCB 20 (-)   63806  
+13    SOBRANIE COLLECTION BLUE KS DSP 20 SLI (-)    8578  
+14                MARLBORO RED 3.5 KS BOB 22 (-)   41212  
+15                   PALL MALL RED KS BOX 24 (-)   17459  
+16             PHILIP MORRIS WHITE KS RCB 20 (-)    2441  
+17  LUCKY STRIKE AMBER RESIZED KS RCB 20 SLI (-)   40087  
+18          BENSON & HEDGES UNISON KS S&S 20 (-)    3584  
+19          MILANO LAS VEGAS NIGHT KS RCB 20 (-)    1825  
+
+Insights and Observations:
+ - No missing values detected.
+ - Data appears to be structured and analyzable.
+
+================================================================================
+
+File: iata_location_query.csv
+--------------------------------------------------------------------------------
+Number of rows: 1011
+Number of columns: 2
+
+Column Names and Data Types:
+LOCATION    object
+IATA        object
+dtype: object
+
+Missing Values per Column:
+LOCATION      0
+IATA        250
+dtype: int64
+
+Basic Statistics:
+                 LOCATION IATA
+count                1011  761
+unique                950  742
+top     Stockholm Arlanda  PEK
+freq                    2    3
+
+Sample Data (first 20 rows):
+                      LOCATION IATA
+0   Santo Domingo Las Americas  SDQ
+1                         Muan  MWX
+2                       Zurich  ZRH
+3                         Lviv  LWO
+4   Asuncion Silvio Petterossi  ASU
+5                        Aland  NaN
+6              Ukraine/Belarus  NaN
+7                    Trondheim  TRD
+8                       Cairns  CNS
+9                     Damascus  DAM
+10                      Gerona  GRO
+11                   Frankfurt  FRA
+12                    Brisbane  BNE
+13                Fredrikshavn  NaN
+14                      Juanda  SUB
+15                 Marsa Aalam  MUH
+16                    Min Vody  MRV
+17           Munster-Osnabruck  FMO
+18                     Norwich  NWI
+19                      Zagreb  ZAG
+
+Insights and Observations:
+ - Missing values are present in the dataset.
+ - Data appears to be structured and analyzable.
+
+================================================================================
+
+File: Market_Summary_Comp.csv
+--------------------------------------------------------------------------------
+Number of rows: 6057
+Number of columns: 10
+
+Column Names and Data Types:
+DF_Market        object
+Location         object
+TMO              object
+Flavor           object
+Taste            object
+Thickness        object
+Length           object
+Comp_Seg_SKU      int64
+Comp Total        int64
+SoM_Comp        float64
+dtype: object
+
+Missing Values per Column:
+DF_Market         0
+Location          0
+TMO               0
+Flavor          598
+Taste           598
+Thickness       598
+Length          598
+Comp_Seg_SKU      0
+Comp Total        0
+SoM_Comp          0
+dtype: int64
+
+Basic Statistics:
+       DF_Market Location   TMO   Flavor        Taste Thickness Length  \
+count       6057     6057  6057     5459         5459      5459   5459   
+unique       119      486    33        4            4         3      4   
+top        China    Dubai   JTI  Regular  Full Flavor       STD     KS   
+freq        1092       66  1657     4040         2972      4063   3562   
+mean         NaN      NaN   NaN      NaN          NaN       NaN    NaN   
+std          NaN      NaN   NaN      NaN          NaN       NaN    NaN   
+min          NaN      NaN   NaN      NaN          NaN       NaN    NaN   
+25%          NaN      NaN   NaN      NaN          NaN       NaN    NaN   
+50%          NaN      NaN   NaN      NaN          NaN       NaN    NaN   
+75%          NaN      NaN   NaN      NaN          NaN       NaN    NaN   
+max          NaN      NaN   NaN      NaN          NaN       NaN    NaN   
+
+        Comp_Seg_SKU    Comp Total     SoM_Comp  
+count    6057.000000  6.057000e+03  6057.000000  
+unique           NaN           NaN          NaN  
+top              NaN           NaN          NaN  
+freq             NaN           NaN          NaN  
+mean        2.208519  3.995383e+08     1.961037  
+std         2.801315  2.323049e+09     7.652425  
+min         1.000000  1.000000e+00     0.000000  
+25%         1.000000  1.670400e+06     0.000000  
+50%         1.000000  1.443520e+07     0.000000  
+75%         2.000000  1.079610e+08     0.400000  
+max        37.000000  8.589572e+10   100.000000  
+
+Sample Data (first 20 rows):
+        DF_Market               Location                   TMO    Flavor  \
+0    Saudi Arabia                 RIYADH                   JTI   Regular   
+1     South Korea         Busan - Kimhae                KT & G  NTD Caps   
+2          Brazil  Sao Paulo - Guarulhos                   BAT   Regular   
+3   Great Britain             Humberside       IMPERIAL BRANDS   Regular   
+4         Germany                 Bremen       IMPERIAL BRANDS   Regular   
+5    Saudi Arabia                 RIYADH       IMPERIAL BRANDS   Regular   
+6       Indonesia             Ngurah Rai                   BAT   Regular   
+7     South Korea                  Daegu                KT & G   Regular   
+8         Tunisia                  Jerba                   JTI   Regular   
+9           China           Xiamen Gaoqi                   BAT   Regular   
+10       Bulgaria                  Sofia                   JTI   Regular   
+11        Tunisia                   Sfax                   BAT  NTD Caps   
+12          China      Hangzhou Xiaoshan                   BAT   Regular   
+13         Taiwan       Taipei - Taoyuan  TAIWAN TOBACCO & LIQ   Regular   
+14         Turkey         Bodrum Airport                   BAT   Regular   
+15         Turkey       Cukurova Airport       IMPERIAL BRANDS   Regular   
+16        Tunisia                  Tunis                   JTI   Regular   
+17    Switzerland                 Zurich                   BAT   Regular   
+18         Turkey         Bodrum Airport                   BAT   Regular   
+19         Turkey         Samsun Airport                   BAT   Regular   
+
+          Taste Thickness Length  Comp_Seg_SKU  Comp Total  SoM_Comp  
+0   Full Flavor       STD     KS             4  1574193800       3.1  
+1        Lights       STD     KS             9   740053000       0.3  
+2   Full Flavor       STD     KS            10  1584810800      15.3  
+3   Full Flavor       STD     KS             3   132961400       0.1  
+4   Full Flavor       STD     KS             3    70787000       1.0  
+5   Full Flavor       STD     KS             3  1320815400       2.6  
+6   Full Flavor       STD     KS             7  2103182000      20.8  
+7   Full Flavor       STD     KS             2    21598200       0.0  
+8   Full Flavor       STD     KS            12  3347500200       8.5  
+9   Full Flavor       STD     KS            15   488092774       0.1  
+10       Lights       STD     KS             2  2163062400      25.9  
+11  Full Flavor       STD     KS             1     3094000       0.0  
+12  Full Flavor       STD    100             1    65989280       0.0  
+13  Full Flavor       STD     KS             4  2302331418       1.4  
+14       Lights       STD     KS             2    76934000       0.0  
+15  Full Flavor       SSL    100             2    22092200       0.0  
+16  Full Flavor       STD     KS            10  9474300800      24.2  
+17  Full Flavor       SSL    100             2  2237419200       2.8  
+18  Full Flavor       STD     KS            19  1065648000       0.4  
+19  Full Flavor       STD     KS            18   236700000       0.1  
+
+Insights and Observations:
+ - Missing values are present in the dataset.
+ - Data appears to be structured and analyzable.
+
+================================================================================
+
+File: Market_Summary_PMI.csv
+--------------------------------------------------------------------------------
+Number of rows: 1662
+Number of columns: 10
+
+Column Names and Data Types:
+DF_Market       object
+Location        object
+TMO             object
+Flavor          object
+Taste           object
+Thickness       object
+Length          object
+PMI_Seg_SKU      int64
+PMI Total        int64
+SoM_PMI        float64
+dtype: object
+
+Missing Values per Column:
+DF_Market      0
+Location       0
+TMO            0
+Flavor         9
+Taste          9
+Thickness      9
+Length         9
+PMI_Seg_SKU    0
+PMI Total      0
+SoM_PMI        0
+dtype: int64
+
+Basic Statistics:
+       DF_Market Location   TMO   Flavor        Taste Thickness Length  \
+count       1662     1662  1662     1653         1653      1653   1653   
+unique       132      520     1        4            4         3      1   
+top        China    Seoul   PMI  Regular  Full Flavor       STD     KS   
+freq         149        7  1662      964         1588      1233   1653   
+mean         NaN      NaN   NaN      NaN          NaN       NaN    NaN   
+std          NaN      NaN   NaN      NaN          NaN       NaN    NaN   
+min          NaN      NaN   NaN      NaN          NaN       NaN    NaN   
+25%          NaN      NaN   NaN      NaN          NaN       NaN    NaN   
+50%          NaN      NaN   NaN      NaN          NaN       NaN    NaN   
+75%          NaN      NaN   NaN      NaN          NaN       NaN    NaN   
+max          NaN      NaN   NaN      NaN          NaN       NaN    NaN   
+
+        PMI_Seg_SKU     PMI Total      SoM_PMI  
+count   1662.000000  1.662000e+03  1662.000000  
+unique          NaN           NaN          NaN  
+top             NaN           NaN          NaN  
+freq            NaN           NaN          NaN  
+mean       4.695548  3.318356e+08     7.939832  
+std        5.905127  1.530606e+09    17.627308  
+min        1.000000  5.400000e+03     0.000000  
+25%        1.000000  4.440800e+06     0.100000  
+50%        3.000000  2.506520e+07     0.800000  
+75%        6.000000  1.370667e+08     5.400000  
+max       58.000000  3.658389e+10   100.000000  
+
+Sample Data (first 20 rows):
+               DF_Market                   Location  TMO    Flavor  \
+0                  Egypt            Sharm El Sheikh  PMI   Regular   
+1                  Egypt                Marsa Aalam  PMI  NTD Caps   
+2                  Gabon                      Gabon  PMI   Regular   
+3                  China                      Hebei  PMI   Regular   
+4                  Japan             Tokyo - Narita  PMI  NTD Caps   
+5   United Arab Emirates             Ras El Khaymah  PMI  NTD Caps   
+6                Tunisia                    Enfidha  PMI   Regular   
+7                  Japan             Osaka - Kansai  PMI   Regular   
+8            El Salvador      San Salvador Comalapa  PMI   Regular   
+9                Germany          Munster-Osnabruck  PMI   Regular   
+10                Turkey              Adana Airport  PMI   Regular   
+11              Portugal                    Madeira  PMI   Regular   
+12               Nigeria                      Lagos  PMI   Regular   
+13            Cape Verde                      Praia  PMI   Regular   
+14                Turkey            Kayseri Airport  PMI   Regular   
+15               Grenada  St. George's Point Saline  PMI   Menthol   
+16                Turkey           Cukurova Airport  PMI   Regular   
+17                Greece                     Rhodes  PMI   Regular   
+18                 China              Hefei Xinqiao  PMI  NTD Caps   
+19                Turkey     Denizli Cardak Airport  PMI  NTD Caps   
+
+          Taste Thickness Length  PMI_Seg_SKU   PMI Total  SoM_PMI  
+0   Full Flavor       STD     KS           25  1172111611      3.5  
+1   Full Flavor       STD     KS            6   217195000      0.6  
+2   Full Flavor       STD     KS            9   130113600    100.0  
+3   Full Flavor       STD     KS            5    31770900      0.4  
+4   Full Flavor       STD     KS            8  1151666400      8.4  
+5   Full Flavor       STD     KS            6    24681600      0.1  
+6   Full Flavor       STD     KS           17  1649548800      7.4  
+7   Full Flavor       STD     KS           11  1424522000     10.4  
+8   Full Flavor       STD     KS           17   539573687     41.1  
+9   Full Flavor       STD     KS            9    51442791      1.6  
+10  Full Flavor       SSL     KS            1     1948800      0.0  
+11  Full Flavor       STD     KS            4    60996600      8.5  
+12  Full Flavor       STD     KS            3    49662800     32.3  
+13  Full Flavor       STD     KS            8   283170000      4.8  
+14  Full Flavor       STD     KS           50  2533827600      1.5  
+15  Full Flavor       STD     KS            1     3203200      5.6  
+16  Full Flavor       SSL     KS            1     1402200      0.0  
+17  Full Flavor       STD     KS           13    84058200      6.5  
+18  Full Flavor       STD     KS            2     6775000      0.1  
+19  Full Flavor       STD     KS           10     8602000      0.0  
+
+Insights and Observations:
+ - Missing values are present in the dataset.
+ - Data appears to be structured and analyzable.
+
+================================================================================
+
+File: MC_per_Product_SQL.csv
+--------------------------------------------------------------------------------
+Number of rows: 10923
+Number of columns: 12
+
+Column Names and Data Types:
+DF_Market           object
+Location            object
+SKU                 object
+skuid                int64
+CR_BrandId         float64
+Item per Bundle    float64
+2022 MC            float64
+2022 NOR           float64
+2023 MC            float64
+2023 NOR           float64
+2024 MC            float64
+2024 NOR           float64
+dtype: object
+
+Missing Values per Column:
+DF_Market           0
+Location            0
+SKU                 0
+skuid               0
+CR_BrandId         27
+Item per Bundle    27
+2022 MC             0
+2022 NOR            0
+2023 MC             0
+2023 NOR            0
+2024 MC             0
+2024 NOR            0
+dtype: int64
+
+Basic Statistics:
+       DF_Market         Location  \
+count      10923            10923   
+unique       147              565   
+top       Turkey  Antalya Airport   
+freq        1500              109   
+mean         NaN              NaN   
+std          NaN              NaN   
+min          NaN              NaN   
+25%          NaN              NaN   
+50%          NaN              NaN   
+75%          NaN              NaN   
+max          NaN              NaN   
+
+                                                      SKU         skuid  \
+count                                               10923  10923.000000   
+unique                                               1344           NaN   
+top     L&M - RED LABEL (5.0 CWB) KS RCB - GENERIC DF-...           NaN   
+freq                                                  123           NaN   
+mean                                                  NaN  20454.809668   
+std                                                   NaN   2804.759571   
+min                                                   NaN      0.000000   
+25%                                                   NaN  19404.000000   
+50%                                                   NaN  21217.000000   
+75%                                                   NaN  22447.000000   
+max                                                   NaN  25272.000000   
+
+           CR_BrandId  Item per Bundle       2022 MC      2022 NOR  \
+count    10896.000000     10896.000000  1.092300e+04  1.092300e+04   
+unique            NaN              NaN           NaN           NaN   
+top               NaN              NaN           NaN           NaN   
+freq              NaN              NaN           NaN           NaN   
+mean    117295.960444       278.493025  2.050819e+04  2.387505e+04   
+std      17363.539260       140.542859  1.023701e+05  1.168735e+05   
+min      40680.000000       100.000000 -1.999740e+05 -1.969120e+05   
+25%     110716.000000       200.000000  0.000000e+00  0.000000e+00   
+50%     122595.000000       200.000000  3.024500e+02  3.734800e+02   
+75%     125051.000000       400.000000  6.911425e+03  8.297520e+03   
+max     157067.000000       600.000000  5.013721e+06  5.628000e+06   
+
+             2023 MC      2023 NOR       2024 MC      2024 NOR  
+count   1.092300e+04  1.092300e+04  1.092300e+04  1.092300e+04  
+unique           NaN           NaN           NaN           NaN  
+top              NaN           NaN           NaN           NaN  
+freq             NaN           NaN           NaN           NaN  
+mean    2.522109e+04  2.979441e+04  2.866313e+04  3.353430e+04  
+std     1.154916e+05  1.337406e+05  1.176712e+05  1.357414e+05  
+min    -7.791130e+05 -7.791130e+05 -2.007884e+04  0.000000e+00  
+25%     0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  
+50%     8.119200e+02  1.000760e+03  1.068110e+03  1.311470e+03  
+75%     9.868735e+03  1.184901e+04  1.177821e+04  1.393444e+04  
+max     5.194407e+06  5.904386e+06  3.904236e+06  4.481841e+06  
+
+Sample Data (first 20 rows):
+               DF_Market                      Location  \
+0                  Egypt               Sharm El Sheikh   
+1               Spain DP                         Ibiza   
+2                 Turkey              Istanbul Airport   
+3            South Korea                       Incheon   
+4   United Arab Emirates                     Abu Dhabi   
+5                Germany                     Frankfurt   
+6                  China                         Hebei   
+7          Great Britain               London Heathrow   
+8   United Arab Emirates                         Dubai   
+9                 Kuwait                        Kuwait   
+10                 Italy              Milan - Malpensa   
+11        Czech Republic                        Prague   
+12    Saint Marteen (NL)  St. Maarten Princess Juliana   
+13                 Spain                        Malaga   
+14                Poland                        Lublin   
+15                Turkey      Antalya Gazipasa Airport   
+16          Saudi Arabia                        Jeddah   
+17                France                        Nantes   
+18                 Italy                        Venice   
+19               Morocco                         Nador   
+
+                                                  SKU  skuid  CR_BrandId  \
+0   L&M - RED LABEL (5.0 CWB) KS RCB - GENERIC DF-...  21817    123645.0   
+1   L&M - RED LABEL (5.0 CWB) KS RCB - SPAIN DF - ...  21610    123310.0   
+2              L&M - RED LABEL KS RCB 600 - TURKEY DF  14896     87049.0   
+3   PARLIAMENT - ONE KS RCB JUMBO RC WHITE - KOREA...  20850    121941.0   
+4            L&M - SILVER LABEL KS RCB WHITE - UAE DF  20192    120009.0   
+5   MARLBORO - GOLD (3.5) KS BOX (PROMO) - ENGLISH...  23070    137262.0   
+6   MARLBORO - ICE BLAST (2.0) MENTHOL KS BOX C WH...  18844    105695.0   
+7   MARLBORO - (RED FWD) KS RCB 400 TRANSPARENT BU...  21297    122747.0   
+8    MARLBORO - TOUCH 3.5 KS RCS SLIMS WHITE - UAE DF  21962    123998.0   
+9   MARLBORO - GOLD (3.5) KS RCS WHITE - GENERIC D...  21757    123515.0   
+10  PHILIP MORRIS - SELECTION BLUE KS RCB TRANSPAR...  20501    120995.0   
+11  L&M - BLUE LABEL (5.0 CWB) KS RCB - ENGLISH GH...  21830    123667.0   
+12  MARLBORO - WHITE MINT (2.0) MENTHOL KS BOX ORH...  22483    125088.0   
+13  PHILIP MORRIS - KS BOX TRANSPARENT BUNDLE - SP...  21110    122429.0   
+14  L&M - RED LABEL (5.0 CWB) KS RCB 400 TRANSPARE...  22130    124294.0   
+15   L&M - RED LABEL (5.0 CWB) KS RCB 400 - TURKEY DF  21218    122595.0   
+16  MARLBORO - GOLD (3.5) KS RCS 600 SPECIAL OUTER...  22639    125325.0   
+17  MARLBORO - GOLD (2.0 ORIGINAL) KS BOX 400 TRAN...  21806    123635.0   
+18  PHILIP MORRIS - SELECTION RED KS RCB TRANSPARE...  20502    121004.0   
+19  MARLBORO - DOUBLE FUSION PURPLE MENTHOL KS RCB...  20983    122221.0   
+
+    Item per Bundle    2022 MC   2022 NOR    2023 MC   2023 NOR    2024 MC  \
+0             200.0   11861.37   14304.65   19455.65   24093.47   13381.77   
+1             200.0    6347.63    9468.53   10754.93   15206.82   19243.61   
+2             600.0   69443.32   88786.84   67535.76   88849.35       0.00   
+3             200.0   22276.76   26096.67  217735.59  278613.10  221006.15   
+4             200.0   20002.58   22517.48      24.13      27.53       0.00   
+5             200.0       0.00       0.00   64486.38   72547.58   97898.62   
+6             200.0       0.00       0.00       0.00       0.00     696.30   
+7             400.0   63630.01   73926.15   76154.20   89680.93   86950.34   
+8             200.0  231986.87  263644.28  233936.38  268544.12  197222.69   
+9             200.0  492796.02  564898.55  397022.95  464072.72  371408.41   
+10            200.0    5740.15    7324.82    7656.26   10116.81    8804.08   
+11            200.0   72781.31   79200.37   87376.59   94761.84   83613.24   
+12            200.0       0.00       0.00    4465.03    4923.06   14642.20   
+13            200.0    2987.36    3435.34    3497.18    4039.72    4002.02   
+14            400.0    9473.41   11424.73    7423.75    8947.40   12562.77   
+15            400.0       0.00       0.00       0.00       0.00    6597.24   
+16            600.0       0.00       0.00  180060.63  205445.42  478377.02   
+17            400.0   20441.39   22859.72   26698.58   29889.93   20173.85   
+18            200.0     612.06     709.01    1043.73    1237.35     779.42   
+19            200.0      10.62      12.36    2690.60    3167.92    2541.70   
+
+     2024 NOR  
+0    16335.16  
+1    25176.22  
+2        0.00  
+3   275395.30  
+4        0.00  
+5   108771.04  
+6      950.54  
+7   100753.77  
+8   224963.90  
+9   432734.23  
+10   10866.69  
+11   91051.81  
+12   16224.04  
+13    4475.50  
+14   14648.65  
+15    7851.56  
+16  543394.50  
+17   22410.35  
+18     891.89  
+19    2984.04  
+
+Insights and Observations:
+ - Missing values are present in the dataset.
+ - Data appears to be structured and analyzable.
+
+================================================================================
+
+File: mrk_nat_map_query.csv
+--------------------------------------------------------------------------------
+Number of rows: 231
+Number of columns: 2
+
+Column Names and Data Types:
+PASSENGER_COUNTRY_NAME    object
+PASSENGER_NATIONALITY     object
+dtype: object
+
+Missing Values per Column:
+PASSENGER_COUNTRY_NAME    0
+PASSENGER_NATIONALITY     0
+dtype: int64
+
+Basic Statistics:
+       PASSENGER_COUNTRY_NAME PASSENGER_NATIONALITY
+count                     231                   231
+unique                    231                   231
+top                  Mongolia              Mongolia
+freq                        1                     1
+
+Sample Data (first 20 rows):
+   PASSENGER_COUNTRY_NAME PASSENGER_NATIONALITY
+0                Mongolia              Mongolia
+1                    Chad                  Chad
+2                   Kenya                 Kenya
+3                  Poland                Poland
+4                 Reunion               Reunion
+5             New Zealand           New Zealand
+6                  Rwanda                Rwanda
+7                  Guyana                Guyana
+8                   Nauru                 Nauru
+9           Bonaire, Saba         Bonaire, Saba
+10            El Salvador           El Salvador
+11                  China                 China
+12                   Fiji                  Fiji
+13           Sint Maarten          Sint Maarten
+14                Austria               Austria
+15                  Nepal                 Nepal
+16              Swaziland             Swaziland
+17              Hong Kong             Hong Kong
+18             Madagascar            Madagascar
+19            Afghanistan           Afghanistan
+
+Insights and Observations:
+ - No missing values detected.
+ - Data appears to be structured and analyzable.
+
+================================================================================
+
+File: Pax_Nat.csv
+--------------------------------------------------------------------------------
+Number of rows: 82265
+Number of columns: 6
+
+Column Names and Data Types:
+Year              int64
+IATA             object
+Market           object
+AIRPORT_NAME     object
+Nationality      object
+Pax             float64
+dtype: object
+
+Missing Values per Column:
+Year                0
+IATA                0
+Market          10930
+AIRPORT_NAME        0
+Nationality         0
+Pax                 0
+dtype: int64
+
+Basic Statistics:
+           Year   IATA Market                         AIRPORT_NAME  \
+count   82265.0  82265  71335                                82265   
+unique      NaN   1075    181                                 1073   
+top         NaN    JFK  Italy  EuroAirport Basel-Mulhouse-Freiburg   
+freq        NaN    193   3932                                  228   
+mean     2024.0    NaN    NaN                                  NaN   
+std         0.0    NaN    NaN                                  NaN   
+min      2024.0    NaN    NaN                                  NaN   
+25%      2024.0    NaN    NaN                                  NaN   
+50%      2024.0    NaN    NaN                                  NaN   
+75%      2024.0    NaN    NaN                                  NaN   
+max      2024.0    NaN    NaN                                  NaN   
+
+       Nationality           Pax  
+count        82265  8.226500e+04  
+unique         231           NaN  
+top          China           NaN  
+freq           875           NaN  
+mean           NaN  1.957234e+04  
+std            NaN  2.359197e+05  
+min            NaN  1.000000e+00  
+25%            NaN  1.400000e+01  
+50%            NaN  7.600000e+01  
+75%            NaN  7.600000e+02  
+max            NaN  1.818059e+07  
+
+Sample Data (first 20 rows):
+    Year IATA               Market  \
+0   2024  BGY                Italy   
+1   2024  ZNZ             Tanzania   
+2   2024  MUC              Germany   
+3   2024  GLA        Great Britain   
+4   2024  LPL        Great Britain   
+5   2024  SLL                 Oman   
+6   2024  MNL          Philippines   
+7   2024  YQB               Canada   
+8   2024  PBM             Suriname   
+9   2024  BCN                Spain   
+10  2024  PMO                Italy   
+11  2024  YYZ               Canada   
+12  2024  BDS                Italy   
+13  2024  SYD            Australia   
+14  2024  SFO                  NaN   
+15  2024  PEW             Pakistan   
+16  2024  ASB         Turkmenistan   
+17  2024  BDJ            Indonesia   
+18  2024  YTZ               Canada   
+19  2024  POS  Trinidad and Tobago   
+
+                                      AIRPORT_NAME      Nationality      Pax  
+0                       Il Caravaggio Intl Airport          Hungary  43315.0  
+1               Zanzibar Airport (Kisauni Airport)   Czech Republic     30.0  
+2   Munich Airport (succeeded Munich-Riem Airport)  S.Tome,Principe    105.0  
+3                                  Glasgow Airport           Latvia   2673.0  
+4                    Liverpool John Lennon Airport            India  22168.0  
+5                                  Salalah Airport           France    291.0  
+6     Ninoy Aquino Intl Airport / Villamor Airbase           Brazil    297.0  
+7                  Quebec/Jean Lesage Intl Airport             Oman      8.0  
+8                  Johan Adolf Pengel Intl Airport         Bulgaria     94.0  
+9                        Barcelona-El Prat Airport        Mauritius    622.0  
+10    Palermo Airport (Falcone-Borsellino Airport)            Congo    174.0  
+11                    Toronto Pearson Intl Airport           Gambia    229.0  
+12                      Brindisi - Salento Airport           France  24914.0  
+13                                  Sydney Airport   United Kingdom  80950.0  
+14                      San Francisco Intl Airport          Uruguay    348.0  
+15                                Peshawar Airport     South Africa   1901.0  
+16                           Ashgabat Intl Airport       Kazakhstan     13.0  
+17                          Syamsudin Noor Airport           Brazil      9.0  
+18               Billy Bishop Toronto City Airport        Australia    162.0  
+19                             Piarco Intl Airport        Guatemala    252.0  
+
+Insights and Observations:
+ - Missing values are present in the dataset.
+ - Data appears to be structured and analyzable.
+
+================================================================================
+
+File: SELMA_DF_map_query.csv
+--------------------------------------------------------------------------------
+Number of rows: 114923
+Number of columns: 8
+
+Column Names and Data Types:
+DF_Market           object
+Product Category    object
+Location            object
+CR_BrandId           int64
+Flavor              object
+Taste               object
+Thickness           object
+Length              object
+dtype: object
+
+Missing Values per Column:
+DF_Market           0
+Product Category    0
+Location            0
+CR_BrandId          0
+Flavor              0
+Taste               0
+Thickness           0
+Length              0
+dtype: int64
+
+Basic Statistics:
+       DF_Market Product Category Location     CR_BrandId   Flavor  \
+count     114923           114923   114923  114923.000000   114923   
+unique       156                1      663            NaN        4   
+top       Turkey       Cigarettes    Dubai            NaN  Regular   
+freq       14480           114923     5064            NaN    92557   
+mean         NaN              NaN      NaN   84990.608068      NaN   
+std          NaN              NaN      NaN   31830.003719      NaN   
+min          NaN              NaN      NaN   37186.000000      NaN   
+25%          NaN              NaN      NaN   52061.000000      NaN   
+50%          NaN              NaN      NaN   92349.000000      NaN   
+75%          NaN              NaN      NaN  114519.500000      NaN   
+max          NaN              NaN      NaN  158374.000000      NaN   
+
+              Taste Thickness  Length  
+count        114923    114923  114923  
+unique            4         3       4  
+top     Full Flavor       STD      KS  
+freq          96272     99894  101553  
+mean            NaN       NaN     NaN  
+std             NaN       NaN     NaN  
+min             NaN       NaN     NaN  
+25%             NaN       NaN     NaN  
+50%             NaN       NaN     NaN  
+75%             NaN       NaN     NaN  
+max             NaN       NaN     NaN  
+
+Sample Data (first 20 rows):
+             DF_Market Product Category                    Location  \
+0                 Peru       Cigarettes                        Lima   
+1          South Korea       Cigarettes   Busan - Kimhae (downtown)   
+2              Curazao       Cigarettes                     Curacao   
+3                Japan       Cigarettes              Tokyo - Narita   
+4              Nigeria       Cigarettes                       Lagos   
+5                Qatar       Cigarettes                        Doha   
+6          Switzerland       Cigarettes                      Zurich   
+7               Mexico       Cigarettes                 Mexico City   
+8              Ukraine       Cigarettes                        Kyiv   
+9               Turkey       Cigarettes              Bodrum Airport   
+10              Turkey       Cigarettes            Istanbul Airport   
+11              Turkey       Cigarettes       Istanbul Asia Airport   
+12  Dominican Republic       Cigarettes  Santo Domingo Las Americas   
+13               China       Cigarettes            Guangzhou Baiyun   
+14       Great Britain       Cigarettes                     Glasgow   
+15              Turkey       Cigarettes            Istanbul Airport   
+16              Russia       Cigarettes                   Astrakhan   
+17             Austria       Cigarettes                    Salzburg   
+18            Portugal       Cigarettes                       Porto   
+19             Ireland       Cigarettes                      Dublin   
+
+    CR_BrandId        Flavor        Taste Thickness Length  
+0       103413       Regular  Full Flavor       STD     KS  
+1        88576       Regular          1mg       STD     KS  
+2       102978       Regular  Full Flavor       STD     KS  
+3        95631       Regular  Full Flavor       STD     KS  
+4        42858       Regular  Ultralights       STD     KS  
+5       109421       Regular  Full Flavor       SLI     KS  
+6        51103       Regular  Full Flavor       SSL    100  
+7        58518       Menthol  Full Flavor       STD     KS  
+8        99237       Regular  Full Flavor       STD     KS  
+9        45969       Regular  Full Flavor       STD     KS  
+10       56640       Regular  Full Flavor       STD     KS  
+11       51260       Regular  Full Flavor       STD     KS  
+12      125088       Menthol  Full Flavor       STD     KS  
+13       44117       Regular  Full Flavor       STD     KS  
+14       42868       Regular  Full Flavor       STD     KS  
+15       91499       Regular  Full Flavor       STD     KS  
+16      121998  Menthol Caps  Full Flavor       STD     KS  
+17       45379       Regular  Full Flavor       STD     KS  
+18       54087       Regular  Full Flavor       STD     KS  
+19      122790       Regular  Full Flavor       STD     KS  
+
+Insights and Observations:
+ - No missing values detected.
+ - Data appears to be structured and analyzable.
+
+================================================================================
+
+File: similarity_file.csv
+--------------------------------------------------------------------------------
+Number of rows: 8536
+Number of columns: 4
+
+Column Names and Data Types:
+IATA                 object
+CLUSTER_IATA         object
+SIMILARITY_SCORE    float64
+RANK                  int64
+dtype: object
+
+Missing Values per Column:
+IATA                0
+CLUSTER_IATA        0
+SIMILARITY_SCORE    0
+RANK                0
+dtype: int64
+
+Basic Statistics:
+             IATA CLUSTER_IATA  SIMILARITY_SCORE         RANK
+count        8536         8536       8536.000000  8536.000000
+unique       2129         2121               NaN          NaN
+top     TU_036-01          TGU               NaN          NaN
+freq            7            8               NaN          NaN
+mean          NaN          NaN          0.967952     2.491448
+std           NaN          NaN          0.645727     1.121102
+min           NaN          NaN        -29.412041     1.000000
+25%           NaN          NaN          0.995496     1.000000
+50%           NaN          NaN          0.998173     2.000000
+75%           NaN          NaN          0.999229     3.000000
+max           NaN          NaN          1.000000     4.000000
+
+Sample Data (first 20 rows):
+   IATA CLUSTER_IATA  SIMILARITY_SCORE  RANK
+0   AAE          KBP          0.999947     1
+1   AAE          QSF          0.999694     2
+2   AAE          RVN          0.999337     3
+3   AAE          SZZ          0.999094     4
+4   AAL          MDT          0.999865     1
+5   AAL          GCM          0.999611     2
+6   AAL          FNT          0.999116     3
+7   AAL          WVB          0.998381     4
+8   AAN    TU_009-01          0.999874     1
+9   AAN          SDL          0.999723     2
+10  AAN    TU_037-03          0.999546     3
+11  AAN          LNK          0.999220     4
+12  AAQ          SVG          0.999680     1
+13  AAQ          GYU          0.999429     2
+14  AAQ          PNS          0.998861     3
+15  AAQ          DBV          0.997854     4
+16  AAR          NSI          0.999835     1
+17  AAR          BIS          0.999753     2
+18  AAR          GRB          0.999266     3
+19  AAR          JKH          0.998442     4
+
+Insights and Observations:
+ - No missing values detected.
+ - Data appears to be structured and analyzable.
+
+================================================================================
+
+File: sql_dom_script.csv
+--------------------------------------------------------------------------------
+Number of rows: 119733
+Number of columns: 33
+
+Column Names and Data Types:
+EBROMId                        int64
+TMO                           object
+Brand Family                  object
+EBROM_ID                       int64
+EBROM_NAME                    object
+IS_SMDL                       object
+IS_USED_IN_VP                 object
+MARKETED_BRAND_ID            float64
+MARKETED_BRAND_NAME          float64
+MARKETED_BRAND_DESC           object
+THICKNESS_CATEGORY_CODE       object
+MKT_LENGTH_CATEGORY_CODE      object
+MENTHOL_INDICATOR             object
+PACK_TYPE_CODE                object
+FILTER_INDICATOR              object
+ITEMS_PER_PACK               float64
+PRODUCT_CATEGORY_CODE         object
+PRODUCT_CATEGORY_NAME         object
+TMO_CODE                      object
+TMO_NAME                      object
+BRAND_FAMILY_CODE             object
+BRAND_FAMILY_NAME             object
+BRAND_DIFFERENTIATOR_CODE     object
+BRAND_DIFFERENTIATOR_NAME     object
+PMI_PRICE_CLASS_ID           float64
+PMI_PRICE_CLASS_DESC          object
+LOCAL_PRICE_CLASS_ID         float64
+LOCAL_PRICE_CLASS_DESC        object
+MKT_COOLING_POS_CODE          object
+MKT_COOLING_POS_DESC          object
+MARKET_CODE                   object
+MARKET_NAME                   object
+LAST_MODIFIED_DATETIME        object
+dtype: object
+
+Missing Values per Column:
+EBROMId                           0
+TMO                               0
+Brand Family                     51
+EBROM_ID                          0
+EBROM_NAME                        0
+IS_SMDL                           0
+IS_USED_IN_VP                     0
+MARKETED_BRAND_ID                51
+MARKETED_BRAND_NAME          119733
+MARKETED_BRAND_DESC              51
+THICKNESS_CATEGORY_CODE       25182
+MKT_LENGTH_CATEGORY_CODE      26660
+MENTHOL_INDICATOR             10557
+PACK_TYPE_CODE                   51
+FILTER_INDICATOR              27392
+ITEMS_PER_PACK                   51
+PRODUCT_CATEGORY_CODE             0
+PRODUCT_CATEGORY_NAME             0
+TMO_CODE                          0
+TMO_NAME                          0
+BRAND_FAMILY_CODE                51
+BRAND_FAMILY_NAME                51
+BRAND_DIFFERENTIATOR_CODE        51
+BRAND_DIFFERENTIATOR_NAME        51
+PMI_PRICE_CLASS_ID               51
+PMI_PRICE_CLASS_DESC             51
+LOCAL_PRICE_CLASS_ID             51
+LOCAL_PRICE_CLASS_DESC           51
+MKT_COOLING_POS_CODE         117096
+MKT_COOLING_POS_DESC              0
+MARKET_CODE                      51
+MARKET_NAME                      51
+LAST_MODIFIED_DATETIME            0
+dtype: int64
+
+Basic Statistics:
+             EBROMId     TMO Brand Family      EBROM_ID  \
+count   1.197330e+05  119733       119682  1.197330e+05   
+unique           NaN     463         5472           NaN   
+top              NaN     PMI     MARLBORO           NaN   
+freq             NaN   40312         8742           NaN   
+mean    5.609143e+07     NaN          NaN  5.609143e+07   
+std     4.952644e+06     NaN          NaN  4.952644e+06   
+min     5.000000e+07     NaN          NaN  5.000000e+07   
+25%     5.004610e+07     NaN          NaN  5.004610e+07   
+50%     6.005198e+07     NaN          NaN  6.005198e+07   
+75%     6.016948e+07     NaN          NaN  6.016948e+07   
+max     6.028121e+07     NaN          NaN  6.028121e+07   
+
+                    EBROM_NAME IS_SMDL IS_USED_IN_VP  MARKETED_BRAND_ID  \
+count                   119733  119733        119733       1.196820e+05   
+unique                   67972       2             2                NaN   
+top     MARLBORO KS BOX 20 (-)       Y             N                NaN   
+freq                       149  119682        111297                NaN   
+mean                       NaN     NaN           NaN       1.004553e+07   
+std                        NaN     NaN           NaN       3.348282e+04   
+min                        NaN     NaN           NaN       1.000000e+07   
+25%                        NaN     NaN           NaN       1.001131e+07   
+50%                        NaN     NaN           NaN       1.004364e+07   
+75%                        NaN     NaN           NaN       1.007870e+07   
+max                        NaN     NaN           NaN       1.010946e+07   
+
+        MARKETED_BRAND_NAME MARKETED_BRAND_DESC  ...  \
+count                   0.0              119682  ...   
+unique                  NaN               65140  ...   
+top                     NaN  PRIMA NF RS FLP 20  ...   
+freq                    NaN                 183  ...   
+mean                    NaN                 NaN  ...   
+std                     NaN                 NaN  ...   
+min                     NaN                 NaN  ...   
+25%                     NaN                 NaN  ...   
+50%                     NaN                 NaN  ...   
+75%                     NaN                 NaN  ...   
+max                     NaN                 NaN  ...   
+
+       BRAND_DIFFERENTIATOR_NAME PMI_PRICE_CLASS_ID PMI_PRICE_CLASS_DESC  \
+count                     119682      119682.000000               119682   
+unique                     13906                NaN                    6   
+top                            -                NaN              PREMIUM   
+freq                       17579                NaN                40371   
+mean                         NaN        1925.114946                  NaN   
+std                          NaN        3161.334791                  NaN   
+min                          NaN           1.000000                  NaN   
+25%                          NaN           2.000000                  NaN   
+50%                          NaN           4.000000                  NaN   
+75%                          NaN        7018.000000                  NaN   
+max                          NaN        7382.000000                  NaN   
+
+       LOCAL_PRICE_CLASS_ID LOCAL_PRICE_CLASS_DESC  MKT_COOLING_POS_CODE  \
+count         119682.000000                 119682                  2637   
+unique                  NaN                     47                    40   
+top                     NaN                PREMIUM                    MT   
+freq                    NaN                  39114                  2228   
+mean            5464.307131                    NaN                   NaN   
+std             4595.526992                    NaN                   NaN   
+min                2.000000                    NaN                   NaN   
+25%              455.000000                    NaN                   NaN   
+50%             4835.000000                    NaN                   NaN   
+75%             8767.000000                    NaN                   NaN   
+max            15175.000000                    NaN                   NaN   
+
+       MKT_COOLING_POS_DESC MARKET_CODE  MARKET_NAME   LAST_MODIFIED_DATETIME  
+count                119733      119682       119682                   119733  
+unique                    4         189          189                        4  
+top               UNDEFINED        DE04      Germany  2025-01-11 11:30:04.000  
+freq                 117217        8990         8990                   119682  
+mean                    NaN         NaN          NaN                      NaN  
+std                     NaN         NaN          NaN                      NaN  
+min                     NaN         NaN          NaN                      NaN  
+25%                     NaN         NaN          NaN                      NaN  
+50%                     NaN         NaN          NaN                      NaN  
+75%                     NaN         NaN          NaN                      NaN  
+max                     NaN         NaN          NaN                      NaN  
+
+[11 rows x 33 columns]
+
+Sample Data (first 20 rows):
+     EBROMId                   TMO    Brand Family  EBROM_ID  \
+0   50050925                   JTI         WINSTON  50050925   
+1   60185605  OTHER LOCAL TMO IND.            ORIS  60185605   
+2   60078361                   BAT       PALL MALL  60078361   
+3   50065103                   BAT            KOOL  50065103   
+4   60194099                   PMI   PHILIP MORRIS  60194099   
+5   60055767                   PMI       LONGBEACH  60055767   
+6   50071331                   JTI           ASPEN  50071331   
+7   60002823      UNSPECIFIED TMOs         BUNTING  60002823   
+8   60128341                   PMI         NICOCIG  60128341   
+9   50073172       IMPERIAL BRANDS            WEST  50073172   
+10  50010476                   JTI      MILD SEVEN  50010476   
+11  60071699                   PMI     MORVEN GOLD  60071699   
+12  60137523                   PMI        INTERVAL  60137523   
+13  50046542       IMPERIAL BRANDS         EMBASSY  50046542   
+14  50055597                   JTI              LD  50055597   
+15  60039092                   PMI  AMERICAN BLEND  60039092   
+16  50028916                   PMI    BOWLING GOLD  50028916   
+17  60076357                   JTI              LD  60076357   
+18  50036143                   PMI            NEXT  50036143   
+19  50081747  H.VAN LANDEWYCK GMBH          ELIXYR  50081747   
+
+                                  EBROM_NAME IS_SMDL IS_USED_IN_VP  \
+0        WINSTON SUBTLE SILVER KS BOX 20 (-)       Y             N   
+1       ORIS DOUBLE APPLE 100 BOX 20 SLI (-)       Y             N   
+2             PALL MALL (RED) 100 BOX 19 (-)       Y             N   
+3             KOOL (GREEN) MNT RS S&S 25 (-)       Y             N   
+4    PHILIP MORRIS VIOLET 100 DSP 20 SSL (-)       Y             N   
+5     LONGBEACH FINESSE YELLOW KS BOX 30 (-)       Y             N   
+6                 ASPEN EXPORT KS BOX 20 (-)       Y             N   
+7                    MYO BUNTING TIN 100 (-)       Y             N   
+8     KIT NICOCIG CAPS STARTER KIT OPK 6 (-)       Y             Y   
+9                  WEST LIGHTS RS BOX 20 (-)       Y             N   
+10           MILD SEVEN LIGHTS KS SOF 20 (-)       Y             N   
+11                 MORVEN GOLD KS DHX 20 (-)       Y             N   
+12  RYO INTERVAL BRUN DE BERGERAC P60 40 (-)       Y             N   
+13            EMBASSY NUMBER 1 KS BOX 20 (-)       Y             Y   
+14             LD STANDARD RED KS BOX 20 (-)       Y             N   
+15        MYO AMERICAN BLEND GOLD T02 90 (-)       Y             N   
+16         BOWLING GOLD LIGHTS KS SOF 20 (-)       Y             N   
+17    LD CLUB EXTRA (BLUE) KS DSP 20 SLI (-)       Y             N   
+18                  NEXT (RED) KS BOX 20 (-)       Y             N   
+19                  ELIXYR RED KS BOX 20 (-)       Y             N   
+
+    MARKETED_BRAND_ID  MARKETED_BRAND_NAME  \
+0          10006538.0                  NaN   
+1          10069381.0                  NaN   
+2          10033237.0                  NaN   
+3          10030266.0                  NaN   
+4          10084035.0                  NaN   
+5          10049783.0                  NaN   
+6          10024801.0                  NaN   
+7          10038335.0                  NaN   
+8          10074114.0                  NaN   
+9          10005434.0                  NaN   
+10         10005886.0                  NaN   
+11         10049365.0                  NaN   
+12         10076165.0                  NaN   
+13         10001190.0                  NaN   
+14         10023590.0                  NaN   
+15         10046079.0                  NaN   
+16         10012307.0                  NaN   
+17         10058840.0                  NaN   
+18         10010548.0                  NaN   
+19         10041461.0                  NaN   
+
+                     MARKETED_BRAND_DESC  ... BRAND_DIFFERENTIATOR_NAME  \
+0        WINSTON SUBTLE SILVER KS BOX 20  ...             SUBTLE SILVER   
+1       ORIS DOUBLE APPLE 100 BOX 20 SLI  ...              DOUBLE APPLE   
+2             PALL MALL (RED) 100 BOX 19  ...                     (RED)   
+3             KOOL (GREEN) MNT RS S&S 25  ...                   (GREEN)   
+4    PHILIP MORRIS VIOLET 100 DSP 20 SSL  ...                    VIOLET   
+5     LONGBEACH FINESSE YELLOW KS BOX 30  ...            FINESSE YELLOW   
+6                 ASPEN EXPORT KS BOX 20  ...                    EXPORT   
+7                    MYO BUNTING TIN 100  ...                         -   
+8     KIT NICOCIG CAPS STARTER KIT OPK 6  ...          CAPS STARTER KIT   
+9                  WEST LIGHTS RS BOX 20  ...                    LIGHTS   
+10           MILD SEVEN LIGHTS KS SOF 20  ...                    LIGHTS   
+11                 MORVEN GOLD KS DHX 20  ...                         -   
+12  RYO INTERVAL BRUN DE BERGERAC P60 40  ...          BRUN DE BERGERAC   
+13            EMBASSY NUMBER 1 KS BOX 20  ...                  NUMBER 1   
+14             LD STANDARD RED KS BOX 20  ...              STANDARD RED   
+15        MYO AMERICAN BLEND GOLD T02 90  ...                      GOLD   
+16         BOWLING GOLD LIGHTS KS SOF 20  ...                    LIGHTS   
+17    LD CLUB EXTRA (BLUE) KS DSP 20 SLI  ...         CLUB EXTRA (BLUE)   
+18                  NEXT (RED) KS BOX 20  ...                     (RED)   
+19                  ELIXYR RED KS BOX 20  ...                       RED   
+
+   PMI_PRICE_CLASS_ID PMI_PRICE_CLASS_DESC LOCAL_PRICE_CLASS_ID  \
+0                 4.0               MEDIUM               5243.0   
+1                 4.0               MEDIUM               2929.0   
+2                 5.0                  LOW               7626.0   
+3                 3.0        ABOVE PREMIUM               8524.0   
+4                 5.0                  LOW               5245.0   
+5                 5.0                  LOW               2263.0   
+6                 4.0               MEDIUM              12732.0   
+7              7018.0            SUPER LOW               7105.0   
+8              7127.0              PREMIUM               8601.0   
+9                 2.0              PREMIUM               3227.0   
+10                2.0              PREMIUM               7932.0   
+11                5.0                  LOW                105.0   
+12             7027.0               MEDIUM               7212.0   
+13                2.0              PREMIUM                246.0   
+14                1.0            SUPER LOW               2878.0   
+15             7019.0              PREMIUM               7017.0   
+16                5.0                  LOW               8274.0   
+17                5.0                  LOW               8654.0   
+18                1.0            SUPER LOW                 40.0   
+19                1.0            SUPER LOW               2878.0   
+
+   LOCAL_PRICE_CLASS_DESC  MKT_COOLING_POS_CODE MKT_COOLING_POS_DESC  \
+0                  MEDIUM                   NaN            UNDEFINED   
+1                  MEDIUM                   NaN            UNDEFINED   
+2                     LOW                   NaN            UNDEFINED   
+3           SUPER PREMIUM                   NaN            UNDEFINED   
+4               UPPER LOW                   NaN            UNDEFINED   
+5                     LOW                   NaN            UNDEFINED   
+6                  MEDIUM                   NaN            UNDEFINED   
+7               SUPER LOW                   NaN            UNDEFINED   
+8                 PREMIUM                   NaN            UNDEFINED   
+9                 PREMIUM                   NaN            UNDEFINED   
+10                PREMIUM                   NaN            UNDEFINED   
+11                  VALUE                   NaN            UNDEFINED   
+12                 MEDIUM                   NaN            UNDEFINED   
+13                PREMIUM                   NaN            UNDEFINED   
+14              SUPER LOW                   NaN            UNDEFINED   
+15                PREMIUM                   NaN            UNDEFINED   
+16                    LOW                   NaN            UNDEFINED   
+17                    LOW                   NaN            UNDEFINED   
+18              SUPER LOW                   NaN            UNDEFINED   
+19              SUPER LOW                   NaN            UNDEFINED   
+
+   MARKET_CODE          MARKET_NAME   LAST_MODIFIED_DATETIME  
+0         UA04              Ukraine  2025-01-11 11:30:04.000  
+1         BF04         Burkina Faso  2025-01-11 11:30:04.000  
+2         CY04               Cyprus  2025-01-11 11:30:04.000  
+3         CA04               Canada  2025-01-11 11:30:04.000  
+4         UA04              Ukraine  2025-01-11 11:30:04.000  
+5         5B04  Other South Pacific  2025-01-11 11:30:04.000  
+6         NG04              Nigeria  2025-01-11 11:30:04.000  
+7         DE04              Germany  2025-01-11 11:30:04.000  
+8         GB04       United Kingdom  2025-01-11 11:30:04.000  
+9         SK04      Slovak Republic  2025-01-11 11:30:04.000  
+10        MY04             Malaysia  2025-01-11 11:30:04.000  
+11        BH04              Bahrain  2025-01-11 11:30:04.000  
+12        FR04               France  2025-01-11 11:30:04.000  
+13        IE04              Ireland  2025-01-11 11:30:04.000  
+14        PL04               Poland  2025-01-11 11:30:04.000  
+15        ES04       Spain Mainland  2025-01-11 11:30:04.000  
+16        PH04          Philippines  2025-01-11 11:30:04.000  
+17        KZ04           Kazakhstan  2025-01-11 11:30:04.000  
+18        1D04              Madeira  2025-01-11 11:30:04.000  
+19        PL04               Poland  2025-01-11 11:30:04.000  
+
+[20 rows x 33 columns]
+
+Insights and Observations:
+ - Missing values are present in the dataset.
+ - Data appears to be structured and analyzable.
+
+================================================================================
+
+File: sql_Domest_script.csv
+--------------------------------------------------------------------------------
+Number of rows: 16841
+Number of columns: 3
+
+Column Names and Data Types:
+Year       int64
+EBROMId    int64
+Volume     int64
+dtype: object
+
+Missing Values per Column:
+Year       0
+EBROMId    0
+Volume     0
+dtype: int64
+
+Basic Statistics:
+          Year       EBROMId        Volume
+count  16841.0  1.684100e+04  1.684100e+04
+mean    2024.0  5.815087e+07  2.239697e+05
+std        0.0  4.050856e+06  3.370669e+06
+min     2024.0  5.000004e+07  1.000000e+00
+25%     2024.0  6.005716e+07  1.517000e+03
+50%     2024.0  6.016534e+07  1.172300e+04
+75%     2024.0  6.021267e+07  5.675100e+04
+max     2024.0  6.028070e+07  1.921738e+08
+
+Sample Data (first 20 rows):
+    Year   EBROMId   Volume
+0   2024  60137655     6446
+1   2024  60274480     6739
+2   2024  60240034    75892
+3   2024  60240451    29492
+4   2024  60211536        1
+5   2024  60074106    59808
+6   2024  60162219    26717
+7   2024  60241408       46
+8   2024  60246775    23488
+9   2024  60240526    39903
+10  2024  60186005    15724
+11  2024  60273375    11717
+12  2024  60195943   320840
+13  2024  60076361      851
+14  2024  60247090  1173838
+15  2024  60055406       92
+16  2024  60188345     1032
+17  2024  60170017       24
+18  2024  60169451    34748
+19  2024  60137890    14876
+
+Insights and Observations:
+ - No missing values detected.
+ - Data appears to be structured and analyzable.
+
+================================================================================
+
+File: sql_PMIDF_script.csv
+--------------------------------------------------------------------------------
+Number of rows: 122286
+Number of columns: 44
+
+Column Names and Data Types:
+CR_BRAND_ID                         int64
+CR_BRAND_NAME                      object
+TABLE_ORIGIN                       object
+PRODUCT_CATEGORY_GROUP_ID         float64
+PRODUCT_CATEGORY_GROUP_NAME        object
+PRODUCT_CATEGORY_CODE              object
+PRODUCT_CATEGORY_NAME              object
+PRODUCT_CATEGORY_UOM_NAME          object
+PRODUCT_CATEGORY_PLATFORM_ID      float64
+PRODUCT_CATEGORY_PLATFORM_NAME     object
+UOM_NAME                           object
+UOM_NUM                           float64
+BRAND_FAMILY_CODE                  object
+BRAND_FAMILY_NAME                  object
+BRAND_DIFFERENTIATOR_CODE          object
+BRAND_DIFFERENTIATOR_NAME          object
+SKU_GROUP_NAME                     object
+SKU_GROUP_MKT_BRAND_NAME           object
+SKU_GROUP_ID                      float64
+SKU_ID                            float64
+SKU_NAME                           object
+MENTHOL_INDICATOR                  object
+THICKNESS_CATEGORY_CODE            object
+LENGTH_CATEGORY_CODE               object
+FILTER_INDICATOR                   object
+PACK_TYPE_CODE                     object
+ORIGINAL_DESIGN_MARKET_CODE        object
+ORIGINAL_DESIGN_MARKET_NAME        object
+ORIGINAL_DESIGN_MARKET_DESC        object
+SUB_MARKET_CODE                   float64
+SUB_MARKET_NAME                    object
+SUB_MARKET_SHORT_NAME              object
+ITEM_PER_BUNDLE                   float64
+ITEM_PER_PACK                     float64
+MARKETED_BRAND_ID                 float64
+SOLD_PRODUCT_LATEST_ID            float64
+UNSOURCED_PRODUCT_CODE             object
+STANDARD_PRODUCT_DESC              object
+IS_USED_IN_VP                      object
+BUNDLE_TYPE_CODE                   object
+TIPPING_COLOR_CODE                 object
+STATUS                             object
+STICK_EQUIVALENT                  float64
+LAST_MODIFIED_DATETIME             object
+dtype: object
+
+Missing Values per Column:
+CR_BRAND_ID                            0
+CR_BRAND_NAME                          0
+TABLE_ORIGIN                           0
+PRODUCT_CATEGORY_GROUP_ID             15
+PRODUCT_CATEGORY_GROUP_NAME           15
+PRODUCT_CATEGORY_CODE                  0
+PRODUCT_CATEGORY_NAME                  0
+PRODUCT_CATEGORY_UOM_NAME              0
+PRODUCT_CATEGORY_PLATFORM_ID         292
+PRODUCT_CATEGORY_PLATFORM_NAME       292
+UOM_NAME                               0
+UOM_NUM                               32
+BRAND_FAMILY_CODE                      0
+BRAND_FAMILY_NAME                      0
+BRAND_DIFFERENTIATOR_CODE           8449
+BRAND_DIFFERENTIATOR_NAME           8449
+SKU_GROUP_NAME                    102644
+SKU_GROUP_MKT_BRAND_NAME               0
+SKU_GROUP_ID                      102649
+SKU_ID                            107047
+SKU_NAME                          107042
+MENTHOL_INDICATOR                  43063
+THICKNESS_CATEGORY_CODE            62323
+LENGTH_CATEGORY_CODE               61749
+FILTER_INDICATOR                   63163
+PACK_TYPE_CODE                     39776
+ORIGINAL_DESIGN_MARKET_CODE       107051
+ORIGINAL_DESIGN_MARKET_NAME       107051
+ORIGINAL_DESIGN_MARKET_DESC       107051
+SUB_MARKET_CODE                   107094
+SUB_MARKET_NAME                   107094
+SUB_MARKET_SHORT_NAME             119780
+ITEM_PER_BUNDLE                   102682
+ITEM_PER_PACK                      44114
+MARKETED_BRAND_ID                  44845
+SOLD_PRODUCT_LATEST_ID            108114
+UNSOURCED_PRODUCT_CODE            108114
+STANDARD_PRODUCT_DESC             108114
+IS_USED_IN_VP                          0
+BUNDLE_TYPE_CODE                  107074
+TIPPING_COLOR_CODE                109543
+STATUS                                27
+STICK_EQUIVALENT                   12515
+LAST_MODIFIED_DATETIME                 0
+dtype: int64
+
+Basic Statistics:
+          CR_BRAND_ID    CR_BRAND_NAME TABLE_ORIGIN  \
+count   122286.000000           122286       122286   
+unique            NaN           118805            6   
+top               NaN  RYO DJI SAM SOE         CSKU   
+freq              NaN                4        62948   
+mean     98230.881704              NaN          NaN   
+std      35320.809895              NaN          NaN   
+min          0.000000              NaN          NaN   
+25%      67640.250000              NaN          NaN   
+50%      98212.500000              NaN          NaN   
+75%     128824.750000              NaN          NaN   
+max     159405.000000              NaN          NaN   
+
+        PRODUCT_CATEGORY_GROUP_ID PRODUCT_CATEGORY_GROUP_NAME  \
+count               122271.000000                      122271   
+unique                        NaN                           4   
+top                           NaN                 Consumables   
+freq                          NaN                      117079   
+mean                     1.099607                         NaN   
+std                      0.563973                         NaN   
+min                      1.000000                         NaN   
+25%                      1.000000                         NaN   
+50%                      1.000000                         NaN   
+75%                      1.000000                         NaN   
+max                      5.000000                         NaN   
+
+       PRODUCT_CATEGORY_CODE PRODUCT_CATEGORY_NAME PRODUCT_CATEGORY_UOM_NAME  \
+count                 122286                122286                    122286   
+unique                    36                    36                        36   
+top                    F0101            Cigarettes          Cigarettes (Th.)   
+freq                   82466                 82466                     82466   
+mean                     NaN                   NaN                       NaN   
+std                      NaN                   NaN                       NaN   
+min                      NaN                   NaN                       NaN   
+25%                      NaN                   NaN                       NaN   
+50%                      NaN                   NaN                       NaN   
+75%                      NaN                   NaN                       NaN   
+max                      NaN                   NaN                       NaN   
+
+        PRODUCT_CATEGORY_PLATFORM_ID PRODUCT_CATEGORY_PLATFORM_NAME  ...  \
+count                  121994.000000                         121994  ...   
+unique                           NaN                              5  ...   
+top                              NaN                             CC  ...   
+freq                             NaN                          82466  ...   
+mean                        2.529018                            NaN  ...   
+std                         1.167565                            NaN  ...   
+min                         1.000000                            NaN  ...   
+25%                         2.000000                            NaN  ...   
+50%                         2.000000                            NaN  ...   
+75%                         3.000000                            NaN  ...   
+max                         5.000000                            NaN  ...   
+
+       MARKETED_BRAND_ID  SOLD_PRODUCT_LATEST_ID UNSOURCED_PRODUCT_CODE  \
+count       7.744100e+04            14172.000000                  14172   
+unique               NaN                     NaN                  14042   
+top                  NaN                     NaN               MA001836   
+freq                 NaN                     NaN                      3   
+mean        1.005383e+07            14397.473751                    NaN   
+std         3.313070e+04             4510.173443                    NaN   
+min         1.000000e+07             6601.000000                    NaN   
+25%         1.002426e+07            10483.750000                    NaN   
+50%         1.005487e+07            14382.500000                    NaN   
+75%         1.008343e+07            18360.250000                    NaN   
+max         1.010951e+07            22101.000000                    NaN   
+
+               STANDARD_PRODUCT_DESC IS_USED_IN_VP BUNDLE_TYPE_CODE  \
+count                          14172        122286            15212   
+unique                          5450             2               21   
+top     MARLBORO (RED FWD) KS BOX 20             Y              DCW   
+freq                             411         71212             7166   
+mean                             NaN           NaN              NaN   
+std                              NaN           NaN              NaN   
+min                              NaN           NaN              NaN   
+25%                              NaN           NaN              NaN   
+50%                              NaN           NaN              NaN   
+75%                              NaN           NaN              NaN   
+max                              NaN           NaN              NaN   
+
+       TIPPING_COLOR_CODE  STATUS  STICK_EQUIVALENT   LAST_MODIFIED_DATETIME  
+count               12743  122259     109771.000000                   122286  
+unique                  7       3               NaN                      746  
+top                   WHT       A               NaN  2024-02-12 14:28:29.767  
+freq                 7337  110610               NaN                    61671  
+mean                  NaN     NaN       9474.788110                      NaN  
+std                   NaN     NaN      42872.859454                      NaN  
+min                   NaN     NaN          1.000000                      NaN  
+25%                   NaN     NaN       1000.000000                      NaN  
+50%                   NaN     NaN       1000.000000                      NaN  
+75%                   NaN     NaN       1000.000000                      NaN  
+max                   NaN     NaN     857136.000000                      NaN  
+
+[11 rows x 44 columns]
+
+Sample Data (first 20 rows):
+    CR_BRAND_ID                                      CR_BRAND_NAME  \
+0        143243               RYO PL - VINTAGE BLEND TIN 99X95 155   
+1        141987  NCP Disp eVapes VEEV - BLUE RASPBERRY 1.8% MEN...   
+2         59624  RICHMOND - COLLECTOR'S EDITION KS OTHER PACK T...   
+3        144471                    MANCHESTER - CLASSIC RED KS RCB   
+4        109912  Accy Customize IQOS - (CAP 2.4 PIANO BLACK)   ...   
+5        157688  Nicotine Pouch (CAN) ZYN - TROPICAL 6MG STANDA...   
+6        144917  Nicotine Pouches VOLT - FROSTED APPLE S5 MENTH...   
+7        138604  NCP Closed Sys Kit SMOK - RPM 40  OTHER PACK T...   
+8        132117                             RICHMOND - GOLD KS RCB   
+9        154895                     RRP HTP Sticks COO - 05 ORANGE   
+10       125164  RRP HTP Sticks HEETS - SIENNA CAPS MENTHOL C S...   
+11       110955                           PRINCE - WHITE KS BOX 19   
+12       131147                         CALUME - VANILLA KS RCB 18   
+13        54958        MARLBORO - (GOLD) KS TIN (PROMO) - SPAIN DF   
+14       157870    RRP HTP Sticks FIIT - ELEMENT STREAM L 20 SLIMS   
+15        62675  RYO MARK TEN - ROLLS 95% MORE TUB TOBACCO CONT...   
+16        43497                                  FREGATE - KS SOFT   
+17       131145                          OVERSTOLZ - RS SOFT NF 17   
+18        91072                       VICTORY - EXPORT GOLD KS RCB   
+19       126619              HEIMAT - TABAK & MINZE MENTHOL KS BOX   
+
+   TABLE_ORIGIN  PRODUCT_CATEGORY_GROUP_ID PRODUCT_CATEGORY_GROUP_NAME  \
+0          CSKU                        1.0                 Consumables   
+1          CSKU                        1.0                 Consumables   
+2          CSKU                        1.0                 Consumables   
+3          CSKU                        1.0                 Consumables   
+4      SKUGroup                        2.0                 Accessories   
+5          CSKU                        1.0                 Consumables   
+6          CSKU                        1.0                 Consumables   
+7          CSKU                        5.0                     Devices   
+8          CSKU                        1.0                 Consumables   
+9        BFDIFF                        1.0                 Consumables   
+10          SKU                        1.0                 Consumables   
+11         CSKU                        1.0                 Consumables   
+12         CSKU                        1.0                 Consumables   
+13          SKU                        1.0                 Consumables   
+14         CSKU                        1.0                 Consumables   
+15         CSKU                        1.0                 Consumables   
+16         CSKU                        1.0                 Consumables   
+17         CSKU                        1.0                 Consumables   
+18         CSKU                        1.0                 Consumables   
+19         CSKU                        1.0                 Consumables   
+
+   PRODUCT_CATEGORY_CODE PRODUCT_CATEGORY_NAME   PRODUCT_CATEGORY_UOM_NAME  \
+0                  F0106         Roll Your Own         Roll Your Own (Kg.)   
+1                  M0105       NCP Disp eVapes       NCP Disp eVapes (Th.)   
+2                  F0101            Cigarettes            Cigarettes (Th.)   
+3                  F0101            Cigarettes            Cigarettes (Th.)   
+4                  M0304        Accy Customize        Accy Customize (Box)   
+5                  M0127  Nicotine Pouch (CAN)  Nicotine Pouch (CAN) (Can)   
+6                  M0117      Nicotine Pouches      Nicotine Pouches (Th.)   
+7                  M0405    NCP Closed Sys Kit    NCP Closed Sys Kit (Box)   
+8                  F0101            Cigarettes            Cigarettes (Th.)   
+9                  M0101        RRP HTP Sticks        RRP HTP Sticks (Th.)   
+10                 M0101        RRP HTP Sticks        RRP HTP Sticks (Th.)   
+11                 F0101            Cigarettes            Cigarettes (Th.)   
+12                 F0101            Cigarettes            Cigarettes (Th.)   
+13                 F0101            Cigarettes            Cigarettes (Th.)   
+14                 M0101        RRP HTP Sticks        RRP HTP Sticks (Th.)   
+15                 F0106         Roll Your Own         Roll Your Own (Kg.)   
+16                 F0101            Cigarettes            Cigarettes (Th.)   
+17                 F0101            Cigarettes            Cigarettes (Th.)   
+18                 F0101            Cigarettes            Cigarettes (Th.)   
+19                 F0101            Cigarettes            Cigarettes (Th.)   
+
+    PRODUCT_CATEGORY_PLATFORM_ID PRODUCT_CATEGORY_PLATFORM_NAME  ...  \
+0                            5.0                            OTP  ...   
+1                            3.0                             P4  ...   
+2                            2.0                             CC  ...   
+3                            2.0                             CC  ...   
+4                            1.0                             P1  ...   
+5                            4.0                             P5  ...   
+6                            4.0                             P5  ...   
+7                            3.0                             P4  ...   
+8                            2.0                             CC  ...   
+9                            1.0                             P1  ...   
+10                           1.0                             P1  ...   
+11                           2.0                             CC  ...   
+12                           2.0                             CC  ...   
+13                           2.0                             CC  ...   
+14                           1.0                             P1  ...   
+15                           5.0                            OTP  ...   
+16                           2.0                             CC  ...   
+17                           2.0                             CC  ...   
+18                           2.0                             CC  ...   
+19                           2.0                             CC  ...   
+
+   MARKETED_BRAND_ID  SOLD_PRODUCT_LATEST_ID UNSOURCED_PRODUCT_CODE  \
+0         10096951.0                     NaN                    NaN   
+1         10095897.0                     NaN                    NaN   
+2         10035317.0                     NaN                    NaN   
+3         10097747.0                     NaN                    NaN   
+4                NaN                     NaN                    NaN   
+5         10108299.0                     NaN                    NaN   
+6         10097726.0                     NaN                    NaN   
+7         10093587.0                     NaN                    NaN   
+8         10087370.0                     NaN                    NaN   
+9                NaN                     NaN                    NaN   
+10        10084492.0                 18647.0               ME004687   
+11        10005598.0                     NaN                    NaN   
+12        10021155.0                     NaN                    NaN   
+13        10011686.0                  8885.0               FA019470   
+14        10108620.0                     NaN                    NaN   
+15        10037334.0                     NaN                    NaN   
+16        10001322.0                     NaN                    NaN   
+17        10021125.0                     NaN                    NaN   
+18        10057508.0                     NaN                    NaN   
+19        10084401.0                     NaN                    NaN   
+
+               STANDARD_PRODUCT_DESC IS_USED_IN_VP BUNDLE_TYPE_CODE  \
+0                                NaN             N              NaN   
+1                                NaN             Y              NaN   
+2                                NaN             Y              NaN   
+3                                NaN             N              NaN   
+4                                NaN             Y              NaN   
+5                                NaN             Y              NaN   
+6                                NaN             N              NaN   
+7                                NaN             N              NaN   
+8                                NaN             Y              NaN   
+9                                NaN             Y              NaN   
+10  HEETS SIENNAC MNT S50 PRI 20 SLI             Y              DCW   
+11                               NaN             Y              NaN   
+12                               NaN             N              NaN   
+13         MARLBORO (GOLD) KS TIN 20             Y              DCW   
+14                               NaN             Y              NaN   
+15                               NaN             Y              NaN   
+16                               NaN             N              NaN   
+17                               NaN             N              NaN   
+18                               NaN             Y              NaN   
+19                               NaN             N              NaN   
+
+   TIPPING_COLOR_CODE STATUS  STICK_EQUIVALENT   LAST_MODIFIED_DATETIME  
+0                 NaN      A            1666.0  2024-02-12 14:35:14.680  
+1                 NaN      A          200000.0  2024-10-28 08:59:55.000  
+2                 NaN      A            1000.0  2024-02-12 14:28:29.767  
+3                 NaN      A            1000.0  2024-02-12 14:28:29.767  
+4                 NaN      I               NaN  2024-02-09 16:37:46.710  
+5                 NaN      A              20.0  2024-11-20 09:00:17.000  
+6                 NaN      A            1000.0  2024-12-04 11:00:39.000  
+7                 NaN      A               NaN  2024-10-28 08:56:17.000  
+8                 NaN      A            1000.0  2024-02-12 14:28:29.767  
+9                 NaN      A            1000.0  2024-07-05 16:01:25.807  
+10                WHT      I            1000.0  2025-01-11 17:00:09.000  
+11                NaN      A            1000.0  2024-02-12 14:28:29.767  
+12                NaN      A            1000.0  2024-02-12 14:28:29.767  
+13                COR      I            1000.0  2025-01-11 17:00:09.000  
+14                NaN      A            1000.0  2024-11-15 11:00:39.000  
+15                NaN      A            1666.0  2024-02-12 14:35:14.680  
+16                NaN      A            1000.0  2024-02-12 14:28:29.767  
+17                NaN      A            1000.0  2024-02-12 14:28:29.767  
+18                NaN      A            1000.0  2024-02-12 14:28:29.767  
+19                NaN      A            1000.0  2024-02-12 14:28:29.767  
+
+[20 rows x 44 columns]
+
+Insights and Observations:
+ - Missing values are present in the dataset.
+ - Data appears to be structured and analyzable.
+
+================================================================================
+

@@ -1,0 +1,4 @@
+2025-02-21 03:31:35,935 - INFO - Data loaded successfully
+2025-02-21 03:34:10,462 - INFO - Data loaded successfully
+2025-02-21 03:34:10,537 - ERROR - Error calculating Category A: Can only compare identically-labeled Series objects
+2025-02-21 03:34:10,541 - ERROR - Error calculating Category B: all the input array dimensions except for the concatenation axis must match exactly, but along dimension 1, the array at index 0 has size 1 and the array at index 1 has size 16

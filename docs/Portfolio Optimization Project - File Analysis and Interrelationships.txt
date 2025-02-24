@@ -1,0 +1,195 @@
+1. Core Code Files Evolution
+2023 Base Code (2023_code_vVP.py)
+
+Primary analysis file using SQL Server database
+Implements core portfolio optimization logic:
+
+SKU performance analysis
+Margin calculations
+Growth metrics
+Cluster analysis
+
+
+Uses VP Data Mart as the data source
+Includes comprehensive data preprocessing and cleaning steps
+
+2024 Snowflake Version (2024_code_vSF.py)
+
+Updated version adapted for Snowflake database
+Maintains similar logic structure but with optimized queries
+Key improvements:
+
+Enhanced data processing efficiency
+Better handling of large datasets
+Improved error handling
+More robust connection management
+
+
+Uses updated scoring methodology
+
+Jeju-Specific Analysis (2023_jeju_code_vVP.py)
+
+Specialized version for Jeju market analysis
+Contains market-specific modifications:
+
+Custom clustering parameters
+Location-specific filters
+Modified scoring weights
+
+
+Serves as a template for other market-specific analyses
+
+2. Data Structure Files
+Snowflake PRD Mapping (Snowflake_PRD_mapping.xlsx)
+
+Maps data structures between old and new databases
+Critical for database migration
+Contains:
+
+Table relationships
+Column mappings
+Data type conversions
+Key constraints
+
+
+
+Queries.docx
+
+Central repository of SQL queries
+Contains both SQL Server and Snowflake versions
+Key query categories:
+
+Base queries for SKU data
+Performance metrics calculations
+Clustering analysis
+Volume and revenue analysis
+
+
+Serves as translation guide between platforms
+
+3. Results and Analysis Files
+2023 All Results (2023_all_results_compiled.xlsx)
+
+Comprehensive results from 2023 analysis
+Includes:
+
+SKU performance metrics
+Market analysis
+Clustering results
+Scoring outcomes
+
+
+
+Sample Compiled Pickles 2024 (sample_compiled_pkls_2024.xlsx)
+
+Contains preprocessed data for 2024 analysis
+Improved data structure for faster processing
+Includes intermediate calculation results
+
+EDA Report (EDA_Report_allv2.txt)
+
+Detailed exploratory data analysis
+Statistical summaries
+Data quality assessments
+Distribution analyses
+
+Interrelationships and Complementary Functions
+
+Data Flow Structure:
+
+CopyRaw Data Sources (SQL/Snowflake)
+         ↓
+Query Transformation (Queries.docx)
+         ↓
+Processing Scripts (2023/2024 code files)
+         ↓
+Analysis Results (Results files)
+         ↓
+Market-Specific Applications (Jeju code)
+
+Key Version Differences (2023 vs 2024):
+
+Database Changes:
+pythonCopy# 2023 SQL Server Connection
+conn = msql.connect(driver='{SQL Server}', 
+                   server='vapafpdf_db.tdisf-prd.eu-west-1.aws.private-pmideep.biz,49600', 
+                   database='VP_DataMart',
+                   trusted_connection='yes')
+
+# 2024 Snowflake Connection
+conn2 = snowflake.connector.connect(
+    user="USER",
+    account="pl47603.eu-west-1",
+    authenticator="externalbrowser",
+    warehouse='WH_PRD_REPORTING',
+    role='PMI_EDP_SPK_SNFK_PMI_FDF_PRD_DATAANALYST_IMDL',
+    database = "DB_FDF_PRD"
+)
+Query Optimizations:
+sqlCopy-- 2023 Version
+SELECT a.Market as DF_Market, a.Location, 
+       SUM(CASE WHEN [Year] = 2023 THEN Volume ELSE 0 END) AS '2023 Volume'
+FROM VDM_Prices a
+
+-- 2024 Version
+SELECT trim(DF_MARKET_NAME) as "DF_Market", 
+       trim(LOCATION_NAME) as "Location",
+       SUM(CASE WHEN YEAR_NUM = 2024 THEN VOLUME ELSE 0 END) AS "2024 Volume"
+FROM DB_FDF_PRD.CS_COMMRCL.RSP_FACT_RSP_CALC a
+
+Complementary Functions:
+
+Data Validation Chain:
+mermaidCopygraph TD
+    A[EDA Report] --> B[Data Quality Checks]
+    B --> C[Processing Scripts]
+    C --> D[Results Validation]
+    D --> E[Market-Specific Analysis]
+Analysis Integration:
+
+Base Analysis:
+
+Uses core code files for general processing
+Applies standard scoring methodology
+Generates baseline results
+
+
+Market-Specific Analysis:
+
+Uses Jeju code as template
+Customizes parameters for local markets
+Integrates with base analysis results
+
+
+Results Compilation:
+
+Combines outputs from all analyses
+Validates against business rules
+Generates final recommendations
+
+
+
+Critical Notes for Future Reference:
+
+Database Migration Considerations:
+
+
+Always refer to Snowflake_PRD_mapping.xlsx for proper field mappings
+Use updated query syntax from Queries.docx
+Verify data types during transformations
+
+
+Code Maintenance:
+
+
+Keep core logic consistent between versions
+Document market-specific modifications
+Maintain query optimization records
+
+
+Results Validation:
+
+
+Cross-reference with historical data
+Verify scoring consistency
+Document anomalies and explanations

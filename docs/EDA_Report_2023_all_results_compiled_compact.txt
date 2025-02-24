@@ -1,0 +1,1211 @@
+Sheet: baselist
+Number of rows: 20592
+Number of columns: 12
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+SKU,object,0
+Item,per,0
+Bundle,int64,0
+CR_BrandId,int64,0
+DF_Market,object,0
+Location,object,0
+TMO,object,0
+Flavor,object,0
+Taste,object,0
+Thickness,object,0
+Length,object,0
+Brand,Family,0
+object,Brand,0
+Diff,object,228
+
+Sample Data (first 20 rows):
+                                                  SKU  Item per Bundle  \
+0                                    .COM (requested)              200   
+1                                    .COM (requested)                1   
+2                      20 MARS - INTERNATIONAL LS BOX              200   
+3                      20 MAR
+
+
+
+S - INTERNATIONAL LS BOX              200   
+4                      20 MARS - INTERNATIONAL LS BOX              200   
+5                      20 MARS - INTERNATIONAL LS BOX              200   
+6                     303 - MENTHOL KS BOX SUPERSLIMS              200   
+7                     303 - MENTHOL KS BOX SUPERSLIMS              400   
+8                   555 - ORIGINAL KS RCB (requested)              200   
+
+================================================================================
+
+Sheet: 2022_vols
+Number of rows: 197
+Number of columns: 18
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+DF_Market,object,0
+Location,object,0
+TMO,object,0
+CR_BrandId,int64,0
+SKU,object,0
+Item,per,0
+Bundle,int64,0
+2021,Vol,0
+int64,2022,0
+Volume,int64,0
+8,float64,0
+cum,som,0
+float64,2022,0
+2021Month,int64,0
+2022Month,int64,0
+2023Month,int64,0
+14,float64,187
+Vol,float64,0
+Gr,float64,0
+
+Sample Data (first 20 rows):
+      DF_Market Location  TMO  CR_BrandId  \
+0   Switzerland   Zurich  PMI      124270   
+1   Switzerland   Zurich  PMI      114483   
+2   Switzerland   Zurich  PMI      123956   
+3   Switzerland   Zurich  BAT       48673   
+4   Switzerland   Zurich  BAT       48673   
+5   Switzerland   Zurich  JTI       54088   
+6   Switzerland   Zurich  JTI       54088   
+7   Switzerland   Zurich  PMI      109379   
+8   Switzerland   Zurich  BAT       48673   
+
+================================================================================
+
+Sheet: 2023scores_1
+Number of rows: 501
+Number of columns: 11
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+Region,object,5
+Market,object,5
+Location,object,0
+Cat_A,float64,0
+Cat_B,float64,0
+Cat_C,float64,0
+Cat_D,float64,0
+Avg_Score,float64,0
+Market_Volume,int64,0
+PMI_Volume,int64,0
+10,float64,7
+
+Sample Data (first 20 rows):
+             Region                Market               Location  Cat_A  \
+0     China and SEA                Taiwan       Taipei - Taoyuan   5.76   
+1   Japan and Korea           South Korea                Incheon   2.17   
+2       Middle East  United Arab Emirates                  Dubai   5.41   
+3   Japan and Korea           South Korea                   Jeju   4.21   
+4           Eurasia                Israel               Tel-Aviv   6.25   
+5     China and SEA                 China        Shanghai Pudong   4.10   
+6           Eurasia                Turkey       Istanbul Airport   6.67   
+7       Middle East                 Qatar                   Doha   5.70   
+8       Middle East                Kuwait                 Kuwait   7.24   
+
+================================================================================
+
+Sheet: 2023scores
+Number of rows: 501
+Number of columns: 11
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+Location,object,0
+Cat_A,float64,0
+Cat_B,float64,0
+Cat_C,float64,0
+Cat_D,float64,0
+Avg_Score,float64,0
+Market_Volume,object,0
+PMI_Volume,object,0
+SoM,float64,7
+COT,object,0
+NOR,object,0
+
+Sample Data (first 20 rows):
+                 Location  Cat_A  Cat_B  Cat_C  Cat_D  Avg_Score  \
+0        Taipei - Taoyuan   5.76   0.04   3.70   0.73       2.56   
+1                 Incheon   2.17   0.00   2.74   0.98       1.47   
+2                   Dubai   5.41   4.06   3.40   8.04       5.23   
+3                    Jeju   4.21   0.01   1.86   1.13       1.80   
+4                Tel-Aviv   6.25   5.63   6.86   7.53       6.57   
+5         Shanghai Pudong   4.10   1.72   1.75   2.28       2.46   
+6        Istanbul Airport   6.67   6.06   8.40   8.39       7.38   
+7                    Doha   5.70  10.00   5.05   7.87       6.21   
+8                  Kuwait   7.24   7.73   7.39   9.18       7.88   
+
+================================================================================
+
+Sheet: All_combined_v1_unselected
+Number of rows: 389
+Number of columns: 22
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+Location,object,0
+Score,C,0
+float64,Incremental,0
+B,float64,0
+D,float64,0
+Average,float64,0
+Avg,B,0
+PMI,SKUs,0
+int64,Num,0
+Departures,Vol,0
+USD,float64,0
+NOR,per,389
+per,LANU,0
+Vol,float64,389
+LANU,float64,0
+Region,object,0
+EU,object,0
+Market,object,0
+Num,of,0
+of,Comp,0
+SKUs,int64,0
+Incremental,NOR,0
+
+Sample Data (first 20 rows):
+               Location  Score A  Score B  Score C  Score D   Average  \
+0         Izmir Airport     7.36     3.69     9.02     6.73  6.700000   
+1             Marrakech     7.78     7.58     8.55     9.27  8.295000   
+2                  Jeju     5.56     0.31     8.11     0.53  3.627500   
+3                 Tunis     7.54     6.40     6.06     7.91  6.977500   
+4               Hurgada     7.54     5.88     8.39     7.16  7.242500   
+5               Baghdad     5.93    10.00     2.58     3.20  3.903333   
+6        Ankara Airport     7.37     3.46     7.73     6.56  6.280000   
+7               Manama      6.11    10.00     2.91     9.23  6.083333   
+8               Incheon     5.44     0.11     9.23     0.26  3.760000   
+
+================================================================================
+
+Sheet: All_combined_v1_selected
+Number of rows: 129
+Number of columns: 22
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+Location,object,0
+Score,C,0
+float64,Incremental,0
+B,float64,0
+D,float64,0
+Average,float64,0
+Avg,B,0
+PMI,SKUs,0
+int64,Num,0
+Departures,Vol,0
+USD,float64,0
+NOR,per,121
+per,LANU,0
+Vol,float64,123
+LANU,float64,0
+Market,object,0
+EU,object,0
+Region,object,0
+Num,of,0
+of,Comp,0
+SKUs,int64,0
+Incremental,NOR,0
+
+Sample Data (first 20 rows):
+                 Location  Score A  Score B  Score C  Score D   Average  \
+0   Istanbul Asia Airport     7.05     4.45     8.31     6.33  6.535000   
+1                Tel-Aviv     5.11     8.47     8.17     6.79  7.135000   
+2                   Amman     7.29     5.90     9.38     3.87  6.610000   
+3   Beirut - Rafik Hariri     6.44    10.00     3.44     6.42  5.433333   
+4                  Kuwait     6.58     6.10     7.18     8.10  6.990000   
+5                   Cairo     7.31     5.39     6.78     7.05  6.632500   
+6         Antalya Airport     6.08     4.89     8.56     6.80  6.582500   
+7        Istanbul Airport     7.04     3.38     8.53     6.76  6.427500   
+8                    Doha     6.11    10.00     3.48     8.82  6.136667   
+
+================================================================================
+
+Sheet: All_combined_v1_after EU pax
+Number of rows: 408
+Number of columns: 22
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+Location,object,0
+Score,C,0
+float64,Incremental,0
+B,float64,0
+D,float64,0
+Average,float64,0
+Avg,B,0
+PMI,SKUs,0
+int64,Num,0
+Departures,Vol,0
+USD,float64,0
+NOR,per,400
+per,LANU,0
+Vol,float64,402
+LANU,float64,0
+Region,object,0
+EU,object,0
+Market,object,0
+Num,of,0
+of,Comp,0
+SKUs,int64,0
+Incremental,NOR,0
+
+Sample Data (first 20 rows):
+                 Location  Score A  Score B  Score C  Score D   Average  \
+0   Istanbul Asia Airport     7.05     4.45     8.31     6.33  6.535000   
+1                Tel-Aviv     5.11     8.47     8.17     6.79  7.135000   
+2                   Amman     7.29     5.90     9.38     3.87  6.610000   
+3   Beirut - Rafik Hariri     6.44    10.00     3.44     6.42  5.433333   
+4                  Kuwait     6.58     6.10     7.18     8.10  6.990000   
+5                   Cairo     7.31     5.39     6.78     7.05  6.632500   
+6         Antalya Airport     6.08     4.89     8.56     6.80  6.582500   
+7        Istanbul Airport     7.04     3.38     8.53     6.76  6.427500   
+8                    Doha     6.11    10.00     3.48     8.82  6.136667   
+
+================================================================================
+
+Sheet: All_combined_v2_unselected
+Number of rows: 389
+Number of columns: 22
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+Location,object,0
+Score,C,0
+float64,Incremental,0
+B,float64,0
+D,float64,0
+Average,float64,0
+Avg,B,0
+PMI,SKUs,0
+int64,Num,0
+Departures,Vol,0
+USD,float64,0
+NOR,per,389
+per,LANU,0
+Vol,float64,389
+LANU,float64,0
+Region,object,0
+EU,object,0
+Market,object,0
+Num,of,0
+of,Comp,0
+SKUs,int64,0
+Incremental,NOR,0
+
+Sample Data (first 20 rows):
+               Location  Score A  Score B  Score C  Score D   Average  \
+0         Izmir Airport     7.36     5.43     8.95     8.07  7.452500   
+1             Marrakech     7.78     7.73     9.23     8.44  8.295000   
+2                  Jeju     5.56     0.00     7.94     1.68  3.795000   
+3                 Tunis     7.54     8.51     5.49     8.61  7.537500   
+4               Hurgada     7.54     9.32     8.80     8.93  8.647500   
+5               Baghdad     5.93    10.00     6.38     9.35  7.220000   
+6        Ankara Airport     7.37     4.69     7.47     7.07  6.650000   
+7               Manama      6.11    10.00     7.22     8.59  7.306667   
+8               Incheon     5.44     0.08     9.45     1.05  4.005000   
+
+================================================================================
+
+Sheet: All_combined_v2_selected
+Number of rows: 129
+Number of columns: 22
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+Location,object,0
+Score,C,0
+float64,Incremental,0
+B,float64,0
+D,float64,0
+Average,float64,0
+Avg,B,0
+PMI,SKUs,0
+int64,Num,0
+Departures,Vol,0
+USD,float64,0
+NOR,per,121
+per,LANU,0
+Vol,float64,123
+LANU,float64,0
+Market,object,0
+EU,object,0
+Region,object,0
+Num,of,0
+of,Comp,0
+SKUs,int64,0
+Incremental,NOR,0
+
+Sample Data (first 20 rows):
+                 Location  Score A  Score B  Score C  Score D   Average  \
+0   Istanbul Asia Airport     7.05     6.10     8.22     7.67  7.260000   
+1                Tel-Aviv     5.11     6.67     9.30     7.45  7.492500   
+2                   Amman     7.29     4.66     8.50     8.09  7.637500   
+3   Beirut - Rafik Hariri     6.44     6.55     3.47     8.71  6.206667   
+4                  Kuwait     6.58    10.00     9.35     8.73  7.330000   
+5                   Cairo     7.31     5.43     7.06     9.21  8.230000   
+6         Antalya Airport     6.08     0.00     8.58     8.12  7.332500   
+7        Istanbul Airport     7.04     9.32     8.65     7.19  6.987500   
+8                    Doha     6.11     4.69     7.95     8.43  7.496667   
+
+================================================================================
+
+Sheet: All_combined_v2_after EU pax
+Number of rows: 408
+Number of columns: 22
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+Location,object,0
+Score,C,0
+float64,Incremental,0
+B,float64,0
+D,float64,0
+Average,float64,0
+Avg,B,0
+PMI,SKUs,0
+int64,Num,0
+Departures,Vol,0
+USD,float64,0
+NOR,per,400
+per,LANU,0
+Vol,float64,402
+LANU,float64,0
+Region,object,0
+EU,object,0
+Market,object,0
+Num,of,0
+of,Comp,0
+SKUs,int64,0
+Incremental,NOR,0
+
+Sample Data (first 20 rows):
+                 Location  Score A  Score B  Score C  Score D   Average  \
+0   Istanbul Asia Airport     7.05     6.10     8.22     7.67  7.260000   
+1                Tel-Aviv     5.11     8.11     9.30     7.45  7.492500   
+2                   Amman     7.29     6.67     8.50     8.09  7.637500   
+3   Beirut - Rafik Hariri     6.44    10.00     3.47     8.71  6.206667   
+4                  Kuwait     6.58     4.66     9.35     8.73  7.330000   
+5                   Cairo     7.31     9.34     7.06     9.21  8.230000   
+6         Antalya Airport     6.08     6.55     8.58     8.12  7.332500   
+7        Istanbul Airport     7.04     5.07     8.65     7.19  6.987500   
+8                    Doha     6.11    10.00     7.95     8.43  7.496667   
+
+================================================================================
+
+Sheet: All_combined_v3_after EU pax
+Number of rows: 0
+Number of columns: 0
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+
+
+================================================================================
+
+Sheet: All_combined_v3_selected
+Number of rows: 135
+Number of columns: 22
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+Location,object,0
+Score,C,0
+float64,Incremental,0
+B,float64,0
+D,float64,0
+Average,float64,0
+Avg,B,0
+PMI,SKUs,0
+int64,Num,0
+Departures,Vol,0
+USD,float64,0
+NOR,per,127
+per,LANU,0
+Vol,float64,129
+LANU,float64,0
+Market,object,0
+EU,object,0
+Region,object,0
+Num,of,0
+of,Comp,0
+SKUs,int64,0
+Incremental,NOR,0
+
+Sample Data (first 20 rows):
+                 Location  Score A  Score B  Score C  Score D   Average  \
+0   Istanbul Asia Airport     7.05     6.10     8.22     7.67  7.260000   
+1                Tel-Aviv     5.11     8.11     9.30     7.45  7.492500   
+2                   Amman     7.29     6.67     8.50     8.09  7.637500   
+3   Beirut - Rafik Hariri     6.44    10.00     3.47     8.71  6.206667   
+4                  Kuwait     6.58     4.66     9.35     8.73  7.330000   
+5                   Cairo     7.31     9.34     7.06     9.21  8.230000   
+6         Antalya Airport     6.08     6.55     8.58     8.12  7.332500   
+7        Istanbul Airport     7.04     5.07     8.65     7.19  6.987500   
+8                    Doha     6.11    10.00     7.95     8.43  7.496667   
+
+================================================================================
+
+Sheet: All_combined_v3_unselected
+Number of rows: 135
+Number of columns: 22
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+Location,object,0
+Score,C,0
+float64,Incremental,0
+B,object,0
+object,Dep,0
+D,object,0
+Average,float64,0
+Avg,B,0
+PMI,SKUs,0
+int64,Num,0
+Departures,Vol,0
+per,LANU,0
+Vol,float64,129
+LANU,object,0
+Region,object,0
+EU,object,0
+Market,object,0
+Num,of,0
+of,Comp,0
+SKUs,int64,0
+1,int64,0
+Comp,SKUs,0
+Incremental,NOR,0
+
+Sample Data (first 20 rows):
+               Location  Score A                            Score B  \
+0         Izmir Airport     7.36                               5.43   
+1             Marrakech     7.78                               7.73   
+2                  Jeju     5.56                                -     
+3                 Tunis     7.54                               8.51   
+4               Hurgada     7.54                               9.32   
+5               Baghdad     5.93                                 10   
+6        Ankara Airport     7.37                               4.69   
+7               Manama      6.11                                 10   
+8               Incheon     5.44                               0.08   
+
+================================================================================
+
+Sheet: All_combined_v4_unselected
+Number of rows: 389
+Number of columns: 22
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+Location,object,0
+Score,C,0
+float64,Incremental,0
+B,float64,0
+D,float64,0
+Average,float64,0
+Avg,B,0
+PMI,SKUs,0
+int64,Num,0
+Departures,Vol,0
+USD,float64,0
+NOR,per,389
+per,LANU,0
+Vol,float64,389
+LANU,float64,0
+Region,object,0
+EU,object,0
+Market,object,0
+Num,of,0
+of,Comp,0
+SKUs,int64,0
+Incremental,NOR,0
+
+Sample Data (first 20 rows):
+               Location  Score A  Score B  Score C  Score D   Average  \
+0         Izmir Airport     7.36     5.43     8.95     8.07  7.452500   
+1             Marrakech     7.78     7.73     9.23     8.44  8.295000   
+2                  Jeju     5.56     0.00     7.94     1.68  3.795000   
+3                 Tunis     7.54     8.51     5.49     8.61  7.537500   
+4               Hurgada     7.54     9.32     8.80     8.93  8.647500   
+5               Baghdad     5.93    10.00     6.38     9.35  7.220000   
+6        Ankara Airport     7.37     4.69     7.47     7.07  6.650000   
+7               Manama      6.11    10.00     7.22     8.59  7.306667   
+8               Incheon     5.44     0.08     9.45     1.05  4.005000   
+
+================================================================================
+
+Sheet: All_combined_v4_selected
+Number of rows: 135
+Number of columns: 22
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+Location,object,0
+Score,C,0
+float64,Incremental,0
+B,float64,0
+D,float64,0
+Average,float64,0
+Avg,B,0
+PMI,SKUs,0
+int64,Num,0
+Departures,Vol,0
+USD,float64,0
+NOR,per,127
+per,LANU,0
+Vol,float64,129
+LANU,float64,0
+Market,object,0
+EU,object,0
+Region,object,0
+Num,of,0
+of,Comp,0
+SKUs,int64,0
+Incremental,NOR,0
+
+Sample Data (first 20 rows):
+                 Location  Score A  Score B  Score C  Score D   Average  \
+0   Istanbul Asia Airport     7.05     6.10     8.22     7.67  7.260000   
+1                Tel-Aviv     5.11     8.11     9.30     7.45  7.492500   
+2                   Amman     7.29     6.67     8.50     8.09  7.637500   
+3   Beirut - Rafik Hariri     6.44    10.00     3.47     8.71  6.206667   
+4                  Kuwait     6.58     4.66     9.35     8.73  7.330000   
+5                   Cairo     7.31     9.34     7.06     9.21  8.230000   
+6         Antalya Airport     6.08     6.55     8.58     8.12  7.332500   
+7        Istanbul Airport     7.04     5.07     8.65     7.19  6.987500   
+8                    Doha     6.11    10.00     7.95     8.43  7.496667   
+
+================================================================================
+
+Sheet: All_combined_v4_after EU pax
+Number of rows: 408
+Number of columns: 22
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+Location,object,0
+Score,C,0
+float64,Incremental,0
+B,float64,0
+D,float64,0
+Average,float64,0
+Avg,B,0
+PMI,SKUs,0
+int64,Num,0
+Departures,Vol,0
+USD,float64,0
+NOR,per,400
+per,LANU,0
+Vol,float64,402
+LANU,float64,0
+Region,object,0
+EU,object,0
+Market,object,0
+Num,of,0
+of,Comp,0
+SKUs,int64,0
+Incremental,NOR,0
+
+Sample Data (first 20 rows):
+                 Location  Score A  Score B  Score C  Score D   Average  \
+0   Istanbul Asia Airport     7.05     6.10     8.22     7.67  7.260000   
+1                Tel-Aviv     5.11     8.11     9.30     7.45  7.492500   
+2                   Amman     7.29     6.67     8.50     8.09  7.637500   
+3   Beirut - Rafik Hariri     6.44    10.00     3.47     8.71  6.206667   
+4                  Kuwait     6.58     4.66     9.35     8.73  7.330000   
+5                   Cairo     7.31     9.34     7.06     9.21  8.230000   
+6         Antalya Airport     6.08     6.55     8.58     8.12  7.332500   
+7        Istanbul Airport     7.04     5.07     8.65     7.19  6.987500   
+8                    Doha     6.11    10.00     7.95     8.43  7.496667   
+
+================================================================================
+
+Sheet: All_comnined_v4_v2
+Number of rows: 408
+Number of columns: 21
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+Location,object,0
+Score,C,0
+float64,Score,0
+b,object,2
+object,Incremental,0
+D,object,0
+Average,object,2
+PMI,SKUs,0
+Departures,Vol,0
+USD,object,0
+NOR,per,400
+per,LANU,0
+Vol,float64,402
+LANU,object,0
+Region,object,0
+EU,object,0
+Market,object,0
+Num,of,0
+int64,Num,0
+of,Comp,0
+SKUs,int64,0
+Incremental,NOR,0
+
+Sample Data (first 20 rows):
+                 Location  Score A                            Score b Score C  \
+0   Istanbul Asia Airport     7.05                                6.1    8.22   
+1                Tel-Aviv     5.11                               8.11     9.3   
+2                   Amman     7.29                                6.7     8.5   
+3   Beirut - Rafik Hariri     6.44                                 10    3.47   
+4                  Kuwait     6.58                               4.66    9.35   
+5                   Cairo     7.31                               9.34    7.06   
+6         Antalya Airport     6.08                               6.55    8.58   
+7        Istanbul Airport     7.04                               5.07    8.65   
+8                    Doha     6.11                                 10    7.95   
+
+================================================================================
+
+Sheet: Jeju_Cat_A
+Number of rows: 105
+Number of columns: 23
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+DF_Market,object,0
+Location,object,0
+TMO,object,0
+Brand,Family,0
+object,Item,0
+int64,Growth,0
+per,Bundle,0
+Volume,int64,0
+2022,NOR,0
+2021Month,int64,0
+2022Month,int64,0
+2023Month,int64,0
+2021,Revenue,0
+Revenue,float64,0
+2023,NOR,0
+float64,dtype,0
+MC,float64,0
+
+Sample Data (first 20 rows):
+      DF_Market Location     TMO Brand Family  CR_BrandId  \
+0   South Korea     Jeju  KT & G         ESSE       56480   
+1   South Korea     Jeju  KT & G         ESSE       52950   
+2   South Korea     Jeju  KT & G         ESSE       92567   
+3   South Korea     Jeju  KT & G        BOHEM       70934   
+4   South Korea     Jeju  KT & G         THIS       96340   
+5   South Korea     Jeju  KT & G       RAISON      126025   
+6   South Korea     Jeju  KT & G         ESSE       94328   
+7   South Korea     Jeju  KT & G         ESSE      106177   
+8   South Korea     Jeju     BAT      DUNHILL       97339   
+
+================================================================================
+
+Sheet: Jeju_Cat_B1
+Number of rows: 28
+Number of columns: 14
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+DF_Market,object,0
+Location,object,0
+Taste,object,0
+Thickness,object,0
+Flavor,object,0
+Length,object,0
+Comp_Seg_SKU,int64,0
+Comp,Total,0
+int64,SKU_Delta,0
+float64,dtype,0
+Total,int64,0
+SoM_PMI,float64,0
+2023,Volume,0
+
+Sample Data (first 20 rows):
+      DF_Market Location        Taste Thickness        Flavor Length  \
+0   South Korea     Jeju  Full Flavor       STD       Regular     KS   
+1   South Korea     Jeju  Full Flavor       STD  Menthol Caps     KS   
+2   South Korea     Jeju  Full Flavor       SSL       Regular   LONG   
+3   South Korea     Jeju          1mg       SSL       Regular   LONG   
+4   South Korea     Jeju  Full Flavor       STD           NTD     KS   
+5   South Korea     Jeju  Full Flavor       SSL  Menthol Caps   LONG   
+6   South Korea     Jeju          1mg       STD       Regular     KS   
+7   South Korea     Jeju  Full Flavor       SLI       Regular   LONG   
+8   South Korea     Jeju  Full Flavor       SSL           NTD   LONG   
+
+================================================================================
+
+Sheet: Jeju_Cat_B2
+Number of rows: 19
+Number of columns: 9
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+0,object,12
+1,object,8
+2,object,7
+3,object,7
+4,object,7
+5,object,13
+6,float64,19
+7,float64,19
+8,float64,18
+
+Sample Data (first 20 rows):
+            Unnamed: 0     Unnamed: 1 Unnamed: 2 Unnamed: 3   Unnamed: 4  \
+0                  NaN            NaN        NaN        NaN          NaN   
+1   Sum of PMI_Seg_SKU  Column Labels        NaN        NaN          NaN   
+2           Row Labels            SLI        SSL        STD  Grand Total   
+3                  1mg              1          1          3            5   
+4          Full Flavor              0          0          2            2   
+5               Lights            NaN          0          9            9   
+6          Ultralights              1          0          2            3   
+7          Grand Total              2          1         16           19   
+8                  NaN            NaN        NaN        NaN          NaN   
+
+================================================================================
+
+Sheet: Jeju_Cat_B3
+Number of rows: 7
+Number of columns: 5
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+0,object,1
+1,object,1
+2,object,1
+3,object,1
+4,float64,3
+
+Sample Data (first 20 rows):
+    Unnamed: 0 Unnamed: 1 Unnamed: 2 Unnamed: 3  Unnamed: 4
+0          NaN        NaN        NaN        NaN         NaN
+1   Row Labels  Comp SKUs   PMI SKUs     Vol'23         NaN
+2  Full Flavor         60          2  252002600       252.0
+3          1mg         11          5  116841400       117.0
+4       Lights          6          9   89996000        90.0
+5  Ultralights          4          3   21230200        21.0
+6  Grand Total         81         19  480070200         NaN
+
+================================================================================
+
+Sheet: Jeju_Cat_B3 (2)
+Number of rows: 6
+Number of columns: 5
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+0,object,1
+1,object,1
+2,object,1
+3,object,1
+4,float64,2
+
+Sample Data (first 20 rows):
+    Unnamed: 0 Unnamed: 1 Unnamed: 2 Unnamed: 3  Unnamed: 4
+0          NaN        NaN        NaN        NaN         NaN
+1   Row Labels  Comp SKUs   PMI SKUs     Vol'23         NaN
+2          STD         51         16  227361400       227.0
+3          SSL         27          1  231523400       232.0
+4          SLI          3          2   21185400        21.0
+5  Grand Total         81         19  480070200       480.0
+
+================================================================================
+
+Sheet: Jeju_Cat_B4
+Number of rows: 6
+Number of columns: 5
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+TMO,object,0
+2023,Vol,0
+float64,2019,0
+SoM,float64,0
+int64,2019,0
+Vol,int64,0
+
+Sample Data (first 20 rows):
+              TMO  2023 SoM  2019 SoM   2023 Vol   2019 Vol
+0          KT & G      0.72      0.66  349533000  452090000
+1             PMI      0.12      0.16   56064600  108600200
+2             BAT      0.08      0.11   41003600   75440600
+3             JTI      0.07      0.06   35655800   44125200
+4  CHINA NATIONAL      0.00      0.01    1393400    3582700
+5           Other      0.00      0.00    1376000    3327400
+
+================================================================================
+
+Sheet: Jeju_Cat_B5
+Number of rows: 7
+Number of columns: 3
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+Nationality,object,0
+PAX,2019,2023
+float64,PAX,0
+2023,float64,0
+
+Sample Data (first 20 rows):
+   Nationality  PAX 2019  PAX 2023
+0  South Korea      0.41      0.66
+1        China      0.39      0.21
+2        Japan      0.09      0.04
+3    Singapore      0.00      0.03
+4       Taiwan      0.03      0.03
+5        Other      0.09      0.03
+6        Total      1.00      1.00
+
+================================================================================
+
+Sheet: Jeju_SKU
+Number of rows: 100
+Number of columns: 13
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+Brand,Family,0
+object,Brand,0
+Diff,object,0
+SKU,object,0
+Item,per,0
+Bundle,int64,0
+CR_BrandId,int64,0
+DF_Market,object,0
+Location,object,0
+TMO,object,0
+Flavor,object,0
+Taste,object,0
+Thickness,object,0
+Length,object,0
+2023,Volume,0
+int64,dtype,0
+
+Sample Data (first 20 rows):
+      Brand Family            Brand Diff  \
+0       PARLIAMENT                AQUA 5   
+1         MARLBORO   GOLD (3.0 ORIGINAL)   
+2         MARLBORO             (RED FWD)   
+3   VIRGINIA SLIMS                  GOLD   
+4       PARLIAMENT                HYBRID   
+5       PARLIAMENT                   ONE   
+6         MARLBORO       TROPICAL SPLASH   
+7         MARLBORO          MEDIUM (FWD)   
+8         MARLBORO       ICE BLAST (2.0)   
+
+================================================================================
+
+Sheet: Jeju_Market_Mix
+Number of rows: 100
+Number of columns: 11
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+DF_Market,object,0
+Location,object,0
+CR_BrandId,int64,0
+Taste,object,0
+Thickness,object,0
+Flavor,object,0
+Length,object,0
+TMO,object,0
+SKU,int64,0
+2023,Volume,0
+int64,SKU,0
+1,object,0
+
+Sample Data (first 20 rows):
+      DF_Market Location  CR_BrandId        Taste Thickness        Flavor  \
+0   South Korea     Jeju       90020          1mg       SSL  Menthol Caps   
+1   South Korea     Jeju       52172       Lights       SSL       Regular   
+2   South Korea     Jeju       87832       Lights       STD       Regular   
+3   South Korea     Jeju       56480  Full Flavor       SSL       Regular   
+4   South Korea     Jeju      122331  Full Flavor       SSL           NTD   
+5   South Korea     Jeju       52950  Full Flavor       SSL       Regular   
+6   South Korea     Jeju      102693  Full Flavor       STD           NTD   
+7   South Korea     Jeju       46910  Full Flavor       STD       Regular   
+8   South Korea     Jeju       97342  Full Flavor       STD       Regular   
+
+================================================================================
+
+Sheet: Sheet32
+Number of rows: 0
+Number of columns: 0
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+
+
+================================================================================
+
+Sheet: Sheet33
+Number of rows: 0
+Number of columns: 0
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+
+
+================================================================================
+
+Sheet: Jeju_Final_Table_CatA
+Number of rows: 0
+Number of columns: 0
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+
+
+================================================================================
+
+Sheet: Jeju_Final_Table_CatB
+Number of rows: 28
+Number of columns: 18
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+Flavor,object,24
+Taste,object,14
+Thickness,object,2
+Length,object,0
+PMI,SKU,0
+int64,PMI,0
+float64,SKU,0
+SKUs,int64,0
+Delta,float64,0
+9,float64,28
+RSQ,float64,28
+01,float64,28
+12,float64,28
+1,object,12
+
+Sample Data (first 20 rows):
+          Flavor        Taste Thickness Length  PMI SKUs  PMI SKU %  \
+0        Regular          1mg       SLI   LONG         1        5.3   
+1            NaN          NaN       SSL   LONG         1        5.3   
+2            NaN          NaN       STD     KS         2       10.5   
+3            NaN  Full Flavor       SLI   LONG         0        0.0   
+4            NaN          NaN       SSL     KS         0        0.0   
+5            NaN          NaN       NaN   LONG         0        0.0   
+6            NaN          NaN       STD     KS         1        5.3   
+7            NaN       Lights       SSL   LONG         0        0.0   
+8            NaN          NaN       STD     KS         4       21.1   
+
+================================================================================
+
+Sheet: Jeju_Final_Table_CatC
+Number of rows: 28
+Number of columns: 18
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+Flavor,object,24
+Taste,object,14
+Thickness,object,2
+Length,object,0
+PMI,SKU,0
+int64,PMI,0
+float64,SKU,0
+SKUs,int64,0
+Delta,float64,0
+9,float64,28
+RSQ,float64,28
+01,float64,28
+12,float64,28
+1,object,12
+
+Sample Data (first 20 rows):
+          Flavor        Taste Thickness Length  PMI SKUs  PMI SKU %  \
+0        Regular          1mg       SLI   LONG         1        5.3   
+1            NaN          NaN       SSL   LONG         1        5.3   
+2            NaN          NaN       STD     KS         2       10.5   
+3            NaN  Full Flavor       SLI   LONG         0        0.0   
+4            NaN          NaN       SSL     KS         0        0.0   
+5            NaN          NaN       NaN   LONG         0        0.0   
+6            NaN          NaN       STD     KS         1        5.3   
+7            NaN       Lights       SSL   LONG         0        0.0   
+8            NaN          NaN       STD     KS         4       21.1   
+
+================================================================================
+
+Sheet: Jeju_Final_Table_CatD
+Number of rows: 37
+Number of columns: 9
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+Flavor,object,33
+Taste,object,21
+Thickness,object,7
+Length,object,0
+PMI,SKU,0
+int64,PMI,0
+float64,SKU,0
+SKU,int64,0
+Cluster,SKU,0
+Delta,float64,0
+
+Sample Data (first 20 rows):
+     Flavor        Taste Thickness Length  PMI SKU  PMI SKU %  Cluster SKU  \
+0   Regular          1mg       SLI   LONG        1   0.052632            4   
+1       NaN          NaN       SSL   LONG        1   0.052632           12   
+2       NaN          NaN       STD     KS        2   0.105263           13   
+3       NaN          NaN       NaN   LONG        0   0.000000            2   
+4       NaN  Full Flavor       SLI   LONG        0   0.000000            4   
+5       NaN          NaN       SSL     KS        0   0.000000            5   
+6       NaN          NaN       NaN   LONG        0   0.000000           17   
+7       NaN          NaN       STD     KS        1   0.052632          110   
+8       NaN          NaN       NaN   LONG        0   0.000000            5   
+
+================================================================================
+
+Sheet: PARIS_Project_20221209
+Number of rows: 51630
+Number of columns: 25
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+Year,int64,0
+Month,int64,0
+DF_Market,object,0
+Product,Category,0
+object,Rank,0
+Class,object,0
+Thickness,object,0
+Flavor,object,0
+Capsule,int64,0
+Length,object,0
+IATA,object,0
+DF_Vol,int64,0
+Proj_SoM_PG,float64,0
+DF_SoM_IATA_PG,float64,0
+Opportunity,float64,0
+NLOV,float64,0
+SCPI,float64,0
+MCperK,float64,0
+MC_Opp,float64,0
+Rank,2PMI,3
+2_All,object,0
+1PMI,object,0
+3PMI,object,0
+
+Sample Data (first 20 rows):
+    Year  Month DF_Market Product Category Taste    Price Class Thickness  \
+0   2019      1     Qatar       Cigarettes   1mg  Above Premium       SLI   
+1   2019      1     Qatar       Cigarettes   1mg  Above Premium       SLI   
+2   2019      1     Qatar       Cigarettes   1mg  Above Premium       SLI   
+3   2019      1     Qatar       Cigarettes   1mg  Above Premium       SSL   
+4   2019      1     Qatar       Cigarettes   1mg  Above Premium       SSL   
+5   2019      1     Qatar       Cigarettes   1mg  Above Premium       STD   
+6   2019      1     Qatar       Cigarettes   1mg  Above Premium       STD   
+7   2019      1     Qatar       Cigarettes   1mg  Above Premium       STD   
+8   2019      1     Qatar       Cigarettes   1mg  Above Premium       STD   
+
+================================================================================
+
+Sheet: PARIS_project_Jeju_output_20230
+Number of rows: 38667
+Number of columns: 12
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+Flavor,object,0
+Taste,object,0
+Thickness,object,0
+Length,object,0
+IATA,object,0
+DF_Vol,int64,0
+Proj_SoM_PG,float64,0
+DF_SoM_IATA_PG,float64,0
+Opportunity,float64,0
+NLOV,float64,0
+SCPI,float64,0
+Location,object,0
+
+Sample Data (first 20 rows):
+     Flavor        Taste Thickness Length IATA  DF_Vol   Proj_SoM_PG  \
+0   Menthol          1mg       SLI   LONG  AAL       0  2.091376e-07   
+1   Menthol          1mg       STD     KS  AAL       0  0.000000e+00   
+2   Menthol          1mg       STD   LONG  AAL       0  1.394251e-07   
+3   Menthol  Full Flavor       MAG     KS  AAL       0  6.971254e-08   
+4   Menthol  Full Flavor       SLI     KS  AAL       0  3.290432e-05   
+5   Menthol  Full Flavor       SLI   LONG  AAL       0  3.141247e-04   
+6   Menthol  Full Flavor       SSL     KS  AAL       0  3.346202e-06   
+7   Menthol  Full Flavor       SSL   LONG  AAL       0  8.525843e-05   
+8   Menthol  Full Flavor       STD     KS  AAL       0  5.855086e-03   
+
+================================================================================
+
+Sheet: PARIS_project_output_20230512
+Number of rows: 11224
+Number of columns: 12
+
+Column Name,Data Type,Missing Value,Mean,Std,Min,25%
+Column,Names,0
+and,Data,0
+Location,object,0
+IATA,object,0
+Flavor,object,0
+Taste,object,0
+Thickness,object,0
+Length,object,0
+DF_Vol,int64,0
+Real_So_Segment,float64,0
+Ideal_So_Segment,float64,0
+Delta_SoS,float64,0
+NLOV,float64,0
+SCPI,float64,0
+
+Sample Data (first 20 rows):
+    Location IATA        Flavor        Taste Thickness Length  DF_Vol  \
+0    Aalborg  AAL       Menthol  Full Flavor       STD     KS       0   
+1    Aalborg  AAL       Menthol  Full Flavor       STD   LONG       0   
+2    Aalborg  AAL       Menthol       Lights       STD     KS       0   
+3    Aalborg  AAL  Menthol Caps  Full Flavor       STD     KS       0   
+4    Aalborg  AAL  Menthol Caps       Lights       STD     KS       0   
+5    Aalborg  AAL       Regular          1mg       STD     KS   49242   
+6    Aalborg  AAL       Regular          1mg       STD   LONG       0   
+7    Aalborg  AAL       Regular  Full Flavor       SLI     KS       0   
+8    Aalborg  AAL       Regular  Full Flavor       SLI   LONG       0   
+
+================================================================================

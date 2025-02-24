@@ -1,0 +1,73 @@
+Portfolio Optimization Score Validation Report
+==================================================
+
+Category A Validation:
+------------------------------
+✓ Validation Passed
+
+Statistics:
+  count: 566.00
+  mean: 6.58
+  std: 0.94
+  min: 3.33
+  max: 10.00
+  median: 6.74
+
+Distribution Patterns:
+  z_score_max: 3.632
+  extreme_count: 0.000
+  distribution_skew: 0.606
+
+Category B Validation:
+------------------------------
+✓ Validation Passed
+
+Statistics:
+  count: 482.00
+  mean: 2.48
+  std: 3.14
+  min: 0.00
+  max: 10.00
+  median: 0.53
+
+Distribution Patterns:
+  z_score_max: 2.395
+  extreme_count: 0.000
+  distribution_skew: 0.975
+
+Category C Validation:
+------------------------------
+✓ Validation Passed
+
+Statistics:
+  count: 507.00
+  mean: 1.65
+  std: 1.80
+  min: 0.00
+  max: 7.40
+  median: 0.97
+
+Distribution Patterns:
+  z_score_max: 3.203
+  extreme_count: 0.000
+  distribution_skew: 1.893
+
+Category D Validation:
+------------------------------
+✓ Validation Passed
+
+Statistics:
+  count: 461.00
+  mean: 1.29
+  std: 1.56
+  min: 0.00
+  max: 8.67
+  median: 0.80
+
+Distribution Patterns:
+  z_score_max: 4.722
+  extreme_count: 0.000
+  distribution_skew: 1.967
+
+Overall Validation Status:
+✓ PASSED

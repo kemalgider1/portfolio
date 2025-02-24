@@ -1,0 +1,13 @@
+2025-02-21 03:19:23,914 - ERROR - Error loading data: True
+2025-02-21 03:19:23,914 - ERROR - Portfolio optimization failed
+2025-02-21 03:29:25,829 - INFO - Successfully loaded MC_per_Product_SQL.csv
+2025-02-21 03:29:25,870 - INFO - Successfully loaded df_vols_query.csv
+2025-02-21 03:29:25,872 - INFO - Successfully loaded Market_Summary_PMI.csv
+2025-02-21 03:29:25,878 - INFO - Successfully loaded Market_Summary_Comp.csv
+2025-02-21 03:29:25,926 - INFO - Successfully loaded Pax_Nat.csv
+2025-02-21 03:29:25,927 - INFO - Successfully loaded mrk_nat_map_query.csv
+2025-02-21 03:29:25,928 - INFO - Successfully loaded iata_location_query.csv
+2025-02-21 03:29:25,932 - INFO - Successfully loaded similarity_file.csv
+2025-02-21 03:29:26,001 - INFO - Successfully loaded SELMA_DF_map_query.csv
+2025-02-21 03:29:26,079 - ERROR - Error loading data: True
+2025-02-21 03:29:26,081 - ERROR - Portfolio optimization failed

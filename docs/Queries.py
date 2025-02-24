@@ -1,0 +1,614 @@
+**base_query**
+
+SELECT distinct \"CR_BRAND_NAME\" as SKU, \"ITEMS_PER_BUNDLE\" \"Item
+per Bundle\", \"CR_BRAND_ID\" \"CR_BrandId\",
+
+trim(a.DF_MARKET_NAME) as \"DF_Market\", trim(a.LOCATION_NAME) as
+\"Location\", \"TMO_NAME\" as \"TMO\"
+
+FROM DB_FDF_PRD.CS_COMMRCL.RSP_FACT_RSP_CALC a
+
+LEFT JOIN DB_FDF_PRD.CS_OPERATR.GEO_DIM_TOUCH_POINT b ON a.\"POV_ID\" =
+b.\"POV_ID\"
+
+WHERE a.\"TRADE_CHANNEL_NAME\" = \'Airports\' and \"DATE\" \>=
+\'2024-01-01\'
+
+AND b.\"DEPARTURE_ARRIVAL\" != \'A\'
+
+AND \"PRODUCT_CATEGORY_NAME\" = \'Cigarettes\' AND \"VOLUME\" \> 0
+
+AND \"DATA_QUALITY_DESC\" in (\'Real\', \'Simulated\', \'Estimated\')
+
+GROUP BY ALL
+
+**clusters**
+
+SELECT
+
+YEAR_NUM AS \"Year\",
+
+IATA_CODE AS \"IATA\",
+
+TRIM(DF_MARKET_NAME) AS \"Market\",
+
+TRIM(PORT_NAME) AS \"AIRPORT_NAME\",
+
+TRIM(NATIONALITY) AS \"Nationality\",
+
+SUM(PAX_QUANTITY \* 1000) AS \"Pax\"
+
+FROM DB_FDF_PRD.CS_PAXLANU.PAX_FACT_PAX_QUANTITY
+
+WHERE DATA_SOURCE_NAME = \'M1ndset Nationalities\'
+
+AND YEAR_NUM = 2024
+
+AND DEPARTURE_ARRIVAL = \'D\'
+
+AND VALIDITY_DESC = \'Actual\'
+
+AND DOM_INTL = \'International\'
+
+GROUP BY YEAR_NUM, IATA_CODE, DF_MARKET_NAME, AIRPORT_NAME, NATIONALITY;
+
+**DF_Vol_data**
+
+SELECT
+
+a.YEAR_NUM AS \"Year\",
+
+TRIM(a.DF_MARKET_NAME) AS \"DF_Market\",
+
+TRIM(a.LOCATION_NAME) AS \"Location\",
+
+TRIM(a.TMO_NAME) AS \"TMO\",
+
+a.CR_BRAND_ID AS \"CR_BrandId\",
+
+a.CR_BRAND_NAME AS \"SKU\",
+
+a.ITEMS_PER_BUNDLE AS \"Item per Bundle\",
+
+SUM(a.STICK_EQUIVALENT_VOLUME) AS \"Volume\"
+
+FROM DB_FDF_PRD.CS_COMMRCL.RSP_FACT_RSP_CALC a
+
+LEFT JOIN DB_FDF_PRD.CS_OPERATR.GEO_DIM_TOUCH_POINT b
+
+ON a.POV_ID = b.POV_ID
+
+WHERE
+
+a.TRADE_CHANNEL_NAME = \'Airports\'
+
+AND a.YEAR_NUM = 2024\-- Change to 2023 for historical validation
+
+AND a.PRODUCT_CATEGORY_NAME = \'Cigarettes\'
+
+AND a.DATA_QUALITY_DESC IN (\'Real\', \'Simulated\', \'Estimated\')
+
+AND a.DF_MARKET_NAME NOT IN (\'France DP\', \'Spain DP\', \'Finland
+DP\')
+
+AND a.VOLUME \> 0
+
+AND b.DEPARTURE_ARRIVAL != \'A\'
+
+GROUP BY ALL;
+
+**DF_Vol_data_cleared**
+
+SELECT
+
+a.YEAR_NUM AS \"Year\",
+
+a.DF_MARKET_NAME AS \"DF_Market\",
+
+a.LOCATION_NAME AS \"Location\",
+
+a.TMO_NAME AS \"TMO\",
+
+a.CR_BRAND_ID AS \"CR_BrandId\",
+
+a.CR_BRAND_NAME AS \"SKU\",
+
+a.ITEMS_PER_BUNDLE AS \"Item per Bundle\",
+
+SUM(a.STICK_EQUIVALENT_VOLUME) AS \"Volume\"
+
+FROM DB_FDF_PRD.CS_COMMRCL.RSP_FACT_RSP_CALC a
+
+WHERE
+
+a.YEAR_NUM = 2024
+
+AND a.CR_BRAND_ID != 0
+
+AND a.PRODUCT_CATEGORY_NAME = \'Cigarettes\'
+
+AND a.TMO_NAME = \'PMI\'
+
+AND a.TRADE_CHANNEL_NAME = \'Airports\'
+
+AND a.DATA_QUALITY_DESC IN (\'Real\', \'Simulated\', \'Estimated\')
+
+GROUP BY ALL;
+
+**df_vols_query**
+
+SELECT trim(a.DF_MARKET_NAME) as \"DF_Market\", trim(a.LOCATION_NAME) AS
+\"Location\", trim(TMO_NAME) AS \"TMO\", trim(BRAND_FAMILY_NAME) AS
+\"Brand Family\" ,
+
+CR_BRAND_ID AS \"CR_BrandId\", CR_BRAND_NAME AS \"SKU\",
+ITEMS_PER_BUNDLE AS \"Item per Bundle\",
+
+SUM(CASE WHEN YEAR_NUM = 2022 THEN STICK_EQUIVALENT_VOLUME ELSE 0 END)
+AS \"2022 Volume\",
+
+SUM(CASE WHEN YEAR_NUM = 2023 THEN STICK_EQUIVALENT_VOLUME ELSE 0 END)
+AS \"2023 Volume\",
+
+SUM(CASE WHEN YEAR_NUM = 2024 THEN STICK_EQUIVALENT_VOLUME ELSE 0 END)
+AS \"2024 Volume\",
+
+COUNT(DISTINCT CASE WHEN (YEAR_NUM = 2022 and Volume \> 1) THEN
+MONTH(DATE) ELSE NULL END) AS \"2022Month\",
+
+COUNT(DISTINCT CASE WHEN (YEAR_NUM = 2023 and Volume \> 1) THEN
+MONTH(DATE) ELSE NULL END) AS \"2023Month\",
+
+COUNT(DISTINCT CASE WHEN (YEAR_NUM = 2024 and Volume \> 1) THEN
+MONTH(DATE) ELSE NULL END) AS \"2024Month\",
+
+SUM(CASE WHEN YEAR_NUM = 2022 and ITEMS_PER_BUNDLE \> 0 THEN RSP_AMOUNT
+\* (STICK_EQUIVALENT_VOLUME/ITEMS_PER_BUNDLE) ELSE 0 END) AS \"2022
+Revenue\",
+
+SUM(CASE WHEN YEAR_NUM = 2023 and ITEMS_PER_BUNDLE \> 0 THEN RSP_AMOUNT
+\* (STICK_EQUIVALENT_VOLUME/ITEMS_PER_BUNDLE) ELSE 0 END) AS \"2023
+Revenue\",
+
+SUM(CASE WHEN YEAR_NUM = 2024 and ITEMS_PER_BUNDLE \> 0 THEN RSP_AMOUNT
+\* (STICK_EQUIVALENT_VOLUME/ITEMS_PER_BUNDLE) ELSE 0 END) AS \"2024
+Revenue\"
+
+FROM DB_FDF_PRD.CS_COMMRCL.RSP_FACT_RSP_CALC a
+
+LEFT JOIN DB_FDF_PRD.CS_OPERATR.GEO_DIM_TOUCH_POINT b ON a.POV_ID =
+b.POV_ID
+
+WHERE a.TRADE_CHANNEL_NAME = \'Airports\'
+
+AND YEAR_NUM in (2022,2023,2024)
+
+AND PRODUCT_CATEGORY_NAME = \'Cigarettes\'
+
+AND DATA_QUALITY_DESC in (\'Real\' , \'Simulated\', \'Estimated\')
+
+AND a.DF_MARKET_NAME not in (\'France DP\', \'Spain DP\', \'Finland
+DP\')
+
+AND \"VOLUME\" \> 0
+
+AND b.DEPARTURE_ARRIVAL != \'A\'
+
+GROUP BY ALL
+
+**Market_Summary_Comp**
+
+SELECT
+
+TRIM(a.DF_MARKET_NAME) AS \"DF_Market\",
+
+TRIM(a.LOCATION_NAME) AS \"Location\",
+
+TRIM(a.TMO_NAME) AS \"TMO\",
+
+b.FLAVOR AS \"Flavor\",
+
+b.TASTE AS \"Taste\",
+
+b.THICKNESS AS \"Thickness\",
+
+b.LENGTH AS \"Length\",
+
+COUNT(DISTINCT a.CR_BRAND_ID) AS \"Comp_Seg_SKU\",
+
+SUM(a.STICK_EQUIVALENT_VOLUME) AS \"Comp Total\",
+
+ROUND(
+
+(SUM(a.STICK_EQUIVALENT_VOLUME) \* 100.0)
+
+/ SUM(SUM(a.STICK_EQUIVALENT_VOLUME)) OVER(PARTITION BY
+a.DF_MARKET_NAME), 1
+
+) AS \"SoM_Comp\"
+
+FROM DB_FDF_PRD.CS_COMMRCL.RSP_FACT_RSP_CALC a
+
+LEFT JOIN DB_FDF_PRD.PRESENTATION.DIM_SELMA_DF b
+
+ON a.CR_BRAND_ID = b.CR_BRAND_ID
+
+WHERE
+
+a.TRADE_CHANNEL_NAME = \'Airports\'
+
+AND a.YEAR_NUM = 2024
+
+AND a.TMO_NAME != \'PMI\' \-- Exclude PMI brands (focus on competitors)
+
+AND a.PRODUCT_CATEGORY_NAME = \'Cigarettes\'
+
+AND a.DATA_QUALITY_DESC IN (\'Real\', \'Simulated\', \'Estimated\')
+
+AND a.DF_MARKET_NAME NOT IN (\'France DP\', \'Spain DP\', \'Finland
+DP\')
+
+AND a.VOLUME \> 0
+
+GROUP BY
+
+a.DF_MARKET_NAME,
+
+a.LOCATION_NAME,
+
+a.TMO_NAME,
+
+b.FLAVOR,
+
+b.TASTE,
+
+b.THICKNESS,
+
+b.LENGTH;
+
+**Market_Summary_PMI**
+
+SELECT
+
+TRIM(a.DF_MARKET_NAME) AS \"DF_Market\",
+
+TRIM(a.LOCATION_NAME) AS \"Location\",
+
+TRIM(a.TMO_NAME) AS \"TMO\",
+
+b.FLAVOR AS \"Flavor\",
+
+b.TASTE AS \"Taste\",
+
+b.THICKNESS AS \"Thickness\",
+
+b.LENGTH AS \"Length\",
+
+COUNT(DISTINCT a.CR_BRAND_ID) AS \"PMI_Seg_SKU\",
+
+SUM(a.STICK_EQUIVALENT_VOLUME) AS \"PMI Total\",
+
+ROUND(
+
+(SUM(a.STICK_EQUIVALENT_VOLUME) \* 100.0)
+
+/ SUM(SUM(a.STICK_EQUIVALENT_VOLUME)) OVER(PARTITION BY
+a.DF_MARKET_NAME), 1
+
+) AS \"SoM_PMI\"
+
+FROM DB_FDF_PRD.CS_COMMRCL.RSP_FACT_RSP_CALC a
+
+LEFT JOIN DB_FDF_PRD.PRESENTATION.DIM_SELMA_DF b
+
+ON a.CR_BRAND_ID = b.CR_BRAND_ID
+
+WHERE
+
+a.TRADE_CHANNEL_NAME = \'Airports\'
+
+AND a.YEAR_NUM = 2024
+
+AND a.TMO_NAME = \'PMI\'
+
+AND a.PRODUCT_CATEGORY_NAME = \'Cigarettes\'
+
+AND a.DATA_QUALITY_DESC IN (\'Real\', \'Simulated\', \'Estimated\')
+
+AND a.DF_MARKET_NAME NOT IN (\'France DP\', \'Spain DP\', \'Finland
+DP\')
+
+AND a.VOLUME \> 0
+
+GROUP BY
+
+a.DF_MARKET_NAME,
+
+a.LOCATION_NAME,
+
+a.TMO_NAME,
+
+b.FLAVOR,
+
+b.TASTE,
+
+b.THICKNESS,
+
+b.LENGTH;
+
+**MC_per_Product_SQL**
+
+SELECT trim(a.DF_MARKET_NAME) as \"DF_Market\", trim(a.LOCATION_NAME) AS
+\"Location\", trim(a.SKU_NAME) AS \"SKU\" , a.SKU_ID AS \"skuid\",
+
+b.CR_BRAND_ID AS \"CR_BrandId\", a.ITEM_PER_BUNDLE AS \"Item per
+Bundle\",
+
+ROUND(SUM(CASE WHEN (YEAR_NUM = 2022 AND PL_ITEM = \'PMIDF MC\') THEN
+USD_AMOUNT ELSE 0 END), 2) AS \"2022 MC\",
+
+ROUND(SUM(CASE WHEN (YEAR_NUM = 2022 AND PL_ITEM = \'PMIDF NOR\') THEN
+USD_AMOUNT ELSE 0 END), 2) AS \"2022 NOR\",
+
+ROUND(SUM(CASE WHEN (YEAR_NUM = 2023 AND PL_ITEM = \'PMIDF MC\') THEN
+USD_AMOUNT ELSE 0 END), 2) AS \"2023 MC\",
+
+ROUND(SUM(CASE WHEN (YEAR_NUM = 2023 AND PL_ITEM = \'PMIDF NOR\') THEN
+USD_AMOUNT ELSE 0 END), 2) AS \"2023 NOR\",
+
+ROUND(SUM(CASE WHEN (YEAR_NUM = 2024 AND PL_ITEM = \'PMIDF MC\') THEN
+USD_AMOUNT ELSE 0 END), 2) AS \"2024 MC\",
+
+ROUND(SUM(CASE WHEN (YEAR_NUM = 2024 AND PL_ITEM = \'PMIDF NOR\') THEN
+USD_AMOUNT ELSE 0 END), 2) AS \"2024 NOR\"
+
+FROM DB_FDF_PRD.CS_FINANCE.PNL_FACT_PL_POS a
+
+LEFT JOIN DB_FDF_PRD.PRESENTATION.DIM_CR_BRAND b on a.SKU_ID = b.SKU_ID
+
+LEFT JOIN DB_FDF_PRD.CS_OPERATR.GEO_DIM_TOUCH_POINT c ON a.POV_ID =
+c.POV_ID
+
+WHERE
+
+a.TRADE_CHANNEL_NAME = \'Airports\'
+
+and a.PRODUCT_CATEGORY_NAME = \'cigarettes\'
+
+And c.DEPARTURE_ARRIVAL != \'A\'
+
+and PL_ITEM IN (\'PMIDF MC\', \'PMIDF NOR\')
+
+AND DATA_VERSION_TYPE =\'AC\'
+
+AND DATA_VERSION_NAME in (\'COT 2022 ACT\',\'COT 2023 ACT\',\'COT 2024
+ACT\')
+
+GROUP BY ALL
+
+**Pax_Nat**
+
+SELECT \"YEAR_NUM\" AS \"Year\" , IATA_CODE AS \"IATA\",
+trim(DF_MARKET_NAME) AS \"Market\", trim(PORT_NAME) as \"AIRPORT_NAME\",
+NATIONALITY AS \"Nationality\"
+
+, sum(PAX_QUANTITY\*1000) AS \"Pax\"
+
+FROM DB_FDF_PRD.CS_PAXLANU.PAX_FACT_PAX_QUANTITY
+
+WHERE DATA_SOURCE_NAME = \'M1ndset Nationalities\'
+
+AND YEAR_NUM = 2024
+
+AND DEPARTURE_ARRIVAL = \'D\'
+
+AND validity_desc = \'Actual\'
+
+AND DOM_INTL = \'International\'
+
+GROUP BY YEAR_NUM, IATA_CODE, DF_MARKET_NAME, PORT_NAME , NATIONALITY
+
+**SELMA_DF_map_query**
+
+SELECT trim(DF_MARKET_NAME) as \"DF_Market\" , PRODUCT_CATEGORY_NAME as
+\"Product Category\", trim(LOCATION_NAME) as \"Location\",
+
+CR_BRAND_ID as \"CR_BrandId\" , FLAVOR as \"Flavor\",
+
+TASTE as \"Taste\", THICKNESS as \"Thickness\", LENGTH as \"Length\"
+
+FROM DB_FDF_PRD.PRESENTATION.DIM_SELMA_DF
+
+WHERE TRADE_CHANNEL_NAME = \'Airports\' and PRODUCT_CATEGORY_NAME =
+\'Cigarettes\'
+
+**similarity_file**
+
+WITH pax_summary AS (
+
+SELECT
+
+IATA_CODE,
+
+AVG(IFF(DATA_SOURCE_ID = 1, PAX_QUANTITY / 2, PAX_QUANTITY)) AS Avg_Pax
+
+FROM DB_FDF_PRD.CS_PAXLANU.PAX_FACT_PAX_QUANTITY
+
+GROUP BY IATA_CODE
+
+)
+
+SELECT
+
+p1.IATA_CODE AS IATA,
+
+p2.IATA_CODE AS Cluster_IATA,
+
+1 - ABS(p1.Avg_Pax - p2.Avg_Pax) AS Similarity_Score,
+
+RANK() OVER (PARTITION BY p1.IATA_CODE ORDER BY 1 - ABS(p1.Avg_Pax -
+p2.Avg_Pax) DESC) AS Rank
+
+FROM pax_summary p1
+
+JOIN pax_summary p2
+
+ON p1.IATA_CODE != p2.IATA_CODE
+
+QUALIFY Rank \<= 4;
+
+**SELMA_dom_map_query**
+
+SELECT trim(MARKET_NAME) as \"Market\", EBROM_ID as \"EBROMId\",
+trim(MKT_COOLING_POS_DESC) as \"Flavor\", trim(THICKNESS_CATEGORY_CODE)
+as \"Thickness\", trim(MKT_LENGTH_CATEGORY_CODE) as \"Length\"
+
+FROM DB_FDF_PRD.PRESENTATION.DIM_EBROM
+
+where PRODUCT_CATEGORY_NAME = \'Cigarettes\'
+
+**iata_location_query**
+
+SELECT distinct trim(LOCATION_NAME) as Location, IATA_CODE as IATA
+
+from DB_FDF_PRD.CS_OPERATR.GEO_DIM_TOUCH_POINT
+
+where DEPARTURE_ARRIVAL != \'A\'
+
+**mrk_nat_map_query**
+
+SELECT distinct PASSENGER_COUNTRY_NAME, PASSENGER_NATIONALITY
+
+from DB_FDF_PRD.CS_PAXLANU.PAX_FACT_PAX_POS_NAT
+
+**COT_query**
+
+SELECT \"YEAR_NUM\" as \"Year\", \"PRODUCT_CATEGORY_NAME\" as \"Product
+Category\", trim(a.\"LOCATION_NAME\") as \"Location\",
+
+trim(a.\"DF_MARKET_NAME\") as \"DF_Market\",
+
+a.\"TMO_NAME\" as \"TMO\",a.\"BRAND_FAMILY_NAME\" \"Brand Family\",
+a.\"CR_BRAND_ID\" as \"CR_BrandId\", SUM(\"VOLUME\") AS \"DF_Vol\"
+
+FROM DB_FDF_PRD.CS_COMMRCL.RSP_FACT_RSP_CALC a
+
+left join DB_FDF_PRD.CS_OPERATR.GEO_DIM_TOUCH_POINT b
+
+on a.\"POV_ID\" = b.\"POV_ID\"
+
+WHERE a.\"TRADE_CHANNEL_NAME\" = \'Airports\' and \"YEAR_NUM\" = 2024
+
+and \"PRODUCT_CATEGORY_NAME\" = \'Cigarettes\'
+
+and \"DATA_QUALITY_DESC\" in (\'Real\' , \'Simulated\', \'Estimated\')
+
+and b.\"DEPARTURE_ARRIVAL\" in (\'D\', \'B\')
+
+GROUP BY ALL
+
+**country_figures**
+
+SELECT YEAR_NUM AS \"KFYear\" , trim(COUNTRY_NAME) as \"Country\",
+ADC_STICK as \"ADCStick\",CC_PREVALENCE as \"SmokingPrevelance\",
+
+INBOUND_ALLOWANCE as \"InboundAllowance\",PURCHASER_RATE as
+\"PurchaserRate\"
+
+FROM DB_FDF_PRD.CS_PAXLANU.LAN_FACT_COUNTRY_KEY_FIGURES
+
+**DomesticVolumes**
+
+SELECT \"YEAR_NUM\" as \"Year\", vpdp.\"EBROM_ID\" as \"EBROMId\",
+
+trim(vpdp.MARKET_NAME) as \"Market\", vpdi.\"EBROM_NAME\" as \"EBROM\",
+SUM(\"VOLUME\") as \"Volume\"
+
+FROM DB_FDF_PRD.CS_SPLYCHN.IMS_FACT_GSPR_IMS vpdi
+
+LEFT JOIN DB_FDF_PRD.CS_PRODUCT.PRD_DIM_EBROM vpdp
+
+on vpdi.\"EBROM_ID\" = vpdp.\"EBROM_ID\"
+
+WHERE \"YEAR_NUM\" = 2024 AND vpdi.\"EBROM_NAME\" IS NOT NULL AND
+vpdp.\"PRODUCT_CATEGORY_NAME\" = \'Cigarettes\'
+
+group by ALL
+
+**sql_Domest_script**
+
+SELECT \"YEAR_NUM\" as \"Year\", a.\"EBROM_ID\" as \"EBROMId\",
+sum(\"VOLUME\") as \"Volume\"
+
+FROM DB_FDF_PRD.CS_SPLYCHN.IMS_FACT_GSPR_IMS a
+
+LEFT JOIN DB_FDF_PRD.CS_PRODUCT.PRD_DIM_EBROM b
+
+ON a.\"EBROM_ID\" = b.\"EBROM_ID\"
+
+WHERE \"VOLUME\" \> 0 and \"YEAR_NUM\" = 2024 and a.\"EBROM_ID\" != 0
+
+AND b.\"PRODUCT_CATEGORY_NAME\" = \'Cigarettes\'
+
+GROUP BY \"YEAR_NUM\", a.\"EBROM_ID\"
+
+**sql_dom_script**
+
+SELECT EBROM_Id as \"EBROMId\" , TMO_NAME AS \"TMO\" , BRAND_FAMILY_NAME
+AS \"Brand Family\" , \*
+
+FROM DB_FDF_PRD.CS_PRODUCT.PRD_DIM_EBROM
+
+**sql_PMIDF_script**
+
+SELECT \* FROM DB_FDF_PRD.PRESENTATION.DIM_CR_BRAND vp
+
+**No_name**
+
+SELECT trim(a.DF_MARKET_NAME) as \"DF_Market\", trim(a.LOCATION_NAME) AS
+\"Location\", trim(a.SKU_NAME) AS \"SKU\" , a.SKU_ID AS \"skuid\",
+
+b.CR_BRAND_ID AS \"CR_BrandId\", a.ITEM_PER_BUNDLE AS \"Item per
+Bundle\",
+
+ROUND(SUM(CASE WHEN (YEAR_NUM = 2022 AND PL_ITEM = \'PMIDF MC\') THEN
+USD_AMOUNT ELSE 0 END), 2) AS \"2022 MC\",
+
+ROUND(SUM(CASE WHEN (YEAR_NUM = 2022 AND PL_ITEM = \'PMIDF NOR\') THEN
+USD_AMOUNT ELSE 0 END), 2) AS \"2022 NOR\",
+
+ROUND(SUM(CASE WHEN (YEAR_NUM = 2023 AND PL_ITEM = \'PMIDF MC\') THEN
+USD_AMOUNT ELSE 0 END), 2) AS \"2023 MC\",
+
+ROUND(SUM(CASE WHEN (YEAR_NUM = 2023 AND PL_ITEM = \'PMIDF NOR\') THEN
+USD_AMOUNT ELSE 0 END), 2) AS \"2023 NOR\",
+
+ROUND(SUM(CASE WHEN (YEAR_NUM = 2024 AND PL_ITEM = \'PMIDF MC\') THEN
+USD_AMOUNT ELSE 0 END), 2) AS \"2024 MC\",
+
+ROUND(SUM(CASE WHEN (YEAR_NUM = 2024 AND PL_ITEM = \'PMIDF NOR\') THEN
+USD_AMOUNT ELSE 0 END), 2) AS \"2024 NOR\"
+
+FROM DB_FDF_PRD.CS_FINANCE.PNL_FACT_PL_POS a
+
+LEFT JOIN DB_FDF_PRD.PRESENTATION.DIM_CR_BRAND b on a.SKU_ID = b.SKU_ID
+
+LEFT JOIN DB_FDF_PRD.CS_OPERATR.GEO_DIM_TOUCH_POINT c ON a.POV_ID =
+c.POV_ID
+
+WHERE
+
+a.TRADE_CHANNEL_NAME = \'Airports\'
+
+and a.PRODUCT_CATEGORY_NAME = \'cigarettes\'
+
+And c.DEPARTURE_ARRIVAL != \'A\'
+
+and PL_ITEM IN (\'PMIDF MC\', \'PMIDF NOR\')
+
+AND DATA_VERSION_TYPE =\'AC\'
+
+AND DATA_VERSION_NAME in (\'COT 2022 ACT\',\'COT 2023 ACT\',\'COT 2024
+ACT\')
+
+GROUP BY ALL
