@@ -1,0 +1,5 @@
+Cluster,Size,Avg_Score,Top_Category,Bottom_Category,Exemplar_Locations
+0,73,4.182009132420092,Cat_A,Cat_B,"Mandalay, Ulaanbaatar, Yancheng Nanyang"
+1,308,2.5038068181818183,Cat_A,Cat_B,"Yangyang, Colombo, Fes"
+2,144,4.059733796296296,Cat_B,Cat_D,"Zhukovsky, Sandefjord-Torp, Faroe Islands"
+3,49,3.795170068027211,Cat_A,Cat_D,"Beira, Wellington, Acapulco"

@@ -1,0 +1,21 @@
+Location,Avg_Score,Weakest_Category,Strongest_Category,Score_Range,Cluster,Cat_A,Cat_B,Cat_C,Cat_D
+Erfurt,5.0,Cat_B,Cat_B,10.0,3,10.0,,,0.0
+La Paz El Alto,3.3333333333333335,Cat_B,Cat_B,10.0,3,10.0,,0.0,0.0
+Memmingen,3.3333333333333335,Cat_B,Cat_B,10.0,3,10.0,,0.0,0.0
+PRISTINA,4.32,Cat_D,Cat_B,10.0,2,6.93,10.0,0.35,0.0
+Aktau,3.3333333333333335,Cat_B,Cat_B,10.0,3,10.0,,0.0,0.0
+Karlsruhe Baden-Baden,3.3333333333333335,Cat_B,Cat_B,10.0,3,10.0,,0.0,0.0
+Guernsey,4.4525,Cat_D,Cat_B,10.0,2,5.56,10.0,2.25,0.0
+Samarkand,5.0,Cat_B,Cat_B,10.0,3,10.0,,0.0,
+Dubrovnik,4.5375000000000005,Cat_D,Cat_B,10.0,2,7.78,10.0,0.37,0.0
+Santa Cruz Viru Viru,3.3333333333333335,Cat_B,Cat_B,10.0,3,10.0,,0.0,0.0
+Queenstown,4.1425,Cat_D,Cat_B,10.0,2,4.44,10.0,2.13,0.0
+Harare,3.3333333333333335,Cat_B,Cat_B,10.0,3,10.0,,0.0,0.0
+Douala,4.405,Cat_D,Cat_B,10.0,2,7.0,10.0,0.62,0.0
+Samara,4.407500000000001,Cat_D,Cat_B,10.0,2,6.67,10.0,0.96,0.0
+Yingsheng,3.3333333333333335,Cat_B,Cat_B,10.0,3,10.0,,0.0,0.0
+Fukushima,6.0225,Cat_D,Cat_B,9.98,0,6.67,10.0,7.4,0.02
+Ekaterinburg,4.425,Cat_D,Cat_B,9.89,2,6.79,10.0,0.8,0.11
+Minsk,4.529999999999999,Cat_D,Cat_B,9.87,2,6.79,10.0,1.2,0.13
+Iwate,6.07,Cat_D,Cat_B,9.79,0,6.67,10.0,7.4,0.21
+Vladivostok,3.223333333333333,Cat_B,Cat_B,9.67,3,9.67,,0.0,0.0
