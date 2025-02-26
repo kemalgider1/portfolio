@@ -1,0 +1,502 @@
+Location	Cat_A	Cat_B	Cat_C	Cat_D	Avg_Score
+Taipei - Taoyuan	5.76	0.04	7.47	0.73	3.5
+Incheon	2.17	0	4.74	0.98	1.97
+Dubai	5.41	4.06	3.6	8.04	5.28
+Jeju	4.21	0.01	3.37	1.13	2.18
+Tel-Aviv	6.25	5.63	7.7	7.53	6.78
+Shanghai Pudong	4.1	1.72	1.86	2.28	2.49
+Istanbul Airport	6.67	6.06	8.47	8.39	7.4
+Doha	5.7	10	5.22	7.87	6.26
+Kuwait	7.24	7.73	7.39	9.18	7.88
+Tokyo - Narita	5.68	2.75	7.32	5.61	5.34
+Antalya Airport	5.49	6.61	8.24	8.33	7.17
+Hong Kong	6.41	1.18	6.73	0.02	3.58
+Amman	7.37	7.21	9.5	8.78	8.22
+Tokyo - Haneda	6.42	10	7.36	5.55	6.44
+Osaka - Kansai	5.52	3.54	5.61	5.28	4.99
+Beijing	6.67	1.92	3.1	2.58	3.57
+Beirut - Rafik Hariri	5.53	10	2.85	8.74	5.71
+Marrakech	7.56	7.18	9.7	8.07	8.13
+Istanbul Asia Airport	6.56	6.77	6.69	8.47	7.12
+Cairo	6.92	6.23	5.19	8.64	6.74
+Everrich Downtown Kinmen	4.85	0.04	0	0	1.22
+Tenerife	6.67	6.73	8.85	0	5.56
+RIYADH	7.33	8.56	6.3	0	5.55
+Guangzhou Baiyun	7.44	2.45	5.08	3.09	4.52
+Addis Ababa	6.06	9.2	9.33	9.87	8.61
+Palma De Mallorca	6	3.93	8.04	8.45	6.6
+Muscat	5.67	10	4.53	7.89	6.03
+Casablanca	7.04	7.48	9.81	8.19	8.13
+Busan - Kimhae	3.52	0	3.4	0.69	1.9
+Jeddah	6.04	8.56	6.38	9.69	7.67
+Abu Dhabi	5.75	10	4.52	8.95	6.41
+Alicante	7.33	6.63	7.72	8.25	7.48
+Gran Canaria	5.33	6.73	8.76	8.29	7.28
+Tunis	6.54	7.48	5.21	8.16	6.85
+Paris Charles De Gaulle	7.62	6.59	7.02	9.71	7.74
+Malaga	7	6.44	7.07	9.35	7.46
+Barcelona	7	3.36	7.49	3.37	5.31
+Zurich	6.67	7.92	8.32	8.31	7.8
+Dalaman Airport	5.89	5.11	8.9	6.89	6.7
+Manchester	6.67	6.11	6.4	6.31	6.37
+Belgrade	7.5	3.65	2.95	8.85	5.74
+Tirana	5.56	6.98	5.57	8.2	6.58
+Hurgada	6.67	10	8.03	7.23	7.31
+Kuala Lumpur	6.97	5.27	5.49	3.59	5.33
+Cancun	7.12	7.3	5	8.87	7.07
+Sharjah	6.67	7.06	4.02	7.41	6.29
+Izmir Airport	6.87	6.71	8.44	8.22	7.56
+Kaohsiung	6.06	0.04	7.54	0.72	3.59
+Singapore - Changi	7.44	10	5.87	1.67	4.99
+Gdansk	5.88	9.5	6.25	9.98	7.9
+Krakow Balice	6.04	9.78	6.13	9.95	7.98
+Riga	6	10	4.44	5.93	5.46
+Roland Garros	4.81	7.63	8.49	7.5	7.11
+Dublin	5	5.71	7.07	4.18	5.49
+Agadir	7.05	7.14	9.73	7.95	7.97
+Indira Gandhi	6.11	10	2.13	9.6	5.95
+Paris Orly	6.9	8.25	8.61	9.72	8.37
+Madrid Barajas	7.33	3.75	7.47	6.52	6.27
+Monastir	5.8	10	4.66	9.32	6.59
+London Heathrow	8.1	5.75	5.58	8.28	6.93
+Warsaw	6.25	9.4	5.94	9.57	7.79
+Punta Cana - Higuey	6.67	6.64	7.77	9.21	7.57
+Fukuoka	5.87	3.91	6.45	4.88	5.28
+London Gatwick	5.56	5.2	6.8	6.56	6.03
+Port Louis	6.67	10	9.03	9.27	8.32
+Geneva	6.48	8.54	7.88	9.39	8.07
+Sofia	7.5	1.76	1.06	9.26	4.89
+Fuerteventura	6.33	6.73	8.17	7.82	7.26
+Fes	6.82	7.79	9.51	8.46	8.14
+Shanghai Hongqiao	6.67	1.72	1.25	2.05	2.92
+Baghdad	5.49	10	1.02	1.19	2.57
+Chubu	5.9	3.56	8.34	5.72	5.88
+Macau	6.67	1.49	4.63	2.46	3.81
+DAMMAM	6.89	8.6	6.96	0	5.61
+Frankfurt	6.67	10	7.38	10	7.02
+Jerba	6.27	7.87	6.37	8.53	7.26
+Ibiza	6.67	4.93	7.5	9.28	7.1
+Seoul	3.16	0	4.79	0.74	2.17
+Oslo	6.67	10	5.18	9.59	7.15
+Amsterdam - Schiphol	5.71	10	8.35	9.67	7.91
+Basel	5.78	8.85	9.61	9.35	8.4
+Tangier	7.54	7.65	9.88	8.47	8.38
+Rabat	7.47	7.33	9.81	8.16	8.19
+Yerevan	3.33	3.89	1.8	9.26	4.57
+Katowice	6	10	5.89	9.97	7.29
+Ngurah Rai	9.05	3.83	5.11	5.53	5.88
+Gibraltar	5.83	10	7.36	9.86	7.68
+Hangzhou Xiaoshan	5.38	1.81	1.92	2.32	2.86
+Athens	6.51	6.6	4.26	9.35	6.68
+Rome Fiumicino	6.88	7.91	7.49	9.38	7.92
+Marsa Aalam	7.27	10	0	0	2.42
+Colombo	6.13	5.21	0	0	2.84
+Wroclaw	6	10	6.06	9.96	7.34
+PRISTINA	6.67	10	1.96	9.8	6.14
+London Stansted	7.78	5.75	7.34	6.43	6.82
+Mexico City	7.17	6.96	5.36	8.85	7.08
+Johannesburg	5.76	6.62	5.69	8.68	6.69
+Chattrapati Shivaji	5.79	10	1.67	9.6	5.69
+Bodrum Airport	6.02	5.71	8.54	7.08	6.84
+Skopje	6.46	10	8.26	8.74	7.82
+Faro Airport	5	7.08	6	8.07	6.54
+Hanoi	6	0.01	7.08	2.5	3.9
+Milan - Malpensa	6.67	6.47	7.15	8.5	7.2
+Kaunas	8.33	10	7.5	9.81	8.55
+Birmingham	6.67	5.32	6.22	6.62	6.21
+Salalah	4.95	10	4.78	8.61	6.11
+Vilnius	7.5	10	7.26	0	4.92
+Xiamen Gaoqi	6.36	3.09	3.36	3.76	4.14
+Buenos Aires - Ezeiza	5.76	8.93	8.37	9.13	8.05
+Daegu	4.63	0.02	1.02	0.31	1.5
+Oujda	7.14	7.53	9.44	8.38	8.12
+Male	5.61	10	7.89	8.8	7.43
+Lisbon	6.67	7.08	8.51	9.52	7.94
+Warsaw-Modlin	5.48	0.78	6.11	9.67	5.51
+Sao Paulo - Guarulhos	7.27	7.7	8	9.27	8.06
+Santiago Arturo Merino Benitez	6.67	7.6	3.48	7.95	6.42
+Valencia	6	6.77	8.19	8.14	7.28
+Tuzla	6.67	10	0	0	2.22
+Ankara Airport	6.61	6.77	4.99	8.33	6.67
+Bogota	6.29	6.46	8.77	8.48	7.5
+Montego Bay	6.49	7.88	5.37	9.03	7.19
+Ras El Khaymah	5.94	10	7.05	8.71	7.23
+Kunming Wujiaba	6.67	2.39	5.47	2.73	4.32
+Glasgow	6.67	5.3	6.49	6.44	6.22
+Lima	6.67	8.42	5.43	9.42	7.48
+Newcastle	6.67	4.78	7.19	6.44	6.27
+Poznan-Lawica	6	10	6.02	9.97	7.33
+Edinburgh	5.56	5.15	7.6	6.63	6.24
+Brussels	6.67	9.11	9.55	9.74	8.77
+Copenhagen	6.67	10	7.76	7.66	7.36
+Pointe-a-Pitre	7.44	9.98	9.08	9.7	9.05
+Danang	6.67	0	3.61	2.36	3.16
+Rhodes	6.33	6.97	3.7	8.54	6.38
+Liverpool	5.56	5.39	6.77	6.41	6.03
+Sharm El Sheikh	6.96	10	6.7	8.32	7.33
+Fort-de-France	6.67	9.65	9.34	9.7	8.84
+Prague	5	9.25	6.06	9.36	7.42
+Munich	6.94	6.74	6.87	9.37	7.48
+Espargos	6.39	2.41	9.15	7.19	6.29
+Jomo Kenyatta	5.71	7.18	5.98	9.13	7
+London Luton	6	4.62	6.44	4.19	5.31
+Pamandzi	6.67	10	9.93	9.09	8.56
+Porto	7.78	7.51	9.39	8.32	8.25
+Erbil International Airport	5.83	10	2.88	0.33	3.01
+Rzeszow	6	10	5.95	9.97	7.31
+Bristol	5.56	5.41	6.89	6.39	6.06
+Leopold Sedar Senghar	7.41	8.42	7.68	8.74	8.06
+Enfidha	5.3	10	5.33	9.08	6.57
+Chengdu Tianfu	5.15	1.94	0	0	1.77
+Sevilla	5.56	3.46	8.31	2.47	4.95
+Tbilisi	6.15	10	8.8	8.69	7.88
+Baku	5.76	10	7.41	9.28	7.48
+Vienna	5.83	10	7.02	6.82	6.56
+Mahon Airport	6.33	6.06	7.84	8.67	7.22
+Ho Chi Minh	5.67	0.49	7.93	2.57	4.16
+Soekarno Hatta	7.92	5.71	1.26	7.21	5.52
+Xian Xianyang	5.9	1.8	3.86	2.12	3.42
+Chitose	6.67	10	5.78	5.66	6.04
+Santo Domingo Las Americas	7.26	7.05	8.15	7.88	7.58
+Curacao	6.05	10	6.6	9.36	7.34
+Qingdao Liuting	5.15	2.58	5.16	3.11	4
+Rio de Janeiro	7.42	8.12	7.87	9.13	8.14
+Basrah	5.24	10	0.25	2.48	2.66
+Lyon Saint Exupery	6.9	6.78	9.11	9.15	7.98
+Berlin Brandenburg	6.22	10	5.78	8.48	6.83
+Stockholm Arlanda	7.78	4.44	5.24	9.7	6.79
+Phnom Penh	6.67	1.62	4.48	2.75	3.88
+Corfu	5.88	6.28	3.39	8.58	6.03
+Heraklion Airport	4.91	7.23	3.47	8.62	6.06
+Marseille	7.44	4.83	8.61	9.83	7.68
+Duesseldorf	6.11	10	8.52	8.43	7.69
+Jersey	6.67	1.07	5.08	3.22	4.01
+Leeds Bradford	6.67	2.06	6.22	4.4	4.84
+Shannon	5.83	10	7.29	10	6.56
+Oranjestad	7.06	7.26	8.85	9.64	8.2
+Cape Town	5	6.2	6.11	8.51	6.46
+Panama Tocumen	5.28	7.54	7.92	8.98	7.43
+Stavanger	6.83	10	5.92	9.58	7.44
+Sandefjord-Torp	6.46	10	6.37	8.59	7.14
+Urumchi Diwobao	6.3	2.8	9.2	3.39	5.42
+Cheongju	6.47	0.35	2.89	0	2.43
+Bydgoszcz	5.33	10	6.52	9.97	7.27
+Nice	7.62	3.9	6.01	9.4	6.73
+Taichung	6.67	0.04	7.56	0.7	3.74
+East Midlands	4.44	5.14	6.55	6.63	5.69
+Hyderabad	6.5	10	2.06	9.16	5.91
+Shenyang Taoxian	6.36	2.09	6.51	2.57	4.38
+Naples	5.62	8.42	8.04	9.38	7.86
+Gerona	6	3.76	8.55	3.16	5.37
+Vientiane	6.67	0.32	4.23	0.99	3.05
+Bourgas	6.67	1.76	0.88	8.73	4.51
+Togo	5.83	10	4.25	8.18	6.09
+Cam Ranh	6.67	0.17	1.91	2.43	2.8
+Puerto Vallarta	6.94	7.3	2.79	8.02	6.26
+Reus	6.67	1.13	8.23	3.29	4.83
+Bangalore	5.62	6.52	1.75	9.51	5.85
+Zakynthos	6.67	5.67	3.62	8.24	6.05
+Venice	6.25	8.19	7.5	9.39	7.83
+Hamburg	5.9	10	6.49	9.48	7.29
+Thessaloniki	5.29	6.17	4.49	8.4	6.09
+Nador	7.56	7.57	9.18	7.72	8.01
+Kos	7.14	6.21	3.48	8.19	6.25
+Los Cabos	6.94	7.21	2.96	9.24	6.59
+Lublin	7.5	2.5	0	0	2.5
+Murcia	7.14	0.15	0	0	1.82
+Medina	5.56	8.44	6.21	0	5.05
+Cork	5	5.71	7.04	4.63	5.6
+Chongqing Jiangbei	5.83	0.46	1.27	0.7	2.06
+San Salvador Comalapa	5.73	6.5	3.17	8.26	5.92
+Rabil	6.67	2.28	7.79	7.26	6
+Sarajevo	5.93	10	6.41	9.3	7.21
+Shenzhen Bao'an	6.41	0.15	0.85	0.36	1.94
+Abidjan	8.89	7.55	8.69	8.68	8.45
+Zia	5.33	10	0.52	7.62	4.49
+Bergen	6.3	10	5.2	9.04	6.85
+Bergamo	6.32	8.21	7.94	9.46	7.98
+Guayaquil	7.5	7.87	7.69	8.61	7.92
+Alexandria	7.39	10	0	0	2.46
+Nis	5	7.73	0	0	3.18
+Szczecin	5.83	9.67	6.12	9.93	7.89
+Guadalajara	7.31	8.13	3.48	9.18	7.02
+Billund	6.67	10	8.02	1.49	5.39
+Wuhan Tianhe	5.71	1.74	1.91	2.23	2.9
+Guernsey	5	0	5.57	0.2	2.69
+Quito	6.79	3.88	8.51	5.64	6.2
+Tashkent	5.33	10	1.75	7.82	4.97
+Santiago Cibao	6.67	6.11	7.53	6.75	6.76
+Bridgetown	5.5	10	7.49	6.75	6.58
+Zanzibar	7.5	10	9.91	8.39	8.6
+Kutaisi	6.19	10	8.81	7.22	7.41
+Toulouse	7.58	6.26	8.46	9.08	7.85
+Essaouira	7.33	7.96	0	0	3.82
+Guatemala City	6.06	4.39	1.48	6.14	4.52
+Batumi	5.24	10	0	0	1.75
+Bamako	7.5	10	5.64	7.5	6.88
+Kayseri Airport	6.26	6	4.58	7.8	6.16
+Yanji Zhaoyangchuan	9.05	3.21	7.2	3.69	5.79
+Podgorica	7.78	10	4.19	10	5.98
+Cayenne	6.67	9.42	9.75	9.53	8.84
+San Jose	5.83	10	7.2	9.4	7.48
+Ciampino Airport	5.56	8.62	7.94	9.8	7.98
+Chania	6.67	4.27	3.71	7.7	5.59
+Changsha Huanghua	5.83	1.94	2.61	2.37	3.19
+Brno	6	10	5.92	8.55	6.82
+Aswan	8.03	10	6.07	8.99	7.7
+Varna	6.67	1.76	1.13	8.85	4.6
+Bilbao	7	1.95	8.04	9.69	6.67
+Trabzon Airport	6.18	6.27	9.33	8.48	7.56
+Suleymania Airport	5	10	0.41	3.11	2.84
+Lodz	6.88	8	6.36	10	7.08
+Alexandoupolis	5	4.65	0	0	2.41
+Montpellier	6.67	10	9.44	8.37	8.16
+Ulaanbaatar	6.67	3.91	1.94	7.9	5.11
+Nantes	7.5	4.11	8.22	8.7	7.13
+Santorini	7.18	5.27	4.42	8.73	6.4
+Entebbe	4.81	10	3.16	8.55	5.51
+Paramaribo	5.38	10	4.28	4.91	4.86
+Changchun Longjia	7.33	1.05	6.3	1.46	4.04
+Stuttgart	5	6.53	8.41	8.04	7
+Santiago De Compostela	7.33	3.96	9.43	2.75	5.87
+Buenos Aires Aeroparque	5.76	10	8.03	8.32	7.37
+Cochin	5.71	10	1.43	8.79	5.31
+Moscow - Vnukovo	6.36	3.51	4.11	5	4.74
+Hannover	5.9	10	8.61	9.48	8
+Bordeaux	7.22	4.65	6.43	7.06	6.34
+Accra	6.11	6.75	5.74	8.32	6.73
+Verona	6.67	9.41	8.21	9.81	8.52
+Cali	6.67	2.45	7.47	8.71	6.32
+Antalya Gazipasa Airport	6.01	4.58	8.43	6.8	6.46
+Changzhou Benniu	7.22	0.78	4.83	1.28	3.53
+Almaty	6.67	0.12	3.33	4.67	3.7
+Montevideo	3.33	0	0.45	5.6	2.34
+Kralendijk (Bonaire)	5.19	10	9.8	8.96	7.98
+Trondheim	6.67	10	7.47	9.27	7.8
+Manas	5	5.84	3.18	8	5.5
+Sfax	7.29	4.82	4.13	8.55	6.2
+Ningbo Lishe	5.83	2.57	0.23	3	2.91
+Gaziantep Airport	6.44	5.41	4.48	7.98	6.08
+Nuernberg	8.18	6.13	7.81	7.43	7.39
+Aberdeen	5.56	5.43	6.74	6.16	5.97
+Olsztyn	4.79	8.18	0	0	3.24
+Moscow - Sheremetyevo	5.56	10	0.72	0.18	2.15
+Johor Bahru	6	5.62	4.85	3.6	5.02
+Naha	6.19	10	5.19	2.62	4.67
+Puerto Plata	6.67	7.11	4.42	8.32	6.63
+Split	8.33	10	6.26	10	7.3
+Samsun Airport	6.32	5.3	5.29	8.37	6.32
+Manila - Ninoy Aquino	7.5	10	8.61	8.41	8.17
+Yantai Penglai	7.33	3.43	5.56	3.97	5.07
+Almeria	7.5	4.97	8.1	0.78	5.34
+Medellin Jose Maria Cordova	5.6	10	7.57	8.93	7.37
+Bologna	6.67	10	7.99	10	7.33
+Praia	6.36	3.94	9.64	7.26	6.8
+Piarco	6.14	0.72	2.03	3.05	2.98
+La Palma	5.42	5.8	9.02	8.07	7.08
+Gabon	7.5	9.37	8.07	9.39	8.58
+Dar Es Salaam	7.78	6.64	5.58	9.56	7.39
+Southampton	3.33	0.5	5.01	1.95	2.7
+Pisa	6.48	6.84	8.64	9.79	7.94
+Mykonos	7.33	4.21	3.67	8.22	5.86
+Windhoek	6.11	10	9.69	8.85	8.22
+Cardiff	4.44	4.02	7.35	6.43	5.56
+Charleroi	7.78	9.11	9.31	9.95	9.04
+Penang	5.71	0.44	5.17	1.76	3.27
+Aqaba	6.44	5.46	0	0	2.98
+Wenzhou Longwan	6.3	0.24	0.78	0.42	1.94
+Adana Airport	5.45	7	3.74	8	6.05
+Fuzhou Changle	8.67	1.05	3.93	1.52	3.79
+Luxor	7.25	10	6.54	7.52	7.1
+Belize City	4.87	10	2.33	0.31	2.5
+Beauvais	6.25	2.94	8.41	6.59	6.05
+Milan - Linate	6.47	8.61	6.06	9.27	7.6
+Skiathos	6.19	5.2	0	0	2.85
+Cologne	6.06	7.24	7.98	9.76	7.76
+Nanning Wuxu	7.33	0.68	8.88	1.24	4.53
+Sanya Fenghuang	7.33	5.73	8.45	6.31	6.95
+Ohrid	5.45	10	0	0	1.82
+Managua	6.67	1.34	5.37	7.42	5.2
+Banjul	7.22	5.16	6.3	8.69	6.84
+Melbourne	6.36	10	8.17	5.45	6.66
+Astana	6.3	8.53	3.31	0	4.53
+Aktio	6.67	2.88	0	0	2.39
+Fortaleza	7.2	7.42	8.69	9.25	8.14
+Bandaranaike	5.78	10	2.26	7.44	5.16
+London City	6.67	8.38	5.74	7.73	7.13
+Kingston	6.41	10	5.07	3.1	4.86
+Moscow - Domodedovo	5.67	1.43	4.6	4.62	4.08
+Siem Reap	7.67	1.51	5.25	3.11	4.38
+Palermo	5.95	3.67	6.63	8.27	6.13
+Jerez De La Frontera	5.83	6.23	7.58	7.66	6.82
+Faroe Islands	5.56	10	8.67	5.69	6.64
+Ouarzazate	8.48	8.5	0	0	4.24
+Astrakhan	6.41	3.66	2.12	5.23	4.36
+Hefei Xinqiao	5.56	0.22	9.12	0.45	3.84
+Lubumbashi	8.33	10	9.65	0	5.99
+Tulear	5	0	0	0	1.25
+Helsinki-Vantaa	8.33	10	9.06	9.44	8.94
+Wuxi Shuofang	5	0.78	0.12	1.27	1.79
+Wellington	7.5	10	6.68	2.94	5.71
+Zagreb	6.67	10	7.12	10	6.9
+Diyarbakir Airport	6.14	4.95	4.9	8.07	6.02
+Jinan Xiaoqiang	5	1.26	2.52	1.76	2.64
+Salzburg	6.25	10	5.86	10	6.06
+Eindhoven	5.56	10	7.17	9.76	7.5
+Florence	5.88	8.69	6.34	9.76	7.67
+Dubrovnik	10	10	6.35	10	6.35
+Zhengzhou Xinzheng	8	1.05	3.04	1.35	3.36
+Santander	7.33	2.21	7.51	7.28	6.08
+St. Petersburg Pulkovo	4.33	3.7	3.86	7.28	4.79
+Krasnoyarsk	6.67	5.23	2.59	3.9	4.6
+Conakry	6.3	10	8.61	7.5	7.47
+Bournemouth	4.44	4.29	6.59	6.38	5.42
+Lagos	6.67	5.97	6.13	8.77	6.88
+Viracopos	7.2	8.07	9.25	9.6	8.53
+Kota Kinabalu	3.81	3.22	4.24	1.94	3.3
+Nouakchott	6.67	7.76	6.13	8.51	7.27
+Monterrey	6.55	8.08	1.53	9.33	6.37
+La Romana	7.02	4.7	7.3	5.86	6.22
+Dresden	6	4.28	6.54	9	6.46
+Bremen	6.11	2.06	7.39	6.38	5.48
+Torino	6.67	10	7.42	10	7.04
+Niamey	5.93	10	3.64	9.08	6.22
+Bari	6.67	10	7.82	10	7.24
+Perth	5.26	6.03	6.67	7.37	6.33
+Cozumel	7.59	7.05	2.08	8.79	6.38
+Djibouti	6	0	0	0	1.5
+Port-au-Prince (Haiti)	6	10	4.65	8.34	6.33
+Sochi	5.56	2.83	2.87	5.49	4.19
+Durban	4.17	6.1	4.08	9.07	5.86
+Yangon	7.08	0.62	6.71	1.29	3.92
+Sendai	5.93	10	6.22	0.24	4.13
+Madeira	6.11	6.18	6.69	8.3	6.82
+Asturias	7.22	5.81	8.45	9.91	7.85
+Volgograd	6.67	7.49	2.97	9.38	6.63
+Mendoza	5.83	10	5.67	9.3	6.93
+Lille	7.14	1.75	9.15	8.12	6.54
+Salvador	6.8	8.22	7.02	9.17	7.8
+Takamatsu	6	10	6.63	1.81	4.81
+Cordoba	5.71	10	8.17	9.76	7.88
+Exeter	6.67	4.82	7.16	6.65	6.32
+Kilimanjaro	7.41	8.14	7.92	9.44	8.23
+Douala	5.83	10	8.17	9.93	7.98
+Weihai Dashuibo	6.67	0.53	5.07	0.96	3.31
+Brisbane	5.45	10	7.85	9.4	7.57
+Lusaka	5	10	0.75	9.64	5.13
+Antigua	6.67	10	7.82	8.25	7.58
+Munster-Osnabruck	6.33	10	6.74	7.35	6.81
+Rotterdam	7.78	10	9.71	9.06	8.85
+Paderborn	3.33	0.05	9.25	4.98	4.4
+Phu Quok	7.67	0.09	6.97	1.29	4
+Genoa	6.19	10	7.55	8.06	7.27
+Kigali	5	10	2.57	4.95	4.17
+Dortmund	6.41	10	8.23	9.64	8.09
+Mombasa	5.71	10	8.64	9.76	8.04
+Malmo	6.67	0.56	6.52	8.32	5.52
+Mazatlan	7.44	5.22	2.37	8.46	5.87
+Dalian Zhoushuizi	7.78	0	0	0	1.94
+Mudanjiang Hailang	7.22	1.27	7.82	1.63	4.49
+La Paz Manuel Marquez de Leon	6.53	9.04	2.47	9.16	6.8
+Konya Airport	6.13	6.43	6.8	8.07	6.86
+Hiroshima	6.67	10	6.38	0.43	4.49
+Okayama	5.93	10	4.11	0	3.35
+Nanchang Changbei	8.33	3.83	8.53	0	5.17
+Belo Horizonte	6.77	7.02	9.27	9.35	8.1
+Pula	5	10	5.28	10	5.14
+Liberia	4.17	10	8.74	8.16	7.02
+Abuja	6.67	6	4.02	8.16	6.21
+Yangyang	5.42	0	0	0	1.36
+A Coruna	8	4.22	9.57	9.33	7.78
+Norwich	7.33	0.08	5.31	1.56	3.57
+Aalborg	7.5	0	7.26	6.91	5.42
+Auckland	4.44	0	0	0	1.11
+Treviso	5.56	0.01	2.96	6.46	3.75
+Ramon	6.44	10	0	0	2.15
+Ekaterinburg	5.83	0	3.08	3.35	3.06
+Kutahya Airport	5.68	4.41	0	0	2.52
+Samana El Catey	7.19	3.89	0	0	2.77
+Minsk	5.56	10	0.16	0.04	1.92
+Humberside	6.67	2.19	0	0	2.22
+Min Vody	7.41	1.91	3.25	5	4.39
+St. George's Point Saline	6.96	6.37	9.6	8.37	7.82
+Katima Mulilo	5	0	0	0	1.25
+Graz	6.25	10	7.84	8.91	7.67
+Kavala	6.11	2.69	0	0	2.2
+Natal	6.55	4.03	9.39	7.8	6.94
+Florianopolis	6.11	8.42	2.22	9.31	6.52
+Grenoble	7.22	0	0	0	1.8
+Ostrava	7.22	7.48	0	0	3.68
+Sydney	7.14	10	3.63	2.6	4.46
+Tarbes - Lourdes	6.67	2.84	0	0	2.38
+Brasilia	7.01	7.28	9.75	9	8.26
+Zadar	8.33	10	8.24	10	8.28
+Porto Alegre	6.99	7.59	7.87	8.66	7.78
+Harbin Taiping	10	3.82	6.26	4.31	4.8
+Recife	7.22	9.15	9.52	8.91	8.7
+Mitilini	7.62	3.3	4.59	7.45	5.74
+Amritsar	6.11	10	1.67	9.6	5.79
+Anna	6.11	10	1.56	9.31	5.66
+Goa	6.11	10	1.84	9.67	5.87
+Jaipur	6.11	10	1.59	10	3.85
+Karipur	6.11	10	1.59	9.47	5.72
+Lucknow	6.11	10	1.57	9.47	5.72
+Mangalore	6.11	10	1.6	9.47	5.73
+Netaji Subhash Chandra Bose Int. Airport	6.11	10	1.7	9.31	5.71
+Sardar Vallabh Bhai Patel	6.11	10	1.72	9.67	5.83
+Trichy	6.11	10	1.59	9.31	5.67
+Granada	6.67	0.51	7.28	9.28	5.94
+Yinchuan Hedong	5.56	0.09	0.23	0.3	1.54
+Gaborone	5.56	0	0	10	1.85
+Haiphong	10	0	5.23	0.06	1.76
+Sierra Leone	6.67	10	4.69	9.77	7.04
+Chambery	8.33	0	0	0	2.08
+London Southend Airport	8.33	3.89	5.87	6.55	6.16
+Bujumbura	6.36	10	3.91	8.47	6.25
+Ixtapa Zihuatanejo	6.57	1.78	4.07	8.17	5.15
+Shizuoka	8.33	10	7.84	6.84	7.67
+Vaxjo	8.33	10	0	0	2.78
+Basseterre (Saint Kitts)	6.81	6.32	4.99	4.58	5.67
+Strasbourg	7.5	5.83	8.99	8.36	7.67
+Maputo	8.33	0	0	0	2.08
+Samarkand	6.25	10	1.04	6.5	4.6
+Denizli Cardak Airport	6.44	0.01	5.77	4.64	4.22
+Queretaro	6	10	2.55	5.08	4.54
+Shandong	7.5	0	0	0	1.88
+Kagoshima	4.44	10	8.52	5.75	6.24
+Tozeur	7.08	2	0	0	2.27
+Kinshasa	7.78	10	0.8	1.35	3.31
+Acapulco	6.52	1.67	1.67	7.52	4.34
+Samos	6.67	4.2	4.62	7.47	5.74
+Samara	3.33	10	4.4	9.9	5.88
+Rosario	5.42	10	6.22	9.44	7.03
+Cairns	7.78	0	6.67	1.15	3.9
+Kalibo	8.33	10	8.36	0	5.56
+Lulea	5.83	10	7.66	10	6.74
+Nykoping	10	10	6.57	8.85	7.71
+Quanzhou	6.19	10	0	0	2.06
+Erfurt	7.78	10	0	0	2.59
+Sihanoukville	6.19	3.7	0	0	2.47
+Miyazaki	6.67	10	2.39	0.99	3.35
+Xuzhou Guanyin	6	0.47	0	0.75	1.8
+Karpathos	5	0	0	0	1.25
+Oita	10	0	3.26	1.38	1.55
+Bariloche	8.33	10	5.46	9.41	7.73
+Radom	6.11	10	0	0	2.04
+Aktau	5.83	0	0	0	1.46
+Umea	7.5	7.49	0	6.08	5.27
+Fukushima	6.67	0	0	5.47	3.04
+Coolangatta	5.56	0	4.87	7.2	4.41
+Marka	5.42	0.12	0	0	1.38
+Ioannina	5.71	9.43	0	0	3.78
+Hatay Airport	5	0	0	0	1.25
+Shymkent	6.67	0	0	0	1.67
+Kazan	6.67	0	0	0	1.67
+Gothenburg	6.67	0	5.32	6.39	4.6
+Luanda 	7.33	10	0.87	3.04	3.75
+Manama 	6.04	10	4.21	7.99	6.08
+Lanzarote	5.67	6.73	8.87	8.26	7.38
+Aarhus	4.44	0	0	0	1.11
+Glasgow Prestwick	6.67	0.86	4.98	0.1	3.15
+Queenstown	4.44	10	6.65	4.25	5.11
+Juba	6.3	10	8.87	8.11	7.76
