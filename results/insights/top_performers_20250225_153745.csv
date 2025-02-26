@@ -1,0 +1,21 @@
+Location,Avg_Score,Top_Category,Cluster,Cat_A,Cat_B,Cat_C,Cat_D
+Ramon,10.0,Cat_B,3,10.0,,,
+Bangui,8.33,Cat_B,3,8.33,,,
+Yaounde,8.15,Cat_B,3,8.15,,,
+Zaporizhya,8.04,Cat_B,3,8.04,,,
+Katima Mulilo,7.38,Cat_C,2,4.76,10.0,,
+Vaxjo,7.335,Cat_C,2,4.67,10.0,,
+Doncaster,7.32,Cat_B,1,7.32,,,
+Lublin,7.16,Cat_C,2,6.82,7.5,,
+Oita,7.133333333333333,Cat_D,2,7.22,10.0,4.18,
+Tulear,6.97,Cat_B,1,6.97,,,
+Zhukovsky,6.67,Cat_A,2,,6.67,,
+Orebro,6.623333333333334,Cat_C,2,7.78,10.0,,2.09
+Miyazaki,6.443333333333334,Cat_D,2,6.67,10.0,2.66,
+Niamey,6.09,Cat_D,2,5.0,10.0,3.27,
+Iwate,6.07,Cat_B,0,6.67,10.0,7.4,0.21
+Fukushima,6.0225,Cat_B,0,6.67,10.0,7.4,0.02
+Nairobi,5.6625,Cat_B,0,6.67,7.5,7.03,1.45
+Juba,5.4775,Cat_B,2,6.9,10.0,2.64,2.37
+Jinan Xiaoqiang,5.445,Cat_D,0,6.67,0.08,6.71,8.32
+Hohhot Baita,5.3875,Cat_D,0,6.71,0.01,7.11,7.72
