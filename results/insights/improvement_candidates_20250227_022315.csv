@@ -1,0 +1,21 @@
+Location,Avg_Score,Weakest_Category,Strongest_Category,Score_Range,Cluster,Cat_A,Cat_B,Cat_C,Cat_D
+Cordoba,5.63,Cat_D,Cat_D,10.0,0,6.89,0.0,10.0,
+Fortaleza,6.6075,Cat_D,Cat_B,10.0,1,6.87,10.0,9.56,0.0
+Krasnoyarsk,6.7025,Cat_B,Cat_D,10.0,3,6.88,0.0,9.93,10.0
+St. Petersburg Pulkovo,4.1875,Cat_B,Cat_C,10.0,0,6.75,0.0,10.0,0.0
+Kutahya Airport,5.6499999999999995,Cat_D,Cat_D,10.0,2,6.95,10.0,0.0,
+Billund,5.5566666666666675,Cat_D,Cat_D,10.0,0,6.67,0.0,10.0,
+Nanchang Changbei,6.015000000000001,Cat_C,Cat_B,10.0,2,6.62,10.0,0.0,7.44
+Strasbourg,6.6625,Cat_B,Cat_D,10.0,3,6.92,0.0,9.73,10.0
+Mangalore,6.1275,Cat_B,Cat_D,10.0,3,4.87,0.0,9.64,10.0
+PRISTINA,6.715,Cat_B,Cat_D,10.0,3,6.93,0.0,9.93,10.0
+Copenhagen,4.2075,Cat_B,Cat_C,10.0,0,6.83,0.0,10.0,0.0
+Johor Bahru,5.99137802510557,Cat_C,Cat_D,10.0,3,6.13,7.83551210042228,0.0,10.0
+Milan - Malpensa,6.6375,Cat_B,Cat_D,10.0,3,6.82,0.0,9.73,10.0
+Tokyo - Haneda,5.016666666666667,Cat_D,Cat_D,10.0,0,5.05,0.0,10.0,
+Grenoble,5.45,Cat_D,Cat_D,10.0,2,6.35,10.0,0.0,
+Salvador,6.35,Cat_D,Cat_B,10.0,1,6.84,10.0,8.56,0.0
+Shannon,5.0,Cat_D,Cat_D,10.0,0,5.0,0.0,10.0,
+Muan,5.52,Cat_D,Cat_D,10.0,2,6.56,10.0,0.0,
+Tbilisi,5.609999999999999,Cat_D,Cat_D,10.0,0,6.83,0.0,10.0,
+Douala,5.666666666666667,Cat_D,Cat_D,10.0,0,7.0,0.0,10.0,

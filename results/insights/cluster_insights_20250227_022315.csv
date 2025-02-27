@@ -1,0 +1,5 @@
+Cluster,Size,Avg_Score,Top_Category,Bottom_Category,Exemplar_Locations
+0,280,5.414162268811194,Cat_C,Cat_B,"Zhukovsky, Cartagena de Indias, Huatulco"
+1,119,7.643533104094091,Cat_B,Cat_D,"Daegu (downtown), Izmir Airport, Fukuoka"
+2,119,3.1326292132309757,Cat_A,Cat_C,"Quanzhou Jinjiang, Shijiazhuang Zhengding, Gothenburg"
+3,66,7.132908287517378,Cat_D,Cat_B,"Trabzon Airport, Zhengzhou Xinzheng, Hangzhou Xiaoshan"

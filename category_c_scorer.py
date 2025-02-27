@@ -1,71 +1,128 @@
 import pandas as pd
 import numpy as np
-from dataclasses import dataclass
-from typing import Optional
+from sklearn.linear_model import LinearRegression
 import logging
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
 
-@dataclass
 class CategoryCScorer:
-    """Calculates Category C scores based on passenger and volume data."""
+    """
+    Calculates Category C scores based on passenger mix alignment with duty-free sales.
+    Simplified implementation based directly on the 2023 code approach.
+    """
 
-    current_year: int = 2024
+    def __init__(self, current_year=2024):
+        self.current_year = current_year
+        self.model = LinearRegression()
+        self.logger = logging.getLogger(__name__)
 
-    def validate_inputs(self, *dataframes: pd.DataFrame) -> bool:
-        """Validates input dataframes."""
-        return all(not df.empty for df in dataframes)
+    def calculate_scores(self, pax_data, df_vols, mrk_nat_map, iata_location):
+        """
+        Calculate Category C scores based on passenger mix and volume data
 
-    def merge_data(self, pax_data: pd.DataFrame, mrk_nat_map: pd.DataFrame,
-                  iata_location: pd.DataFrame) -> pd.DataFrame:
-        """Merges input dataframes."""
+        Parameters:
+        -----------
+        pax_data : DataFrame
+            Passenger data
+        df_vols : DataFrame
+            Duty-free volumes data
+        mrk_nat_map : DataFrame
+            Mapping of Nationality to Country
+        iata_location : DataFrame
+            Mapping of IATA code to Location
+
+        Returns:
+        --------
+        DataFrame
+            Scores for Category C with columns ['Location', 'Cat_C']
+        """
         try:
-            merged = pax_data.merge(mrk_nat_map, how='left', on='Location')
-            return merged.merge(iata_location, how='left', on='Location')
-        except Exception as e:
-            logger.error(f"Error merging data: {e}")
-            raise
+            # Step 1: Filter to locations with IATA codes
+            locations_with_iata = iata_location['Location'].unique()
+            df_vols_filtered = df_vols[df_vols['Location'].isin(locations_with_iata)].copy()
 
-    def calculate_location_score(self, pax_volume: float, df_volume: float) -> float:
-        """Calculates score for a single location."""
-        if pax_volume > 0 and df_volume > 0:
-            return min((df_volume / pax_volume) * 10, 10)
-        return 0.0
+            # Step 2: Join volume data with IATA codes
+            df_with_iata = df_vols_filtered.merge(iata_location, on='Location', how='left')
 
-    def calculate_scores(self, pax_data: pd.DataFrame, df_vols: pd.DataFrame,
-                        mrk_nat_map: pd.DataFrame, iata_location: pd.DataFrame) -> pd.DataFrame:
-        """Calculates Category C scores for all locations."""
-        try:
-            logger.info(f"Processing data - shapes: PAX:{pax_data.shape}, "
-                       f"Vols:{df_vols.shape}, Map:{mrk_nat_map.shape}, "
-                       f"IATA:{iata_location.shape}")
+            # Step 3: Calculate real distribution
+            # Find the volume column
+            volume_columns = [c for c in df_with_iata.columns if 'Volume' in c]
+            volume_col = volume_columns[0] if volume_columns else 'Volume'
 
-            if not self.validate_inputs(pax_data, df_vols, mrk_nat_map, iata_location):
-                raise ValueError("Invalid input data")
+            # Calculate distribution by IATA and SKU
+            real_dist = df_with_iata.groupby(['IATA', 'CR_BrandId'])[volume_col].sum().reset_index()
 
-            merged_df = self.merge_data(pax_data, mrk_nat_map, iata_location)
+            # Step 4: Prepare PAX distribution
+            # Join nationality data
+            pax_with_country = pax_data.merge(
+                mrk_nat_map,
+                left_on='Nationality',
+                right_on='PASSENGER_NATIONALITY' if 'PASSENGER_NATIONALITY' in mrk_nat_map.columns else 'Nationality',
+                how='left'
+            )
 
+            # Group by IATA and country
+            country_col = 'PASSENGER_COUNTRY_NAME' if 'PASSENGER_COUNTRY_NAME' in pax_with_country.columns else 'Countries'
+            if country_col not in pax_with_country.columns:
+                country_col = [col for col in pax_with_country.columns if 'COUNTRY' in col.upper()
+                               or 'NATION' in col.upper()]
+                country_col = country_col[0] if country_col else 'Nationality'
+
+            pax_dist = pax_with_country.groupby(['IATA', country_col])['Pax'].sum().reset_index()
+
+            # Step 5: Calculate scores
             scores = []
-            for location in df_vols['Location'].unique():
+
+            for iata in real_dist['IATA'].unique():
                 try:
-                    location_data = merged_df[merged_df['Location'] == location]
-                    if location_data.empty:
+                    # Get location name
+                    location_info = iata_location[iata_location['IATA'] == iata]
+                    if location_info.empty:
+                        continue
+                    location = location_info['Location'].iloc[0]
+
+                    # Get distributions - create a proper copy to avoid SettingWithCopyWarning
+                    real_values = real_dist[real_dist['IATA'] == iata].copy()
+                    pax_values = pax_dist[pax_dist['IATA'] == iata].copy()
+
+                    # Skip if not enough data
+                    if len(real_values) < 3 or len(pax_values) < 3:
+                        scores.append({'Location': location, 'Cat_C': 0})
                         continue
 
-                    pax_volume = location_data['PAX_Volume'].sum()
-                    df_volume = df_vols[df_vols['Location'] == location]['2024 Volume'].sum()
+                    # Calculate ranks - using .loc to avoid SettingWithCopyWarning
+                    real_values.loc[:, 'Rank'] = real_values[volume_col].rank(ascending=False)
+                    pax_values.loc[:, 'Rank'] = pax_values['Pax'].rank(ascending=False)
 
-                    score = self.calculate_location_score(pax_volume, df_volume)
-                    if score > 0:
+                    # Get the minimum length of both distributions
+                    min_length = min(len(real_values), len(pax_values))
+
+                    if min_length >= 3:
+                        # Get the top ranked items from both distributions
+                        real_ranks = real_values.sort_values('Rank').head(min_length)['Rank'].values
+                        pax_ranks = pax_values.sort_values('Rank').head(min_length)['Rank'].values
+
+                        # Use the model to calculate R-squared
+                        X = np.array(real_ranks).reshape(-1, 1)
+                        y = np.array(pax_ranks)
+
+                        # Fit the model and get R-squared
+                        self.model.fit(X, y)
+                        r_squared = max(0, self.model.score(X, y))
+
+                        # Scale to 0-10
+                        score = round(r_squared * 10, 2)
+
                         scores.append({'Location': location, 'Cat_C': score})
+                    else:
+                        scores.append({'Location': location, 'Cat_C': 0})
 
                 except Exception as e:
-                    logger.error(f"Error processing location {location}: {e}")
-                    continue
+                    self.logger.warning(f"Error calculating score for {iata}: {str(e)}")
+                    # Make sure we still add the location with a zero score
+                    scores.append({'Location': location, 'Cat_C': 0})
 
             return pd.DataFrame(scores)
 
         except Exception as e:
-            logger.error(f"Error in Category C scoring: {e}")
+            self.logger.error(f"Error in Category C scoring: {str(e)}")
             return pd.DataFrame(columns=['Location', 'Cat_C'])

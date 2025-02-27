@@ -6,15 +6,15 @@ Hebei,0.0
 Tokyo - Narita,9.513909961100751
 Ras El Khaymah,0.0
 Enfidha,9.993238406552752
-Osaka - Kansai,5.081883479516196
-San Salvador Comalapa,9.80330619877573
+Osaka - Kansai,5.081883479516199
+San Salvador Comalapa,9.803306198775733
 Munster-Osnabruck,0.0
-Adana Airport,9.159195623169557
+Adana Airport,9.159195623169555
 Madeira,0.0
-Lagos,9.999999999999998
+Lagos,10.0
 Praia,10.0
-Kayseri Airport,9.999999999999998
-St. George's Point Saline,9.9993873353484
+Kayseri Airport,10.0
+St. George's Point Saline,9.999387335348398
 Cukurova Airport,9.083979949225299
 Rhodes,10.0
 Hefei Xinqiao,6.541016363962926
@@ -26,33 +26,33 @@ Ohrid,0.0
 Kagoshima,0.0
 Asturias,0.0
 Santiago De Compostela,0.0
-Bogota,9.903834942592173
+Bogota,9.903834942592178
 Faro Airport,0.0
 Edinburgh,0.0
 Colombo,9.999999999999996
 Luxor,0.0
 Aswan,0.0
 Santo Domingo Las Americas,9.644460176964873
-Belo Horizonte,9.998608763341057
-Fukuoka,9.463165452712056
+Belo Horizonte,9.998608763341059
+Fukuoka,9.463165452712053
 Verona,0.0
 Port-au-Prince (Haiti),0.0
 Montego Bay,9.611246344354115
 Fort-de-France,10.0
-Busan - Kimhae,9.848798862191208
+Busan - Kimhae,9.848798862191199
 Jinan Xiaoqiang,5.902590285782189
 Zhukovsky,0.0
 Malaga,0.0
-Xiamen Gaoqi,9.95325737462868
-Seoul,8.540526633976404
+Xiamen Gaoqi,9.953257374628684
+Seoul,8.5405266339764
 Hanoi,0.0
 Kingston,0.0
-Cheongju,9.898377443336159
+Cheongju,9.898377443336164
 Leopold Sedar Senghar,0.0
 Yantai Penglai,9.972627549374343
 Bandaranaike,0.0
 London City,0.0
-Xian Xianyang,9.820119889565186
+Xian Xianyang,9.820119889565184
 Volgograd,0.0
 Vilnius,0.0
 Danang,0.0
@@ -69,9 +69,9 @@ Bristol,0.0
 Nis,0.0
 Jeju,9.738573573149019
 Luanda,0.0
-Ningbo Lishe,0.09465557592182264
+Ningbo Lishe,0.0946555759218226
 Anna,0.0
-Cancun,9.85880336843681
+Cancun,9.858803368436806
 Florianopolis,10.0
 Bujumbura,0.0
 Macau,10.0
@@ -79,11 +79,11 @@ Netaji Subhash Chandra Bose Int. Airport,0.0
 Yinchuan Hedong,7.01408010858033
 Sofia,0.0
 Zakynthos,0.0
-Incheon,9.638618444531948
-Daegu (downtown),9.73343133308647
+Incheon,9.638618444531943
+Daegu (downtown),9.733431333086468
 Doha,0.0
-Qingdao Liuting,9.875638614121305
-Taichung,9.964350742284724
+Qingdao Liuting,9.875638614121309
+Taichung,9.964350742284715
 Copenhagen,0.0
 Johor Bahru,7.83551210042228
 Faroe Islands,0.0
@@ -103,33 +103,33 @@ Chattrapati Shivaji,0.0
 Samsun Airport,9.04435424202746
 Poznan-Lawica,0.0
 Jeddah,10.0
-Hangzhou Xiaoshan,2.4152306386935067
+Hangzhou Xiaoshan,2.4152306386935076
 Reus,0.0
 Rio de Janeiro,10.0
-Amman,10.0
+Amman,9.999999999999996
 Ciampino Airport,0.0
 Christchurch,0.0
 Jaipur,0.0
 Niamey,0.0
-Los Cabos,9.932636819030627
-Bodrum Airport,9.61451312511527
-Shenyang Taoxian,9.887394009788112
-Konya Airport,8.059718228480738
+Los Cabos,9.93263681903063
+Bodrum Airport,9.614513125115275
+Shenyang Taoxian,9.887394009788114
+Konya Airport,8.059718228480742
 Elblag,0.0
 Kutahya Airport,10.0
 Shizuoka,0.0
 Bourgas,0.0
 Soekarno Hatta,9.999999999999998
-Dalian Zhoushuizi,9.944036592764625
-Antalya Gazipasa Airport,9.230198412993696
+Dalian Zhoushuizi,9.944036592764622
+Antalya Gazipasa Airport,9.2301984129937
 Alicante,0.0
 Florence,0.0
-Guatemala City,5.116465043005256
+Guatemala City,5.116465043005254
 Montevideo,0.0
 Sfax,10.0
 Nantes,10.0
 Dalaman Airport,0.0
-Mudanjiang Hailang,8.446070841184463
+Mudanjiang Hailang,8.446070841184465
 Paris Charles De Gaulle,10.0
 Abidjan,10.0
 Naples,0.0
@@ -139,7 +139,7 @@ Ouarzazate,10.0
 Rabil,9.999999999999996
 Natal,10.0
 Cam Ranh,0.0
-Busan - Kimhae (downtown),2.6408985366861506
+Busan - Kimhae (downtown),2.6408985366861466
 Santiago Arturo Merino Benitez,10.0
 Daegu,8.336940756877883
 Karpathos,0.0
@@ -150,7 +150,7 @@ Prague,0.0
 Yanji Zhaoyangchuan,0.0
 Min Vody,0.0
 Brasilia,9.999924497984523
-Izmir Airport,9.624082882997323
+Izmir Airport,9.624082882997326
 Djibouti,0.0
 Kaunas,0.0
 Yangon,0.0
@@ -177,10 +177,10 @@ Aarhus,0.0
 Iwate,0.0
 Sarajevo,0.0
 Trondheim,0.0
-Essaouira,9.985785323847457
+Essaouira,9.985785323847452
 Douala,0.0
 Warsaw-Modlin,0.0
-Bordeaux,9.999999999999998
+Bordeaux,10.0
 Cardiff,0.0
 Changchun Longjia,10.0
 Nouakchott,0.0
@@ -191,14 +191,14 @@ Indira Gandhi,0.0
 Athens,10.0
 Pamandzi,0.0
 Xuzhou Guanyin,3.077488644949546
-Diyarbakir Airport,8.533975562171113
-Guangzhou Baiyun,9.747631752066715
+Diyarbakir Airport,8.533975562171115
+Guangzhou Baiyun,9.74763175206672
 Shanghai Hongqiao,6.633158459977885
 Krasnoyarsk,0.0
 Viracopos,9.99811370594323
 Tokyo - Haneda,0.0
 Kuwait,9.937619137795632
-Nanjing Lukou,5.5153334323552885
+Nanjing Lukou,5.515333432355289
 Skiathos,0.0
 Pisa,0.0
 Brisbane,0.0
@@ -209,17 +209,17 @@ Istanbul Airport,0.0
 London Southend Airport,0.0
 Torino,0.0
 Lodz,0.0
-Everrich Downtown Kinmen,9.964348193177289
+Everrich Downtown Kinmen,9.96434819317729
 Ulaanbaatar,0.0
 Oranjestad,9.154446465949409
-Antalya Airport,9.680017939594787
+Antalya Airport,9.68001793959478
 Vigo,0.0
 Geneva,10.0
-Lima,9.991862889279194
+Lima,9.991862889279197
 Murcia,0.0
 Johannesburg,10.0
 Moscow - Sheremetyevo,0.0
-Chongqing Jiangbei,9.908305088901326
+Chongqing Jiangbei,9.908305088901319
 Oujda,9.998636898988897
 San Jose,0.0
 Skopje,0.0
@@ -235,19 +235,19 @@ Adelaide,0.0
 Mitilini,0.0
 Mexico City,9.870943455145348
 Espargos,9.999926747817097
-Managua,9.455220141642972
-Addis Ababa,9.997484903189285
+Managua,9.45522014164297
+Addis Ababa,9.997484903189287
 Heraklion Airport,10.0
-Quito,9.734068433799418
+Quito,9.734068433799413
 Genoa,0.0
 RIYADH,9.99964107742663
 Iloilo,0.0
 Eskisehir Airport,8.938868357172069
 Ankara Airport,9.520905262573255
 Gdansk,0.0
-Wenzhou Longwan,4.700879544883648
-Kota Kinabalu,3.3722230711813617
-Weihai Dashuibo,9.962916170786007
+Wenzhou Longwan,4.7008795448836445
+Kota Kinabalu,3.3722230711813603
+Weihai Dashuibo,9.962916170785999
 Mendoza,0.0
 Tuzla,0.0
 Guayaquil,10.0
@@ -256,7 +256,7 @@ Lubumbashi,0.0
 Yancheng Nanyang,0.0
 Warsaw,0.0
 Bamako,0.0
-Lyon Saint Exupery,9.999999999999998
+Lyon Saint Exupery,10.0
 Sevilla,0.0
 Hannover,0.0
 Almaty,0.0
@@ -275,19 +275,19 @@ Medina,10.0
 Stavanger,0.0
 Taiyuan Wusu,10.0
 Lulea,0.0
-Jerba,9.979188020710545
+Jerba,9.97918802071055
 Durban,10.0
 Rosario,0.0
 Beirut - Rafik Hariri,0.0
 Wuxi Shuofang,10.0
-Sao Paulo - Guarulhos,9.997073720896699
+Sao Paulo - Guarulhos,9.997073720896703
 Hong Kong,9.991764611272654
 Bergen,0.0
 Olsztyn,0.0
 Salzburg,0.0
 Dortmund,0.0
 Billund,0.0
-Rabat,9.999483969237314
+Rabat,9.99948396923731
 Yangyang,10.0
 Varna,0.0
 Buenos Aires Aeroparque,0.0
@@ -306,7 +306,7 @@ Ho Chi Minh,0.0
 Phnom Penh,4.27526805025105
 Tbilisi,0.0
 Katowice,0.0
-Nanning Wuxu,9.375967349051203
+Nanning Wuxu,9.375967349051194
 Kaohsiung,9.967393876535425
 Birmingham,0.0
 Guiyang Longdongbao,0.0
@@ -315,22 +315,22 @@ Radom,0.0
 Treviso,0.0
 Trichy,0.0
 Jersey,0.0
-Gaziantep Airport,8.920204851154981
+Gaziantep Airport,8.920204851154985
 Bariloche,0.0
-Cozumel,9.999001131520304
+Cozumel,9.9990011315203
 Zurich,10.0
-Hohhot Baita,9.999999999999996
+Hohhot Baita,10.0
 Alexandria,0.0
-Tarbes - Lourdes,10.0
+Tarbes - Lourdes,9.999999999999998
 Sardar Vallabh Bhai Patel,0.0
 Cape Town,10.0
 Marka,0.0
 Nairobi,0.0
 Sanya Fenghuang,0.0
-Urumchi Diwobao,9.998428366126326
+Urumchi Diwobao,9.998428366126324
 Manchester,0.0
 Liberia,0.0
-Tangier,9.989729518358875
+Tangier,9.989729518358878
 Exeter,0.0
 Paderborn,0.0
 Sendai,0.0
@@ -347,7 +347,7 @@ Mandalay,0.0
 La Romana,9.969498785535677
 La Paz Manuel Marquez de Leon,0.0
 Dubrovnik,0.0
-Seoul (downtown),0.3496579551187395
+Seoul (downtown),0.3496579551187394
 Marrakech,9.978109237014568
 Stuttgart,0.0
 Cologne,0.0
@@ -357,10 +357,10 @@ Shannon,0.0
 Auckland,0.0
 Abu Dhabi,9.624509661011393
 Jomo Kenyatta,9.993496647525236
-Trabzon Airport,5.38531705193638
+Trabzon Airport,5.385317051936381
 Karipur,0.0
 Pengsheng,0.0
-Changsha Huanghua,9.448638294849017
+Changsha Huanghua,9.448638294849015
 Belgrade,0.0
 Mangalore,0.0
 Shanghai Pudong,3.5696188978475636
@@ -374,7 +374,7 @@ Tulear,0.0
 Tirana,0.0
 Hamburg,0.0
 Chitose,0.0
-Jeju (downtown),0.11846661695817452
+Jeju (downtown),0.11846661695817447
 Tunis,9.99054256700627
 Dresden,0.0
 Katima Mulilo,0.0
@@ -387,25 +387,25 @@ Gerona,0.0
 Asuncion Silvio Petterossi,0.0
 Fuerteventura,0.0
 Rzeszow,0.0
-Okayama,9.934442211752344
+Okayama,9.93444221175235
 Rome Fiumicino,0.0
 Lisbon,0.0
 Cochin,0.0
 Takamatsu,0.0
 Cairns,0.0
 Valencia,0.0
-Chubu,8.980981121470359
+Chubu,8.980981121470355
 Zagreb,0.0
 Dar Es Salaam,10.0
 Kos,0.0
 Oslo,0.0
 Cayenne,10.0
-Tozeur,9.999999999999998
+Tozeur,10.0
 Santorini,0.0
 Montpellier,0.0
 Bergamo,0.0
 Buenos Aires - Ezeiza,0.0
-Punta Cana - Higuey,9.822873512533828
+Punta Cana - Higuey,9.822873512533823
 Banja Luka,0.0
 Salvador,10.0
 Bangui,0.0
@@ -413,7 +413,7 @@ Kunming Wujiaba,9.994041871579237
 Penang,10.0
 Brno,0.0
 Lille,0.0
-Zhengzhou Xinzheng,2.5301140074920596
+Zhengzhou Xinzheng,2.5301140074920574
 Porto,0.0
 Abuja,9.999999999999998
 Manila Downtown Shop,0.0
@@ -423,7 +423,7 @@ Thessaloniki,0.0
 Ibiza,0.0
 Graz,0.0
 Vaxjo,0.0
-Agadir,9.983407241514254
+Agadir,9.983407241514248
 Helsinki-Vantaa,0.0
 Cordoba,0.0
 St. Maarten Princess Juliana,0.0
@@ -439,7 +439,7 @@ Accra,9.998051094576688
 Samos,0.0
 Port Louis,0.0
 Monterrey,10.0
-Grenoble,9.999999999999996
+Grenoble,10.0
 Jerez De La Frontera,0.0
 Eindhoven,0.0
 Sihanoukville,10.0
@@ -468,7 +468,7 @@ La Palma,0.0
 Milan - Malpensa,0.0
 Alexandoupolis,0.0
 Kalibo,0.0
-Taipei - Taoyuan,9.970030221692191
+Taipei - Taoyuan,9.970030221692188
 Chania,0.0
 Sydney,0.0
 Cork,0.0
@@ -490,7 +490,7 @@ Malmo,0.0
 Novosibirsk,0.0
 London Heathrow,0.0
 Guernsey,0.0
-Ngurah Rai,9.963311883559747
+Ngurah Rai,9.96331188355975
 Split,0.0
 Munich,0.0
 Lublin,0.0
