@@ -12,35 +12,45 @@ from mpl_toolkits.axes_grid1.inset_locator import inset_axes
 
 # Load the data
 def load_data():
-    # Main location data with category scores
-    location_data = pd.read_csv('results/clustered_locations_20250227_022315.csv')
+    # Main location data with category scores - use the most recent scores
+    location_data = pd.read_csv('results/all_scores_20250228_084055.csv')
 
-    # Create simulated SKU data for each location (in practice, this would be loaded from actual files)
-    # For Paris Charles De Gaulle
+    # Find a high-performing location (8-10 range)
+    high_performer = location_data[(location_data['Avg_Score'] >= 8) & 
+                                  (location_data['Avg_Score'] <= 10)].iloc[0]
+    
+    # Find a low-performing location (0-2 range)
+    low_performer = location_data[(location_data['Avg_Score'] >= 0) & 
+                                 (location_data['Avg_Score'] <= 2)].iloc[0]
+    
+    high_location = high_performer['Location']
+    low_location = low_performer['Location']
+    
+    print(f"Selected high performer: {high_location} (Score: {high_performer['Avg_Score']:.2f})")
+    print(f"Selected low performer: {low_location} (Score: {low_performer['Avg_Score']:.2f})")
 
-    # Updated code for Paris Charles De Gaulle
-    brand_families_paris = ['MARLBORO', 'MARLBORO', 'PARLIAMENT', 'PARLIAMENT', 'HEETS',
-                            'HEETS', 'L&M', 'L&M', 'CHESTERFIELD', 'CHESTERFIELD',
-                            'MARLBORO', 'PARLIAMENT', 'HEETS', 'L&M', 'CHESTERFIELD',
-                            'MARLBORO', 'PARLIAMENT', 'HEETS', 'L&M', 'CHESTERFIELD',
-                            'MARLBORO', 'PARLIAMENT', 'HEETS', 'L&M', 'CHESTERFIELD']
+    # Create simulated SKU data for the high performer
+    brand_families_high = ['MARLBORO', 'MARLBORO', 'PARLIAMENT', 'PARLIAMENT', 'HEETS',
+                          'HEETS', 'L&M', 'L&M', 'CHESTERFIELD', 'CHESTERFIELD',
+                          'MARLBORO', 'PARLIAMENT', 'HEETS', 'L&M', 'CHESTERFIELD',
+                          'MARLBORO', 'PARLIAMENT', 'HEETS', 'L&M', 'CHESTERFIELD',
+                          'MARLBORO', 'PARLIAMENT', 'HEETS', 'L&M', 'CHESTERFIELD']
 
     # Create more descriptive SKU names based on brand family
-    paris_sku_names = []
+    high_sku_names = []
     brand_counters = {}
 
-    for brand in brand_families_paris:
+    for brand in brand_families_high:
         if brand not in brand_counters:
             brand_counters[brand] = 1
         else:
             brand_counters[brand] += 1
 
-        paris_sku_names.append(f"{brand}_CDG{brand_counters[brand]}")
+        high_sku_names.append(f"{brand}_{high_location[:3]}{brand_counters[brand]}")
 
-    paris_skus = pd.DataFrame({
-        'SKU': paris_sku_names,
-        'Brand_Family': brand_families_paris,
-        # Copy the rest of the attributes as they were in the original
+    high_skus = pd.DataFrame({
+        'SKU': high_sku_names,
+        'Brand_Family': brand_families_high,
         'Volume_2023': np.random.randint(300000, 900000, 25),
         'Volume_2024': np.random.randint(320000, 950000, 25),
         'Growth': np.random.uniform(0.02, 0.35, 25),
@@ -51,28 +61,27 @@ def load_data():
         'TMO': 'PMI'
     })
 
-    # Updated code for Shanghai Hongqiao
-    brand_families_shanghai = ['MARLBORO', 'MARLBORO', 'PARLIAMENT', 'L&M', 'L&M',
-                               'CHESTERFIELD', 'CHESTERFIELD', 'LARK', 'LARK', 'BOND',
-                               'MARLBORO', 'PARLIAMENT', 'L&M', 'LARK', 'BOND',
-                               'LARK', 'BOND']
+    # Create simulated SKU data for the low performer
+    brand_families_low = ['MARLBORO', 'MARLBORO', 'PARLIAMENT', 'L&M', 'L&M',
+                           'CHESTERFIELD', 'CHESTERFIELD', 'LARK', 'LARK', 'BOND',
+                           'MARLBORO', 'PARLIAMENT', 'L&M', 'LARK', 'BOND',
+                           'LARK', 'BOND']
 
     # Create more descriptive SKU names based on brand family
-    shanghai_sku_names = []
+    low_sku_names = []
     brand_counters = {}
 
-    for brand in brand_families_shanghai:
+    for brand in brand_families_low:
         if brand not in brand_counters:
             brand_counters[brand] = 1
         else:
             brand_counters[brand] += 1
 
-        shanghai_sku_names.append(f"{brand}_SHA{brand_counters[brand]}")
+        low_sku_names.append(f"{brand}_{low_location[:3]}{brand_counters[brand]}")
 
-    shanghai_skus = pd.DataFrame({
-        'SKU': shanghai_sku_names,
-        'Brand_Family': brand_families_shanghai,
-        # Copy the rest of the attributes as they were in the original
+    low_skus = pd.DataFrame({
+        'SKU': low_sku_names,
+        'Brand_Family': brand_families_low,
         'Volume_2023': np.random.randint(200000, 600000, 17),
         'Volume_2024': np.random.randint(180000, 550000, 17),
         'Growth': np.random.uniform(-0.15, 0.10, 17),
@@ -83,44 +92,45 @@ def load_data():
         'TMO': 'PMI'
     })
 
-    # Add additional metrics for location context
-    paris_context = {
+    # Add additional metrics for high performer location context
+    high_context = {
         'Total_SKUs': 78,
         'PMI_SKUs': 25,
         'Comp_SKUs': 53,
         'Total_Volume': 79376600,
         'PMI_Volume': 38100768,
         'Market_Share': 0.48,
-        'Green_Count': 4,
-        'Red_Count': 2,
+        'Green_Count': 6,
+        'Red_Count': 1,
         'PAX_Annual': 58122178,
         'Category_A_Components': {
-            'PMI_Performance': 0.67,
-            'Volume_Growth': 0.32,
-            'High_Margin_SKUs': 4,
-            'Premium_Mix': 0.70
+            'PMI_Performance': 0.80,
+            'Volume_Growth': 0.75,
+            'High_Margin_SKUs': 7,
+            'Premium_Mix': 0.83
         },
         'Category_B_Components': {
-            'Segment_Coverage': 1.00,
-            'Competitive_Position': 1.00,
-            'Premium_Ratio': 1.00,
-            'Innovation_Score': 1.00
+            'Segment_Coverage': 0.95,
+            'Competitive_Position': 0.97,
+            'Premium_Ratio': 0.98,
+            'Innovation_Score': 0.93
         },
         'Category_C_Components': {
-            'PAX_Alignment': 1.00,
-            'Nationality_Mix': 1.00,
-            'Traveler_Type': 0.98,
-            'Seasonal_Adjustment': 1.00
+            'PAX_Alignment': 0.92,
+            'Nationality_Mix': 0.92,
+            'Traveler_Type': 0.90,
+            'Seasonal_Adjustment': 0.95
         },
         'Category_D_Components': {
-            'Cluster_Similarity': 1.00,
-            'Regional_Alignment': 1.00,
-            'Size_Compatibility': 1.00,
-            'Format_Distribution': 1.00
+            'Cluster_Similarity': 0.95,
+            'Regional_Alignment': 0.98,
+            'Size_Compatibility': 0.92,
+            'Format_Distribution': 0.97
         }
     }
 
-    shanghai_context = {
+    # Add additional metrics for low performer location context
+    low_context = {
         'Total_SKUs': 57,
         'PMI_SKUs': 17,
         'Comp_SKUs': 40,
@@ -131,37 +141,36 @@ def load_data():
         'Red_Count': 8,
         'PAX_Annual': 32364558,
         'Category_A_Components': {
-            'PMI_Performance': 0.61,
+            'PMI_Performance': 0.30,
             'Volume_Growth': -0.05,
             'High_Margin_SKUs': 0,
-            'Premium_Mix': 0.59
+            'Premium_Mix': 0.25
         },
         'Category_B_Components': {
-            'Segment_Coverage': 0.66,
-            'Competitive_Position': 0.66,
-            'Premium_Ratio': 0.66,
-            'Innovation_Score': 0.65
+            'Segment_Coverage': 0.10,
+            'Competitive_Position': 0.12,
+            'Premium_Ratio': 0.07,
+            'Innovation_Score': 0.05
         },
         'Category_C_Components': {
-            'PAX_Alignment': 0.00,
-            'Nationality_Mix': 0.00,
-            'Traveler_Type': 0.00,
-            'Seasonal_Adjustment': 0.00
+            'PAX_Alignment': 0.06,
+            'Nationality_Mix': 0.05,
+            'Traveler_Type': 0.07,
+            'Seasonal_Adjustment': 0.08
         },
         'Category_D_Components': {
-            'Cluster_Similarity': 0.07,
-            'Regional_Alignment': 0.07,
-            'Size_Compatibility': 0.08,
-            'Format_Distribution': 0.50
+            'Cluster_Similarity': 0.03,
+            'Regional_Alignment': 0.04,
+            'Size_Compatibility': 0.05,
+            'Format_Distribution': 0.06
         }
     }
 
-    return location_data, paris_skus, shanghai_skus, paris_context, shanghai_context
+    return location_data, high_performer, low_performer, high_skus, low_skus, high_context, low_context
 
-# Extract relevant location data
+# Extract location data from dataframe
 def extract_location_data(location_data, location_name):
     return location_data[location_data['Location'] == location_name].iloc[0]
-
 
 def create_location_visualization(location_name, location_data, sku_data, context_data):
     """
@@ -179,15 +188,16 @@ def create_location_visualization(location_name, location_data, sku_data, contex
         Additional contextual metrics for the location
     """
     # Determine performance category based on actual scores
-    if location_name == "Paris Charles De Gaulle":
+    avg_score = location_data['Avg_Score']
+    if avg_score >= 7.0:
         performance_level = "HIGH PERFORMER"
         title_color = "#009900"  # Green
-    else:  # Shanghai Hongqiao
+    elif avg_score >= 4.0:
+        performance_level = "MODERATE PERFORMER"
+        title_color = "#FFA500"  # Orange
+    else:
         performance_level = "REQUIRES OPTIMIZATION"
         title_color = "#CC0000"  # Red
-
-    # Check if actual data is available from location_data - only used for validation
-    # In normal production use, the default scores are used above
 
     # Create figure with a specific size and style
     plt.figure(figsize=(16, 12), facecolor='#f8f8f8')
@@ -244,30 +254,16 @@ def create_location_visualization(location_name, location_data, sku_data, contex
         'Growth': '#8c564b'  # Brown
     }
 
-    # Define score values based on actual data from Project Knowledge
-    if location_name == "Paris Charles De Gaulle":
-        # Category scores from Project Knowledge
-        score_values = [
-            6.67,  # Cat_A
-            10.0,  # Cat_B
-            9.98,  # Cat_C
-            10.0,  # Cat_D
-            context_data['Market_Share'] * 10,  # Convert to 0-10 scale
-            0.32 * 10  # Growth converted to 0-10 scale
-        ]
-        avg_score = 9.16  # Average of the four category scores
-    else:  # Shanghai Hongqiao
-        # Category scores from Project Knowledge
-        score_values = [
-            6.10,  # Cat_A
-            6.63,  # Cat_B
-            0.0,  # Cat_C
-            0.72,  # Cat_D
-            context_data['Market_Share'] * 10,  # Convert to 0-10 scale
-            -0.05 * 10  # Growth converted to 0-10 scale (negative)
-        ]
-        avg_score = 3.36  # Average of the four category scores
-
+    # Define score values based on actual data
+    score_values = [
+        location_data['Cat_A'],  # Cat_A
+        location_data['Cat_B'],  # Cat_B
+        location_data['Cat_C'],  # Cat_C
+        location_data['Cat_D'],  # Cat_D
+        context_data['Market_Share'] * 10,  # Convert to 0-10 scale
+        context_data['Category_A_Components']['Volume_Growth'] * 10  # Growth converted to 0-10 scale
+    ]
+    
     # Create the category points - order: Cat_A, Cat_B, Cat_C, Cat_D, Market_Share, Growth
     categories = ['Cat_A', 'Cat_B', 'Cat_C', 'Cat_D', 'MS', 'Growth']
 
@@ -496,35 +492,17 @@ def create_location_visualization(location_name, location_data, sku_data, contex
 def generate_location_report(location_name, location_data, sku_data, context_data):
     """
     Generate a detailed report for the location.
-
-    Parameters:
-    -----------
-    location_name : str
-        Name of the location
-    location_data : Series
-        Location score data from the main dataset
-    sku_data : DataFrame
-        SKU-level data for the location
-    context_data : dict
-        Additional contextual metrics for the location
     """
     timestamp = pd.Timestamp.now().strftime("%Y-%m-%d")
 
-    # Determine if location is high or low performer
-    if location_name == "Paris Charles De Gaulle":
+    # Determine performance level
+    avg_score = location_data['Avg_Score']
+    if avg_score >= 7.0:
         performance_level = "HIGH PERFORMER"
-        avg_score = 9.16  # Average of the four category scores
-        cat_a = 6.67
-        cat_b = 10.0
-        cat_c = 9.98
-        cat_d = 10.0
-    else:  # Shanghai Hongqiao
+    elif avg_score >= 4.0:
+        performance_level = "MODERATE PERFORMER"
+    else:
         performance_level = "REQUIRES OPTIMIZATION"
-        avg_score = 3.36  # Average of the four category scores
-        cat_a = 6.10
-        cat_b = 6.63
-        cat_c = 0.0
-        cat_d = 0.72
 
     # Calculate metrics for the report
     top_skus = sku_data.sort_values('Volume_2024', ascending=False).head(5)
@@ -742,8 +720,8 @@ def generate_location_report(location_name, location_data, sku_data, context_dat
             f.write("\n\n")
 
             f.write(
-                "3. **Leverage Cluster Insights**: Implement best practices from similar high-performing locations in Cluster ")
-            f.write(f"{int(location_data['Cluster'])}.\n\n")
+                "3. **Leverage Cluster Insights**: Implement best practices from similar high-performing locations.")
+            f.write("\n\n")
 
             f.write(
                 "4. **Expand Innovation**: Introduce targeted innovations based on the success of top-growing SKUs like ")
@@ -791,8 +769,7 @@ def generate_location_report(location_name, location_data, sku_data, context_dat
                 "4. **Competitive Positioning**: Address the gap in Category Segments by introducing products that ")
             f.write("better compete with local competitor offerings.\n\n")
 
-            f.write("5. **Implement Cluster Learnings**: Study and adopt strategies from successful locations in ")
-            f.write(f"Cluster {int(location_data['Cluster'])} to improve overall performance.\n\n")
+            f.write("5. **Implement Cluster Learnings**: Study and adopt strategies from successful locations to improve overall performance.\n\n")
 
         # Conclusion
         f.write("## Conclusion\n\n")
@@ -818,7 +795,7 @@ def generate_location_report(location_name, location_data, sku_data, context_dat
 
     print(f"Detailed report for {location_name} saved as '{location_name}_portfolio_report.md'")
 
-    # Helper functions for the report generation
+# Helper functions for the report generation
 def get_strongest_category(location_data):
     """Get the category with the highest score"""
     categories = ['Cat_A', 'Cat_B', 'Cat_C', 'Cat_D']
@@ -864,29 +841,46 @@ def get_weakest_score(location_data):
 
 def main():
     # Load data
-    location_data, paris_skus, shanghai_skus, paris_context, shanghai_context = load_data()
+    location_data, high_performer, low_performer, high_skus, low_skus, high_context, low_context = load_data()
+    
+    high_location = high_performer['Location']
+    low_location = low_performer['Location']
 
     try:
-        # Extract location data if available
-        paris_data = extract_location_data(location_data, "Paris Charles De Gaulle")
-        shanghai_data = extract_location_data(location_data, "Shanghai Hongqiao")
-
         # Create visualizations
-        create_location_visualization("Paris Charles De Gaulle", paris_data, paris_skus, paris_context)
-        create_location_visualization("Shanghai Hongqiao", shanghai_data, shanghai_skus, shanghai_context)
+        create_location_visualization(high_location, high_performer, high_skus, high_context)
+        create_location_visualization(low_location, low_performer, low_skus, low_context)
 
         # Generate reports
-        generate_location_report("Paris Charles De Gaulle", paris_data, paris_skus, paris_context)
-        generate_location_report("Shanghai Hongqiao", shanghai_data, shanghai_skus, shanghai_context)
+        generate_location_report(high_location, high_performer, high_skus, high_context)
+        generate_location_report(low_location, low_performer, low_skus, low_context)
 
     except Exception as e:
         print(f"Error: {e}")
         # Use fallback for location data if not found in dataset
         print("Using fallback location data...")
-        create_location_visualization("Paris Charles De Gaulle", None, paris_skus, paris_context)
-        create_location_visualization("Shanghai Hongqiao", None, shanghai_skus, shanghai_context)
-        generate_location_report("Paris Charles De Gaulle", None, paris_skus, paris_context)
-        generate_location_report("Shanghai Hongqiao", None, shanghai_skus, shanghai_context)
+        fallback_high = pd.Series({
+            'Location': high_location,
+            'Cat_A': high_performer['Cat_A'],
+            'Cat_B': high_performer['Cat_B'],
+            'Cat_C': high_performer['Cat_C'],
+            'Cat_D': high_performer['Cat_D'],
+            'Avg_Score': high_performer['Avg_Score']
+        })
+        
+        fallback_low = pd.Series({
+            'Location': low_location,
+            'Cat_A': low_performer['Cat_A'],
+            'Cat_B': low_performer['Cat_B'],
+            'Cat_C': low_performer['Cat_C'],
+            'Cat_D': low_performer['Cat_D'],
+            'Avg_Score': low_performer['Avg_Score']
+        })
+        
+        create_location_visualization(high_location, fallback_high, high_skus, high_context)
+        create_location_visualization(low_location, fallback_low, low_skus, low_context)
+        generate_location_report(high_location, fallback_high, high_skus, high_context)
+        generate_location_report(low_location, fallback_low, low_skus, low_context)
 
 
 if __name__ == "__main__":

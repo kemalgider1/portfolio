@@ -1,0 +1,28 @@
+Validation Report - Comparison to 2023 Scores
+==============================================
+
+Category A Statistics:
+  Average difference: -0.03
+  Maximum difference: 1.40
+  Minimum difference: -1.40
+
+Category B Statistics:
+  Average difference: -0.04
+  Maximum difference: 1.40
+  Minimum difference: -1.40
+
+Category C Statistics:
+  Average difference: 0.03
+  Maximum difference: 1.40
+  Minimum difference: -1.15
+
+Category D Statistics:
+  Average difference: 0.03
+  Maximum difference: 1.28
+  Minimum difference: -1.40
+
+Average Score Statistics:
+  Average difference: 0.34
+  Maximum difference: 2.80
+  Minimum difference: -0.83
+

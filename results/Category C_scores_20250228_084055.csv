@@ -1,0 +1,502 @@
+Location,Cat_C
+Taipei - Taoyuan,7.41
+Incheon,4.62
+Dubai,3.86
+Jeju,2.48
+Tel-Aviv,8.83
+Shanghai Pudong,1.66
+Istanbul Airport,8.54
+Doha,5.14
+Kuwait,7.62
+Tokyo - Narita,7.02
+Antalya Airport,8.05
+Hong Kong,7.14
+Amman,9.54
+Tokyo - Haneda,7.57
+Osaka - Kansai,6.5
+Beijing,2.72
+Beirut - Rafik Hariri,3.21
+Marrakech,10.0
+Istanbul Asia Airport,7.24
+Cairo,5.05
+Everrich Downtown Kinmen,0.0
+Tenerife,9.38
+RIYADH,5.6
+Guangzhou Baiyun,5.06
+Addis Ababa,9.15
+Palma De Mallorca,7.67
+Muscat,4.38
+Casablanca,9.77
+Busan - Kimhae,3.1
+Jeddah,5.82
+Abu Dhabi,4.89
+Alicante,8.22
+Gran Canaria,9.05
+Tunis,4.79
+Paris Charles De Gaulle,6.47
+Malaga,7.24
+Barcelona,8.22
+Zurich,9.09
+Dalaman Airport,9.63
+Manchester,5.37
+Belgrade,2.46
+Tirana,5.84
+Hurgada,7.83
+Kuala Lumpur,4.99
+Cancun,5.73
+Sharjah,4.56
+Izmir Airport,9.08
+Kaohsiung,7.65
+Singapore - Changi,5.24
+Gdansk,6.28
+Krakow Balice,7.11
+Riga,4.22
+Roland Garros,8.26
+Dublin,7.57
+Agadir,9.39
+Indira Gandhi,2.75
+Paris Orly,8.83
+Madrid Barajas,7.83
+Monastir,4.21
+London Heathrow,5.49
+Warsaw,5.68
+Punta Cana - Higuey,7.23
+Fukuoka,5.89
+London Gatwick,6.94
+Port Louis,8.9
+Geneva,7.23
+Sofia,0.97
+Fuerteventura,7.69
+Fes,9.36
+Shanghai Hongqiao,1.27
+Baghdad,0.72
+Chubu,8.68
+Macau,3.84
+DAMMAM,7.05
+Frankfurt,6.58
+Jerba,6.21
+Ibiza,6.6
+Seoul,4.76
+Oslo,4.39
+Amsterdam - Schiphol,8.31
+Basel,9.26
+Tangier,9.94
+Rabat,10.0
+Yerevan,1.53
+Katowice,5.44
+Ngurah Rai,4.71
+Gibraltar,7.52
+Hangzhou Xiaoshan,1.48
+Athens,3.42
+Rome Fiumicino,7.4
+Marsa Aalam,0.63
+Colombo,0.55
+Wroclaw,5.14
+PRISTINA,2.69
+London Stansted,8.04
+Mexico City,6.09
+Johannesburg,6.21
+Chattrapati Shivaji,0.88
+Bodrum Airport,9.06
+Skopje,8.64
+Faro Airport,6.21
+Hanoi,6.29
+Milan - Malpensa,7.9
+Kaunas,8.37
+Birmingham,5.71
+Salalah,4.78
+Vilnius,7.91
+Xiamen Gaoqi,3.78
+Buenos Aires - Ezeiza,8.26
+Daegu,1.66
+Oujda,8.64
+Male,7.87
+Lisbon,8.8
+Warsaw-Modlin,6.05
+Sao Paulo - Guarulhos,7.08
+Santiago Arturo Merino Benitez,3.48
+Valencia,8.32
+Tuzla,0.0
+Ankara Airport,4.99
+Bogota,9.06
+Montego Bay,5.71
+Ras El Khaymah,7.4
+Kunming Wujiaba,6.19
+Glasgow,6.92
+Lima,6.42
+Newcastle,7.85
+Poznan-Lawica,6.61
+Edinburgh,7.43
+Brussels,9.68
+Copenhagen,7.66
+Pointe-a-Pitre,8.84
+Danang,3.67
+Rhodes,3.73
+Liverpool,6.65
+Sharm El Sheikh,6.96
+Fort-de-France,8.89
+Prague,6.43
+Munich,7.36
+Espargos,10.0
+Jomo Kenyatta,5.41
+London Luton,6.53
+Pamandzi,9.93
+Porto,10.0
+Erbil International Airport,2.71
+Rzeszow,6.54
+Bristol,6.71
+Leopold Sedar Senghar,8.38
+Enfidha,4.86
+Chengdu Tianfu,0.29
+Sevilla,8.3
+Tbilisi,8.59
+Baku,8.53
+Vienna,7.49
+Mahon Airport,8.3
+Ho Chi Minh,7.45
+Soekarno Hatta,2.21
+Xian Xianyang,3.6
+Chitose,5.57
+Santo Domingo Las Americas,7.94
+Curacao,5.95
+Qingdao Liuting,5.33
+Rio de Janeiro,7.32
+Basrah,0.0
+Lyon Saint Exupery,9.38
+Berlin Brandenburg,6.52
+Stockholm Arlanda,5.37
+Phnom Penh,4.56
+Corfu,4.14
+Heraklion Airport,3.85
+Marseille,8.06
+Duesseldorf,8.44
+Jersey,4.81
+Leeds Bradford,6.16
+Shannon,7.02
+Oranjestad,9.6
+Cape Town,7.11
+Panama Tocumen,8.77
+Stavanger,5.48
+Sandefjord-Torp,7.0
+Urumchi Diwobao,9.78
+Cheongju,3.49
+Bydgoszcz,5.53
+Nice,6.18
+Taichung,7.63
+East Midlands,6.66
+Hyderabad,1.84
+Shenyang Taoxian,5.99
+Naples,8.5
+Gerona,9.04
+Vientiane,3.09
+Bourgas,1.07
+Togo,4.05
+Cam Ranh,1.3
+Puerto Vallarta,2.67
+Reus,9.11
+Bangalore,1.05
+Zakynthos,3.58
+Venice,7.53
+Hamburg,6.85
+Thessaloniki,3.72
+Nador,9.43
+Kos,3.02
+Los Cabos,2.68
+Lublin,0.2
+Murcia,0.18
+Medina,6.66
+Cork,7.67
+Chongqing Jiangbei,1.22
+San Salvador Comalapa,2.99
+Rabil,8.31
+Sarajevo,6.94
+Shenzhen Bao'an,0.66
+Abidjan,9.4
+Zia,1.03
+Bergen,4.36
+Bergamo,7.33
+Guayaquil,7.77
+Alexandria,0.0
+Nis,0.61
+Szczecin,5.76
+Guadalajara,4.22
+Billund,8.25
+Wuhan Tianhe,2.28
+Guernsey,5.1
+Quito,8.4
+Tashkent,1.23
+Santiago Cibao,7.29
+Bridgetown,7.06
+Zanzibar,9.08
+Kutaisi,8.94
+Toulouse,8.66
+Essaouira,0.0
+Guatemala City,1.76
+Batumi,0.39
+Bamako,5.37
+Kayseri Airport,4.27
+Yanji Zhaoyangchuan,7.03
+Podgorica,4.63
+Cayenne,9.62
+San Jose,7.78
+Ciampino Airport,8.28
+Chania,3.57
+Changsha Huanghua,2.05
+Brno,5.93
+Aswan,6.61
+Varna,0.89
+Bilbao,7.83
+Trabzon Airport,9.1
+Suleymania Airport,0.0
+Lodz,6.61
+Alexandoupolis,0.0
+Montpellier,9.45
+Ulaanbaatar,2.36
+Nantes,7.95
+Santorini,4.75
+Entebbe,3.19
+Paramaribo,3.78
+Changchun Longjia,6.31
+Stuttgart,8.55
+Santiago De Compostela,9.73
+Buenos Aires Aeroparque,8.1
+Cochin,0.85
+Moscow - Vnukovo,3.77
+Hannover,8.7
+Bordeaux,6.58
+Accra,5.14
+Verona,7.77
+Cali,7.47
+Antalya Gazipasa Airport,7.94
+Changzhou Benniu,4.98
+Almaty,3.37
+Montevideo,0.0
+Kralendijk (Bonaire),9.63
+Trondheim,7.49
+Manas,2.27
+Sfax,4.37
+Ningbo Lishe,0.0
+Gaziantep Airport,4.95
+Nuernberg,7.32
+Aberdeen,6.84
+Olsztyn,0.26
+Moscow - Sheremetyevo,1.44
+Johor Bahru,4.7
+Naha,4.67
+Puerto Plata,5.05
+Split,6.01
+Samsun Airport,4.74
+Manila - Ninoy Aquino,9.5
+Yantai Penglai,4.83
+Almeria,8.0
+Medellin Jose Maria Cordova,7.12
+Bologna,8.23
+Praia,9.43
+Piarco,2.62
+La Palma,8.85
+Gabon,7.91
+Dar Es Salaam,5.16
+Southampton,4.36
+Pisa,8.03
+Mykonos,3.91
+Windhoek,9.38
+Cardiff,7.71
+Charleroi,9.62
+Penang,5.74
+Aqaba,0.06
+Wenzhou Longwan,0.06
+Adana Airport,4.22
+Fuzhou Changle,4.54
+Luxor,5.77
+Belize City,2.74
+Beauvais,8.72
+Milan - Linate,5.95
+Skiathos,0.44
+Cologne,7.58
+Nanning Wuxu,8.74
+Sanya Fenghuang,8.41
+Ohrid,0.0
+Managua,5.43
+Banjul,6.42
+Melbourne,8.3
+Astana,3.65
+Aktio,0.26
+Fortaleza,9.26
+Bandaranaike,2.66
+London City,5.31
+Kingston,4.51
+Moscow - Domodedovo,4.5
+Siem Reap,5.29
+Palermo,6.35
+Jerez De La Frontera,7.95
+Faroe Islands,8.55
+Ouarzazate,0.39
+Astrakhan,2.58
+Hefei Xinqiao,9.18
+Lubumbashi,9.19
+Tulear,0.88
+Helsinki-Vantaa,9.37
+Wuxi Shuofang,1.18
+Wellington,7.2
+Zagreb,6.45
+Diyarbakir Airport,5.39
+Jinan Xiaoqiang,2.33
+Salzburg,7.0
+Eindhoven,6.29
+Florence,6.27
+Dubrovnik,5.92
+Zhengzhou Xinzheng,3.57
+Santander,6.68
+St. Petersburg Pulkovo,3.31
+Krasnoyarsk,3.08
+Conakry,8.32
+Bournemouth,7.07
+Lagos,5.46
+Viracopos,9.4
+Kota Kinabalu,3.88
+Nouakchott,5.87
+Monterrey,2.26
+La Romana,7.41
+Dresden,5.82
+Bremen,7.08
+Torino,6.85
+Niamey,3.3
+Bari,7.13
+Perth,6.62
+Cozumel,1.68
+Djibouti,0.0
+Port-au-Prince (Haiti),4.35
+Sochi,2.31
+Durban,4.8
+Yangon,6.47
+Sendai,6.56
+Madeira,6.33
+Asturias,8.07
+Volgograd,2.67
+Mendoza,4.54
+Lille,8.88
+Salvador,7.04
+Takamatsu,6.6
+Cordoba,8.45
+Exeter,7.2
+Kilimanjaro,7.57
+Douala,8.78
+Weihai Dashuibo,5.1
+Brisbane,7.9
+Lusaka,0.6
+Antigua,8.33
+Munster-Osnabruck,6.67
+Rotterdam,9.71
+Paderborn,9.52
+Phu Quok,6.94
+Genoa,6.87
+Kigali,2.44
+Dortmund,8.03
+Mombasa,9.46
+Malmo,6.37
+Mazatlan,2.9
+Dalian Zhoushuizi,0.35
+Mudanjiang Hailang,7.72
+La Paz Manuel Marquez de Leon,2.25
+Konya Airport,6.94
+Hiroshima,6.73
+Okayama,4.38
+Nanchang Changbei,8.75
+Belo Horizonte,9.1
+Pula,4.33
+Liberia,7.59
+Abuja,3.76
+Yangyang,0.15
+A Coruna,10.0
+Norwich,4.98
+Aalborg,6.74
+Auckland,0.0
+Treviso,3.05
+Ramon,0.0
+Ekaterinburg,2.72
+Kutahya Airport,0.74
+Samana El Catey,0.0
+Minsk,1.56
+Humberside,0.44
+Min Vody,3.01
+St. George's Point Saline,10.0
+Katima Mulilo,0.0
+Graz,8.28
+Kavala,0.0
+Natal,10.0
+Florianopolis,1.67
+Grenoble,0.19
+Ostrava,0.19
+Sydney,3.29
+Tarbes - Lourdes,0.14
+Brasilia,9.32
+Zadar,8.77
+Porto Alegre,7.94
+Harbin Taiping,6.1
+Recife,9.62
+Mitilini,4.99
+Amritsar,1.38
+Anna,0.88
+Goa,2.09
+Jaipur,1.55
+Karipur,1.64
+Lucknow,1.46
+Mangalore,1.24
+Netaji Subhash Chandra Bose Int. Airport,2.01
+Sardar Vallabh Bhai Patel,0.96
+Trichy,1.93
+Granada,7.94
+Yinchuan Hedong,0.08
+Gaborone,0.68
+Haiphong,4.63
+Sierra Leone,4.73
+Chambery,0.32
+London Southend Airport,6.08
+Bujumbura,4.24
+Ixtapa Zihuatanejo,4.78
+Shizuoka,8.44
+Vaxjo,0.0
+Basseterre (Saint Kitts),4.98
+Strasbourg,9.31
+Maputo,0.0
+Samarkand,0.67
+Denizli Cardak Airport,6.3
+Queretaro,2.13
+Shandong,0.09
+Kagoshima,8.46
+Tozeur,0.0
+Kinshasa,0.0
+Acapulco,2.21
+Samos,4.73
+Samara,4.95
+Rosario,5.77
+Cairns,6.88
+Kalibo,8.67
+Lulea,8.19
+Nykoping,5.98
+Quanzhou,0.0
+Erfurt,0.38
+Sihanoukville,0.76
+Miyazaki,2.37
+Xuzhou Guanyin,0.02
+Karpathos,0.76
+Oita,3.09
+Bariloche,4.97
+Radom,0.0
+Aktau,0.7
+Umea,0.07
+Fukushima,0.0
+Coolangatta,4.81
+Marka,0.14
+Ioannina,0.0
+Hatay Airport,0.0
+Shymkent,0.9
+Kazan,0.0
+Gothenburg,6.21
+Luanda ,1.24
+Manama ,4.19
+Lanzarote,9.23
+Aarhus,0.0
+Glasgow Prestwick,4.98
+Queenstown,6.7
+Juba,8.28
